@@ -1,0 +1,125 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 20px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.slider {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  margin: auto;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.slider-ctrl {
+  position: absolute;
+  border: none;
+  display: inline-block;
+  width: 50px;
+  height: 57px;
+  background-color: #26b9e1;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 700;
+  z-index: 7;
+}
+
+.slider-ctrl-prev {
+  left: 0;
+}
+
+.slider-ctrl-next {
+  right: 0;
+}
+
+.slides-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slides-item {
+  position: relative;
+}
+
+.slides-img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.slides-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.slider-pagination {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider-pagination-item {
+  display: inline-block;
+  width: 60px;
+  height: 5px;
+  background-color: #b0b8b9;
+}
+
+.slider-pagination-active {
+  background-color: #20a8da;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* visually-hidden helper */
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+

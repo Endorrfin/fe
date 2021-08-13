@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #212121;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* FLEXBOX TECHNOLOGY */
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.column {
+  padding: 10px;
+}
+
+.left-column {
+  width: 24%;
+  background-color: #eee3ab;
+}
+
+.right-column {
+  width: 24%;
+  background-color: #85c7f2;
+}
+
+.center-column {
+  width: 50%;
+  background-color: #a77e58;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* visually-hidden helper */
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+

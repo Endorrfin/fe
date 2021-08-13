@@ -1,0 +1,7 @@
+<h1>Angular lifecycle hooks</h1>
+
+<button (click)="show = !show">SHOW</button>
+<button (click)="duplicate()">PUSH ME</button>
+<!--<input #val type="text" (change)="parentValue = $event.target.value">-->
+<input #val type="text" (change)="change(val)">
+<app-child *ngIf="show" [value]="parentValue"></app-child>

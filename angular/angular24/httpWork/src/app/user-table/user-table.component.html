@@ -1,0 +1,18 @@
+<h2>Таблица пользователей</h2>
+
+<table>
+  <tr>
+    <th>Фамилия:</th>
+    <th>Имя:</th>
+  </tr>
+
+  <tr *ngFor="let user of users">
+    <td>{{user.firstName}}</td>
+    <td>{{user.lastName}}</td>
+  </tr>
+</table>
+
+<p>Created on: <b>{{serviceUsers.creationDate | date: 'dd.MM.yyyy &nbsp; HH:mm:ss.sss'}}</b></p>
+<p>Clicked: <b>{{serviceUsers.clickCount}}</b> times</p>
+<button (click)="serviceUsers.increase()">Click</button>
+

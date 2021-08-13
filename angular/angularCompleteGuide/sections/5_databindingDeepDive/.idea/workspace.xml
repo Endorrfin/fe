@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fa292502-bd0b-4ab5-98b1-a4340ca33f68" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/e2e/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/about_course" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/1_GettingStarted/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/e2e/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/about_course" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/app/server/server.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/app/server/server.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/app/servers/servers.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/app/servers/servers.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/app/servers/servers.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/app/success-alert/success-alert.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/app/success-alert/success-alert.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/app/success-alert/success-alert.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/app/warning-alert/warning-alert-component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/30_PassingAndUsingDataWithEventBinding/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/e2e/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/about_course" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/app/components/success-alert/success-alert.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/app/components/success-alert/success-alert.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/app/components/success-alert/success-alert.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/app/components/warning-alert/warning-alert-component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/app/server/server.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/app/server/server.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/app/servers/servers.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/app/servers/servers.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/app/servers/servers.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/42_GettingTheIndexWhenUsingNgFor/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/e2e/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/about_course" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/app/components/server/server.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/app/components/server/server.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/app/components/servers/servers.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/app/components/servers/servers.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/app/components/servers/servers.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/app/components/success-alert/success-alert.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/app/components/success-alert/success-alert.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/app/components/success-alert/success-alert.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/app/components/warning-alert/warning-alert-component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/2_TheBasics/TheBasics_completed/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/e2e/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/about_course" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/header/header.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/header/header.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/header/header.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/recipes/recipe-detail/recipe-detail.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/recipes/recipe-detail/recipe-detail.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/recipes/recipe-detail/recipe-detail.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/recipes/recipe-list/recipe-item/recipe-item.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/recipes/recipe-list/recipe-item/recipe-item.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/recipes/recipe-list/recipe-item/recipe-item.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/recipes/recipe-list/recipe-list.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/recipes/recipe-list/recipe-list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/recipes/recipe-list/recipe-list.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/recipes/recipe.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/recipes/recipes.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/recipes/recipes.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/recipes/recipes.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/shopping-list/shopping-edit/shopping-edit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/shopping-list/shopping-edit/shopping-edit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/shopping-list/shopping-edit/shopping-edit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/shopping-list/shopping-list.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/shopping-list/shopping-list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/components/shopping-list/shopping-list.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/app/shared/ingredient.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/3_CourseProjectTheBasics/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/e2e/tsconfig.e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/how-to-use.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/00_databindinginitial/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/e2e/tsconfig.e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/how-to-use.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/cockpit/cockpit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/cockpit/cockpit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/cockpit/cockpit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/server-element/server-element.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/server-element/server-element.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/server-element/server-element.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_Components&amp;DatabindingDeepDive/cmp-databinding-start/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/e2e/tsconfig.e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/how-to-use.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/app/cockpit/cockpit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/app/cockpit/cockpit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/app/cockpit/cockpit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/app/server-element/server-element.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/app/server-element/server-element.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/app/server-element/server-element.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/src/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_ComponentsDatabindingDeepDive/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/e2e/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/app/cockpit/cockpit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/app/cockpit/cockpit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/app/cockpit/cockpit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/app/server-element/server-element.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/app/server-element/server-element.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/app/server-element/server-element.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/5_databindingDeepDive/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/Angular - The Complete Guide (2020 Edition).xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../[sections]/packetStart.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/e2e/tsconfig.e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/how-to-use.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/src/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/00_databindinginitial/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/e2e/tsconfig.e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/how-to-use.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/cockpit/cockpit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/cockpit/cockpit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/cockpit/cockpit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/server-element/server-element.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/server-element/server-element.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/app/server-element/server-element.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/src/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_Components&amp;DatabindingDeepDive/cmp-databinding-start/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/e2e/tsconfig.e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/how-to-use.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/app/cockpit/cockpit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/app/cockpit/cockpit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/app/cockpit/cockpit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/app/server-element/server-element.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/app/server-element/server-element.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/app/server-element/server-element.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/src/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5_ComponentsDatabindingDeepDive/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/e2e/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cockpit/cockpit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cockpit/cockpit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/cockpit/cockpit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server-element/server-element.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server-element/server-element.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/server-element/server-element.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tslint.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1knuxvGHbpSii3zF2fifVSQ1Uzj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (databindingDeepDive)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (databindingDeepDive)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa292502-bd0b-4ab5-98b1-a4340ca33f68" name="Default Changelist" comment="" />
+      <created>1606348927492</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606348927492</updated>
+      <workItem from="1606348929974" duration="7223000" />
+      <workItem from="1606409756114" duration="10307000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

@@ -1,0 +1,222 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+/* ELEMENT POSITIONING */
+
+.container {
+  background-color: #918d8d;
+  position: relative;
+}
+
+.box {
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  line-height: 150px;
+  font-size: 60px;
+  font-weight: 700;
+}
+.box-1 {
+  background-color: #4040ffb6;
+}
+.box-2 {
+  background-color: #ff1500b6;
+}
+.box-3 {
+  background-color: #ff9100b6;
+}
+
+.box:nth-child(2) {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+}
+
+
+/* ЦЕНТРИРОВАНИЕ */
+.wrapper {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  background-color: #a6ffff;
+  border: 4px solid #000;
+}
+.cube {
+  border: 1px solid #000;
+  /* background-color: #88c911; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+/* ФИКСИРОВАННОЕ ПОЗИЦИОНИРОВАНИЕ */
+.fixed {
+  position: fixed;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #000000;
+  right: 50px;
+  top: 100px;
+}
+
+
+
+/* Z-INDEX */
+.container-2 {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  background-color: #c5c5c5;
+  border: 2px dotted #000;
+}
+
+.box-02 {
+  position: absolute;
+  border-radius: 12px;
+  
+}
+.cube-01 {
+  background-color: #01b7ff;
+}
+.cube-02 {
+  background-color: #b721fc;
+}
+.cube-03 {
+  background-color: #00ff0db6;
+}
+
+.box-02:nth-child(1) {
+  width: 250px;
+  height: 250px;
+  z-index: 1;
+}
+.box-02:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+
+}
+.box-02:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  z-index: 3;
+}
+
+
+/* CARD */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.card {
+  width: 270px;
+  padding: 10px;
+  border: 2px solid #424242;
+  text-align: center;
+}
+
+.card-content {
+  position: relative;
+  /* background-color: red; */
+}
+
+.card-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  cursor: pointer;
+  background-image: url('../img/heart.svg');
+}
+
+.card-button:hover {
+  background-image: url('../img/heart-hover.svg');
+}
+
+.card:hover .social-icons {
+  opacity: 1;
+}
+
+.social-icons {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* background-color: red; */
+  transition: opacity 0.3s linear;
+}
+
+.social-icons li {
+  display: inline-block;
+}
+
+.social-icons a {
+  display: block;
+  height: 50px;
+  width: 50px;
+  background-color: teal;
+}
+
+.social-icons a:hover {
+  background-color: palevioletred;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* visually-hidden helper */
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+

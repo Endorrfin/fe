@@ -1,0 +1,60 @@
+
+* {
+  outline: 1px solid #00aefd
+}
+
+body {
+  background-color: #ccc;
+  font-family: sans-serif;
+}
+
+/* PSEUDO ELEMENTS */
+
+h2 {
+  text-align: center;
+}
+
+h2::before {
+  display: block;
+  content: '';
+  width: 50px;
+  height: 2px;
+  background-color: red;
+  margin: 0 auto;
+}
+
+p::before {
+  content: "\21A0";
+  color: blue;
+}
+
+p::after {
+  content: "\21a9";
+  color: red;
+}
+
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: teal;
+  text-align: center;
+  line-height: 100px;
+}
+
+.box span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-color: red;
+}
+
+
+p::selection {
+  color: #fff;
+  background-color:#000;
+}
+
+
+
+

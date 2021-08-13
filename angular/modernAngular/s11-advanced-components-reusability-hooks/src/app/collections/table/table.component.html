@@ -1,0 +1,37 @@
+<table [ngClass]="classNames" class="ui table">
+  <thead>
+    <tr>
+      <th *ngFor="let header of headers">
+        {{ header.label }}
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let record of data">
+      <td>{{ record.name}}</td>
+      <td>{{record.job}}</td>
+      <td>{{record.age}}</td>
+      <td>{{ record.employed }}</td>
+
+    </tr>
+  </tbody>
+</table>
+
+
+
+<!--<table [ngClass]="classNames" class="ui table">-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th>-->
+<!--        {{ headers.keys() }}-->
+<!--      </th>-->
+<!--    </tr>-->
+<!--  </thead>-->
+
+<!--  <tbody>-->
+<!--    <tr>-->
+<!--      <td>{{data.keys()}}</td>-->
+<!--    </tr>-->
+<!--  </tbody>-->
+<!--</table>-->

@@ -1,0 +1,2064 @@
+Last login: Tue Jun  1 07:38:39 on ttys021
+nataly@tretyak-mac frontend % pwd
+/Users/nataly/Desktop/Projects/payOp/frontend
+nataly@tretyak-mac frontend % pwd
+/Users/nataly/Desktop/Projects/payOp/frontend
+nataly@tretyak-mac frontend % pwd
+/Users/nataly/Desktop/Projects/payOp/frontend
+nataly@tretyak-mac frontend % git log
+fatal: not a git repository (or any of the parent directories): .git
+nataly@tretyak-mac frontend % whereami
+zsh: command not found: whereami
+nataly@tretyak-mac frontend % ls 
+account
+nataly@tretyak-mac frontend % cd ..
+nataly@tretyak-mac payOp % ls   
+backend		frontend
+nataly@tretyak-mac payOp % pwd
+/Users/nataly/Desktop/Projects/payOp
+nataly@tretyak-mac payOp % cd frontend/account 
+nataly@tretyak-mac account % pwd
+/Users/nataly/Desktop/Projects/payOp/frontend/account
+nataly@tretyak-mac account % git status
+On branch ST-3195-simplified-pass
+Your branch is ahead of 'origin/ST-3195-simplified-pass' by 5 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+nataly@tretyak-mac account % clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nataly@tretyak-mac account % git log
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+nataly@tretyak-mac account % git rebase -i HEAD-3 -m 'Simplify'
+fatal: invalid upstream 'HEAD-3'
+nataly@tretyak-mac account % git rebase -i HEAD~3 -m 'Simplify'
+fatal: fatal: no such branch/commit 'Simplify'
+nataly@tretyak-mac account % git rebase -i HEAD~3              
+Successfully rebased and updated refs/heads/ST-3195-simplified-pass.
+nataly@tretyak-mac account % git log
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+nataly@tretyak-mac account % git rebase -i HEAD~3
+Successfully rebased and updated refs/heads/ST-3195-simplified-pass.
+nataly@tretyak-mac account % git rebase -i HEAD~3 -s
+error: switch `s' requires a value
+nataly@tretyak-mac account % git rebase -s -i HEAD~3
+Successfully rebased and updated refs/heads/ST-3195-simplified-pass.
+nataly@tretyak-mac account % git log
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+nataly@tretyak-mac account % git rebase -s -i HEAD~3
+Successfully rebased and updated refs/heads/ST-3195-simplified-pass.
+nataly@tretyak-mac account % git rebase -i HEAD~3 
+hint: Waiting for your editor to close the file... error: There was a problem with the editor 'vi'.
+nataly@tretyak-mac account % git rebase HEAD~3   
+Current branch ST-3195-simplified-pass is up to date.
+nataly@tretyak-mac account % git rebase -s HEAD~3
+Successfully rebased and updated refs/heads/ST-3195-simplified-pass.
+nataly@tretyak-mac account % git log
+commit 03757fdc85f4db3aa92974babd2a8fd7a701dabd (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu Jun 3 08:29:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit 34f7eaeee830dbe5e22a381f0f54f2ffb4dd4219
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Mon May 31 13:54:45 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit b024ae07e71ab3f1d17e233d6a7e0ddd413a972e
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+nataly@tretyak-mac account % git rebase -i HEAD~3
+[detached HEAD 841226d6] ST-3199-safetyPay-add-logo-additional-edits
+ Date: Fri May 28 10:18:27 2021 +0300
+ 11 files changed, 75 insertions(+), 40 deletions(-)
+Successfully rebased and updated refs/heads/ST-3195-simplified-pass.
+nataly@tretyak-mac account % git log
+commit 841226d6ba3c64daa0fb0227d5cf9c7724e40dca (HEAD -> ST-3195-simplified-pass)
+commit 841226d6ba3c64daa0fb0227d5cf9c7724e40dca (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+    
+    ST-3195-simplified-pass
+    
+    ST-3195-simplified-pass
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 05:52:24 2021 +0000
+
+    Merge branch 'hotfix_checkut-hide-pdf-download' into 'master'
+    
+    hide_hide-checkout-pdf-download
+    
+    See merge request frontend/account!1225
+
+nataly@tretyak-mac account % git log
+commit 841226d6ba3c64daa0fb0227d5cf9c7724e40dca (HEAD -> ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:18:27 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+    
+    ST-3195-simplified-pass
+    
+    ST-3195-simplified-pass
+
+commit 9af5b0a8b3ab895568dc7588c8113a0d60cd03ac
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 10:17:54 2021 +0300
+
+    ST-3199-safetyPay-add-logo-additional-edits
+
+commit 0eed488f1a1898a1de161a468c2351d682736197
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Fri May 28 07:32:36 2021 +0300
+
+    ST-3195-simplified-pass-additional-edits
+
+commit bf42caf3a05ce8ebf83febe5ab0f60a143f5bc15 (origin/ST-3195-simplified-pass)
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:40 2021 +0300
+
+    ST-3195-simplified-pass
+
+commit f0a384596c4bea53e422ae5d72026a52ea2d5a93
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 15:07:05 2021 +0300
+
+    ST-3195-simplified-pass-service
+
+commit 15e1b74ec9bd3ec077d9f6a75b52f00acadef985
+Author: Vasiliy Krupka <vasiliy.k@payop.com>
+Date:   Thu May 27 14:56:26 2021 +0300
+
+    ST-3195-simplified-pass-validation
+
+commit 220fc30800a183ede1db2099d198b1bb18b73883 (tag: build-26042021.0935)
+Merge: a5c47b13 c9cc924c
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Merge branch 'mass-operation' into 'master'
+    
+    Mass operation
+    
+    See merge request frontend/account!1226
+
+commit c9cc924ccef371916837f90c5b62ec257b336251
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 06:33:01 2021 +0000
+
+    Mass operation:
+    - fix.
+
+commit a5c47b13331761b7828d0f1a88ede49408e67e20 (tag: build-26042021.0854)
+Merge: 2b6599b8 82431e72
+Author: Volodymyr Chyhura <volodymyr.c@payop.com>
+Date:   Wed May 26 05:52:24 2021 +0000
+
+    Merge branch 'hotfix_checkut-hide-pdf-download' into 'master'
+    
+    hide_hide-checkout-pdf-download
+    
+    See merge request frontend/account!1225
+
+nataly@tretyak-mac account % git rebase -i HEAD~3
+[detached HEAD 6340b42e] ST-3195-simplified-pass-additional-edits
+ Date: Fri May 28 07:32:36 2021 +0300
+ 15 files changed, 133 insertions(+), 29 deletions(-)
+ create mode 100644 apps/payop/src/assets/images/icons/icon_visibility-off.svg
+ create mode 100644 apps/payop/src/assets/images/icons/icon_visibility.svg
+Successfully rebased and updated refs/heads/ST-3195-simplified-pass.
+nataly@tretyak-mac account % 

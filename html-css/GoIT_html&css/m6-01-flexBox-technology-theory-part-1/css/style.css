@@ -1,0 +1,115 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* FLEXBOX TECHNOLOGY */
+.flex-container {
+  display: flex;
+  flex-direction: row; /* по умолчанию у display: flex */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  /* align-items: stratch; */
+  /* align-items: flex-start;  */
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  flex-wrap: inherit;
+  flex-wrap: initial;
+  flex-wrap: nowrap;
+  flex-wrap: unset;
+  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
+  padding: 70px;
+  background-color: #212121;
+  /* height: 600px; */
+}
+
+.flex-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  /* line-height: 100px; */
+  width: 100px;
+  background-color: teal;
+  border: 1px solid #fff;
+}
+
+
+.flex-child:nth-child(1) {
+  background-color: #214e34;
+  /* align-self: auto; */
+}
+
+.flex-child:nth-child(2) {
+  background-color: #ffb140;
+  /* align-self: flex-end; */
+}
+
+.flex-child:nth-child(3) {
+  background-color: #d14621;
+  /* align-self: center; */
+}
+
+.flex-child:nth-child(4) {
+  background-color: #197bbd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* visually-hidden helper */
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+

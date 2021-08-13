@@ -1,0 +1,127 @@
+
+/* * {
+  outline: 1px solid #00aefd
+} */
+
+body {
+  background-color: #ccc;
+  font-family: sans-serif;
+}
+
+/* MENU */
+.page-header {
+  outline: 2px solid brown;
+  padding: 20px;
+}
+
+.logo {
+  outline: 2px solid orange;
+  float: left;
+  /* height: 150px; */
+}
+
+.menu {
+  float: right;
+  outline: 2px solid blue;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  float: left;
+}
+
+
+/* LIST  */
+.catalog {
+  width: 1000px;
+  margin: 0 auto;
+  /* margin-bottom: 500px; */
+}
+
+.catalog-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog-list-item {
+  float: left;
+  width: 300px;
+  outline: 1px solid #919090;
+}
+
+.catalog-list-item:not(:nth-child(3n)) {
+  margin-right: 50px;
+}
+
+.catalog-list-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 50px;
+}
+
+.catalog-text {
+  padding: 0 8px;
+}
+ 
+
+
+
+/* FLOAT */
+
+.clearfix::after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.container {
+  padding: 20px;
+  background-color: #424242;
+}
+
+.red {
+  float: right;
+  /* float: left; */
+  height: 60px;
+  width: 100px;
+  background-color: red;
+}
+
+.green {
+  clear: right;
+  float: right;
+  /* float: left;÷] */
+  height: 80px;
+  width: 120px;
+  background-color: green;
+}
+
+.blue {
+  float: right;
+  /* float: left; */
+  height: 100px;
+  width: 140px;
+  background-color: cornflowerblue;
+}
+
+
+/* POST */
+.post {
+  width: 960px;
+  outline: 2px solid red;
+}
+
+p {
+  background-color: #bdbbbb;
+}
+
+.post img {
+  opacity: 0.3;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+
+
