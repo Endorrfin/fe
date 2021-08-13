@@ -1,0 +1,30 @@
+The Modern Angular Bootcamp
+
+Course content
+Section 1: Welcome! Start Here!
+Section 2: Understanding Angular Template Syntax
+Section 3: Building Components
+Section 4: Exercise! Building a Typing Game
+Section 5: Mastering Pipes
+Section 6: Directives in Angular
+Section 7: The Module System
+Section 8: Routing and Navigation Between Pages
+Section 9: Lazy Loading with Modules
+Section 10: Advanced Component Routing
+Section 11: Advanced Component
+Section 12: A Typescript Overview Reusability + Hooks
+Section 13: Handling Data and HTTP Requests
+Section 14: App Security in Angular
+Section 15: RxJs From the Fundamentals
+Section 16: Bonus - Typescript + RxJs!
+Section 17: Exercise! A Photo-Fetching App
+Section 18: Credit Card Payments with Reactive Forms
+Section 19: Simple Data Entry with Template Forms
+Section 20: Build a Fast-Paced Math Game
+Section 21: Custom Validators
+Section 22: Handling Authentication
+Section 23: More on Angular App Security
+Section 24: Build a Real Email Client!
+Section 25: TypeScript - A DEEP Dive
+Section 26: A Multi-Feature Landing Page App
+Section 27: Bonus!
