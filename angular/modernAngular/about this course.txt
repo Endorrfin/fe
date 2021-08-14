@@ -1,4 +1,5 @@
 The Modern Angular Bootcamp
+Stephen Grider Engineering Architect
 
 Course content
 Section 1: Welcome! Start Here!
@@ -29,9 +30,6 @@ Section 25: TypeScript - A DEEP Dive
 Section 26: A Multi-Feature Landing Page App
 Section 27: Bonus!
 
-
-Stephen Grider
-Engineering Architect
 
 By the numbers
 Skill level: All Levels
