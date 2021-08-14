@@ -28,3 +28,15 @@ Section 24: Build a Real Email Client!
 Section 25: TypeScript - A DEEP Dive
 Section 26: A Multi-Feature Landing Page App
 Section 27: Bonus!
+
+
+Stephen Grider
+Engineering Architect
+
+By the numbers
+Skill level: All Levels
+Students: 11590
+Languages: English
+Captions: Yes
+Lectures: 506
+Video: 45.5 total hours
