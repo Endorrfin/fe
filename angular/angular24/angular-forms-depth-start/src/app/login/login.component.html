@@ -1,13 +1,17 @@
 <mat-card class="login-page">
   <mat-card-title>Login</mat-card-title>
   <mat-card-content>
-    <form class="login-form data-form" #loginForm="ngForm">
+    <form
+      class="login-form data-form"
+      #loginForm="ngForm"
+      (ngSubmit)="login(loginForm, $event)">
 
       <mat-form-field appearance="outline">
         <input matInput
-               ngModel #email="ngModel"
+               ngModel [ngModelOptions]="{updateOn: 'blur'}"
+               #email="ngModel"
+               (ngModelChange)="onEmailChange($event)"
                required email minlength="3" maxlength="20"
-               pattern="[a-z]+"
                type="email"
                name="email"
                placeholder="Email">
@@ -31,17 +35,18 @@
 
       <button mat-raised-button
               color="primary"
-              (click)="login(loginForm)">
+              type="submit"
+              [disabled]="!loginForm.valid">
         Login
       </button>
 
     </form>
 
-    <div class="form-val">
-      {{loginForm.value | json}}.
-      {{email.valid}}
-      {{password.valid}}
-    </div>
+<!--    <div class="form-val">-->
+<!--      {{loginForm.value | json}}.-->
+<!--      {{email.valid}}-->
+<!--      {{password.valid}}-->
+<!--    </div>-->
 
 <!--    <div class="form-val">-->
 <!--      {{email.value + ' ' + password.value}}-->
