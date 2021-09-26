@@ -7,7 +7,7 @@ import {createPasswordStrengthValidator} from '../validators/password-strength.v
     selector: "[passwordStrength]",
     providers: [{
         provide: NG_VALIDATORS,
-        useExisting:PasswordStrengthDirective,
+        useExisting: PasswordStrengthDirective,
         multi: true
     }]
 })
