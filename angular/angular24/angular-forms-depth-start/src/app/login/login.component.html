@@ -4,16 +4,21 @@
     <form class="login-form data-form" #loginForm="ngForm">
 
       <mat-form-field appearance="outline">
-        <input matInput type="email"
+        <input matInput
+               ngModel #email="ngModel"
+               type="email"
                name="email"
                placeholder="Email">
       </mat-form-field>
 
       <mat-form-field appearance="outline">
-        <input matInput type="password"
+        <input matInput
+               ngModel #password="ngModel"
+               type="password"
                name="password"
                placeholder="Password">
       </mat-form-field>
+
       <button mat-raised-button
               color="primary"
               (click)="login(loginForm)">
@@ -21,6 +26,14 @@
       </button>
 
     </form>
+
+<!--    <div class="form-val">-->
+<!--      {{loginForm.value | json}}-->
+<!--    </div>-->
+
+    <div class="form-val">
+      {{email.value + ' ' + password.value}}
+    </div>
 
   </mat-card-content>
 </mat-card>
