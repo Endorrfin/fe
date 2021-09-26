@@ -9,18 +9,19 @@ import {NgForm} from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
+  val = {
+    email: 'hello@gmail.com',
+    password: '123456'
+  };
 
-  constructor() {
+  constructor() {}
 
-
-  }
-
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   login(loginForm: NgForm, submit) {
     console.log(loginForm.value, loginForm.valid, submit);
+
+    console.log('val', this.val);
   }
 
   onEmailChange(change) {
