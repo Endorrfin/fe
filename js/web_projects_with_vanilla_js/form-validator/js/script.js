@@ -9,29 +9,53 @@ const password2 = document.getElementById('password2');
 // SHOW INPUT ERROR MESSAGE
 function showError (input, message) {
     const formControl = input.parentElement;
-    formControl.className = 'form-controll error';
+    formControl.className = 'form-control error';
     const small = formControl.querySelector('small');
     small.innerText = message;
 }
 
-// SHOW INPUT SUCCESS OUTLINE
+// SHOW SUCCESS OUTLINE
 function showSuccess(input) {
     const formControl = input.parentElement;
     formControl.className = 'form-control success';
+}
+
+// CHECK EMAIL IS VALID
+function isValidEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
 }
 
 // EVENT LISTENERS
 form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    if (username === '' ) {
+    if (username === '') {
         showError(username, 'Username is required');
     } else {
         showSuccess(username)
     }
 
+    if (email === '') {
+        showError(email, 'Email is required');
+    } else if (!isValidEmail(email.value)) {
+        showError(email, "Email is not valid")
+    } else {
+        showSuccess(email)
+    }
 
+    if (password === '') {
+        showError(password, 'Password is required');
+    } else {
+        showSuccess(password)
+    }
 
-    console.log(username.value);
-    console.log('submit');
+    if (password2 === '') {
+        showError(password2, 'Password 2 is required');
+    } else {
+        showSuccess(password2)
+    }
+
+    // console.log(username.value);
+    // console.log('submit');
 });
