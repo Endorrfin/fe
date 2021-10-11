@@ -1,0 +1,37 @@
+<form [formGroup]="tableForm">
+
+  <mat-table formArrayName="users" [dataSource]="dataSource">
+
+    <ng-container cdkColumnDef="position">
+      <mat-header-cell *cdkHeaderCellDef> No. </mat-header-cell>
+      <mat-cell *cdkCellDef="let row let rowIndex = index"  [formGroupName]="rowIndex">
+        <input type="text" size="2" formControlName="position"> </mat-cell>
+    </ng-container>
+
+
+    <ng-container cdkColumnDef="name">
+      <mat-header-cell *cdkHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *cdkCellDef="let row let rowIndex = index"  [formGroupName]="rowIndex">
+        <input type="text" size="7" formControlName="name">
+      </mat-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="weight">
+      <mat-header-cell *cdkHeaderCellDef> Weight </mat-header-cell>
+      <mat-cell *cdkCellDef="let row let rowIndex = index"  [formGroupName]="rowIndex">
+        <input type="text" size="3" formControlName="weight">
+      </mat-cell>
+    </ng-container>
+
+    <ng-container cdkColumnDef="symbol">
+      <mat-header-cell *cdkHeaderCellDef> Symbol </mat-header-cell>
+      <mat-cell *cdkCellDef="let row let rowIndex = index"  [formGroupName]="rowIndex">
+        <input type="text" size="2" formControlName="symbol">
+      </mat-cell>
+    </ng-container>
+
+    <!-- Header and Row Declarations -->
+    <mat-header-row *cdkHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *cdkRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</form>
