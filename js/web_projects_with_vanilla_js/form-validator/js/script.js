@@ -2,7 +2,7 @@ const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+const confirmPassword = document.getElementById('confirmPassword');
 
 
 
@@ -26,36 +26,57 @@ function isValidEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
+// CHECK REQUIRED FIELDS
+function checkRequired(inputArr) {
+    inputArr.forEach(function(input) {
+        if (input.value.trim() === '') {
+            // console.log(input.id);
+            showError(input, `${getFieldName(input)} is required`);
+        } else {
+            showSuccess(input)
+        }
+        console.log(input);
+        console.log(input.value);
+    })
+
+    // if (username.value === '') {
+    //     showError(username, 'Username is required');
+    // } else {
+    //     showSuccess(username)
+    // }
+    //
+    // if (email.value === '') {
+    //     showError(email, 'Email is required');
+    // } else if (!isValidEmail(email.value)) {
+    //     showError(email, "Email is not valid")
+    // } else {
+    //     showSuccess(email)
+    // }
+    //
+    // if (password.value === '') {
+    //     showError(password, 'Password is required');
+    // } else {
+    //     showSuccess(password)
+    // }
+    //
+    // if (confirmPassword.value === '') {
+    //     showError(confirmPassword, 'Confirm password is required');
+    // } else {
+    //     showSuccess(confirmPassword)
+    // }
+}
+
+// GET FIELD NAME
+function getFieldName(input) {
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
+
 // EVENT LISTENERS
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-
-    if (username === '') {
-        showError(username, 'Username is required');
-    } else {
-        showSuccess(username)
-    }
-
-    if (email === '') {
-        showError(email, 'Email is required');
-    } else if (!isValidEmail(email.value)) {
-        showError(email, "Email is not valid")
-    } else {
-        showSuccess(email)
-    }
-
-    if (password === '') {
-        showError(password, 'Password is required');
-    } else {
-        showSuccess(password)
-    }
-
-    if (password2 === '') {
-        showError(password2, 'Password 2 is required');
-    } else {
-        showSuccess(password2)
-    }
-
-    // console.log(username.value);
     // console.log('submit');
+    // console.log(username);
+    // console.log(username.value);
+
+    checkRequired([username, email, password, confirmPassword]);
 });
