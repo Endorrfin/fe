@@ -58,6 +58,54 @@ const user: User = {
     name: 'John',
 }
 
+// Type Assertion
+let cid: any = 1;
+// let customerId: <number>cid;
+let customerId = cid as number
+
+// Functions
+function  addNum(x: number, y: number): number {
+    return x * y;
+}
+
+console.log('addNum', addNum( 3, 4));
+
+
+// Void
+function  log(message: string | number): void {
+    console.log(message);
+}
+
+// console.log(log(true));
+console.log(log("Hello 2021 year"));
+
+
+// Iterfaces
+interface IUserInterface {
+    readonly id: number,
+    name: string,
+    isAdmin: boolean
+}
+
+const user1: IUserInterface = {
+    id: 1,
+    name: 'Zak',
+    isAdmin: false
+}
+
+type Point = number | string;
+const p1: Point = '1';
+
+// user1.id = 4; // Attempt to assign to const or readonly variable
+
+interface MathFunc {
+    (x: number, y: number): number
+}
+
+const add: MathFunc = (x: number, y: number): number => x + y;
+const sub: MathFunc = (x: number, y: number): number => x - y;
+
+
 
 
 

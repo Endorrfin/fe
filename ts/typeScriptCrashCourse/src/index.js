@@ -1,24 +1,24 @@
 "use strict";
 // Basic Types
-let id = 5;
+var id = 5;
 console.log('ID: ', id);
-let company = 'Traversy Media';
-let isPublished = true;
-let x = 'Hello';
-let ids = [1, 2, 3, 4, 5];
+var company = 'Traversy Media';
+var isPublished = true;
+var x = 'Hello';
+var ids = [1, 2, 3, 4, 5];
 // ids.push('Hello');
-let arr = [1, true, 'Hello'];
+var arr = [1, true, 'Hello'];
 // Tuple
-let person = [1, 'Brad', true];
+var person = [1, 'Brad', true];
 //Tuple Array
-let employee;
+var employee;
 employee = [
     [1, 'Brad'],
     [2, 'John'],
     [3, 'Jill'],
 ];
 // Union
-let pid = 22;
+var pid = 22;
 pid = '22';
 // Enum
 var Direction1;
@@ -37,3 +37,22 @@ var Direction2;
     Direction2["Right"] = "Right";
 })(Direction2 || (Direction2 = {}));
 console.log('Enum Direction2', Direction2.Left);
+var user = {
+    id: 1,
+    name: 'John',
+};
+// Type Assertion
+var cid = 1;
+// let customerId: <number>cid;
+var customerId = cid;
+// Functions
+function addNum(x, y) {
+    return x * y;
+}
+console.log('addNum', addNum(3, 4));
+// Void
+function log(message) {
+    console.log(message);
+}
+// console.log(log(true));
+console.log(log("Hello 2021 year"));
