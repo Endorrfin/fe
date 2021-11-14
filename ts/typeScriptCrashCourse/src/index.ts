@@ -147,6 +147,27 @@ const emp = new Employee(3, 'Kir', 'Developer');
 
 console.log(emp.name, emp.register());
 
+// Generics.
+
+// example I
+function getArray(items: any[]): any[] {
+    return new Array().concat(items);
+}
+
+let numArray = getArray([1, 3, 5, 7]);
+let strArray = getArray(['Brad', 'John', 'Jill', 'Steve']);
+
+numArray.push('Hector');
+
+// example II
+function getArrayGenerics<T>(items: T[]): T[] {
+    return new Array().concat(items);
+}
+
+let numArrayGenerics = getArrayGenerics<number>([1, 3, 5, 7]);
+let strArrayGenerics = getArrayGenerics<string>(['Brad', 'John', 'Jill', 'Steve']);
+
+// numArrayGenerics.push('Hector'); // Argument of type 'string' is not assignable to parameter of type 'number'.
 
 
 
