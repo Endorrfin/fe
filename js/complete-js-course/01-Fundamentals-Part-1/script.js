@@ -502,3 +502,5 @@ GOOD LUCK 😀
 
 
 
+// ============ 30 JAVASCRIPT RELEASES ES5, ES6+ AND ESNEXT ============
+// Theory
