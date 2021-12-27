@@ -479,7 +479,7 @@ GOOD LUCK 😀
 // console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
 
 
-// ============ 25 CODING CHALLENGE #4 ============
+// ============ 29 CODING CHALLENGE #4 ============
 /*
 Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his country, it's
  usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
