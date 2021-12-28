@@ -105,6 +105,36 @@
 // console.log(fruitProcessor(2, 3));
 
 
+// ============ 37 Reviewing Functions ============
+
+// Function declaration - function than can be used before it's declared;
+// Function expression - Essentially a function value stored in a variable;
+// Arrow function - Creat for a quick one-line function. Has no this keyword (more later...)
+
+// const calcAge = function(birthYear) {
+//     return 2037 - birthYear;
+// }
+//
+// const yearsUntilRetirement = function (birthYear, firstName) {
+//     const age = calcAge(birthYear);
+//     const retirement = 65 - age;
+//
+//     if (retirement > 0) {
+//         console.log(`${firstName} retires in ${retirement} years`);
+//         return retirement;
+//     } else {
+//         console.log(`${firstName} has already retired :)`);
+//         return -1;
+//     }
+// }
+//
+// console.log(yearsUntilRetirement(1991, 'Jonas'));
+// console.log(yearsUntilRetirement(1970, 'Mike'));
+
+
+
+
+
 
 
 
