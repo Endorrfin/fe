@@ -1,14 +1,23 @@
-// import { Observable, fromEvent } from 'rxjs';
-// import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+
+const observer = {
+    next: value => console.log('next', value),
+    error: error => console.log('error', error),
+    complete: () => console.log('complete!')
+};
 
 
-const { Observable, fromEvent } = rxjs;
-const { map } = rxjs/operators;
+const observable = new Observable(subscriber => {
+    subscriber.next('Hello');
+    subscriber.next('World');
+    subscriber.complete();
+    subscriber.next('Hello');
+    subscriber.next('World');
+})
 
-range(1, 200).pipe(
-    filter(x => x % 2 === 1),
-    map(x => x + x)
-).subscribe(x => console.log(x));
+observable.subscribe(observer);
+    // observer here
+
 
 
 
