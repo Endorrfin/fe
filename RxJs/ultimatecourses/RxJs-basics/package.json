@@ -1,7 +1,6 @@
 {
   "name": "RxJs-basics",
   "version": "1.0.0",
-  "private": true,
   "dependencies": {
     "rxjs": "^7.5.1"
   }
