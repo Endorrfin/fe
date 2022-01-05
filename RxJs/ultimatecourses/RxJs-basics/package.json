@@ -1,7 +1,17 @@
 {
-  "name": "RxJs-basics",
+  "name": "rxjs-basics",
   "version": "1.0.0",
+  "description": "",
+  "main": "sample.js",
   "dependencies": {
-    "rxjs": "^7.5.1"
-  }
+    "parcel-bundler": "^1.12.3",
+    "rxjs": "^6.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "KvN",
+  "license": "MIT"
 }
