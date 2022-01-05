@@ -1,4 +1,5 @@
-import { of } from 'rxjs';
+import { Observable, fromEvent, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 /*
  * Any code samples you want to play with can go in this file.
