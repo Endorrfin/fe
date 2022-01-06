@@ -6,6 +6,6 @@ import { map } from 'rxjs/operators';
  * Updates will trigger a live reload on http://localhost:1234/
  * after running npm start.
  */
-of('Hello', 'RxJs-Basic').subscribe(console.log);
+of('Hello', 'RxJs-Basic!').subscribe(console.log);
 
 
