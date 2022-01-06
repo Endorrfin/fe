@@ -8,4 +8,14 @@ import { map } from 'rxjs/operators';
  */
 of('Hello', 'RxJs-Basic!').subscribe(console.log);
 
+const observer = {
+    next: value => console.log('next', value),
+    error: error => console.log('error', value),
+    complete: () => console.log('complete!')
+}
 
+const observable = new Observable(subscriber => {
+    subscriber.next('Hello');
+})
+
+observable.subscribe(observer)
