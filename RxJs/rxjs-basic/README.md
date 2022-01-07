@@ -56,3 +56,12 @@ After running npm start you can navigate to the development server running on ht
 Any changes made to the sample.js file will trigger an automatic reload.
 
 
+6 Manage Observable Subscriptions
+Chapter Recap
+1. Observable are push based
+2. Observables are cold (by efault)
+3. Observables can emit multiple values
+4. Observables can deliver values both synchronous and asynchronously
+5. Observables can be canceled
+
+
