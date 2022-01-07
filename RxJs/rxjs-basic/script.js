@@ -1,5 +1,9 @@
-import { Observable, fromEvent, of } from 'rxjs';
+import { Observable, fromEvent, of, range } from 'rxjs';
 import { map } from 'rxjs/operators';
+
+function hello() {
+    return 'Hello World!';
+}
 
 const observer = {
     next: val => console.log('next', val),
@@ -7,18 +11,9 @@ const observer = {
     complete: () => console.log('complete!')
 };
 
+// const source$ = of(1,2,3,4,5);
+// const source$ = of([1],2,3,[4],5);
+const source$ = range(1, 11);
 
-// const source$ = fromEvent(document, 'click');
-const source$ = fromEvent(document, 'keyup');
-
-// source$.subscribe(observer);
-
-
-const subOne = source$.subscribe(observer);
-const subTwo = source$.subscribe(observer);
-
-
-setTimeout(() => {
-    console.log('unsubscribing');
-    subOne.unsubscribe();
-}, 3000)
+source$.subscribe(observer);
+console.log(hello());
