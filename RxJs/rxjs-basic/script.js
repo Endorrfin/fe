@@ -1,34 +1,24 @@
 import { Observable, fromEvent, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-
 const observer = {
-    next: value => console.log('next', value),
-    error: error => console.log('error', value),
+    next: val => console.log('next', val),
+    error: err => console.log('error', err),
     complete: () => console.log('complete!')
-}
+};
 
-const observable = new Observable(subscriber => {
-    let count = 0;
 
-    const id = setInterval(() => {
-        subscriber.next(count);
-        // subscriber.complete();
-        count += 1;
-    }, 1000);
+// const source$ = fromEvent(document, 'click');
+const source$ = fromEvent(document, 'keyup');
 
-    return () => {
-        console.log('called');
-        clearInterval(id);
-    }
-});
+// source$.subscribe(observer);
 
-const subscription = observable.subscribe(observer);
-const subscriptionTwo = observable.subscribe(observer);
 
-subscription.add(subscriptionTwo);
+const subOne = source$.subscribe(observer);
+const subTwo = source$.subscribe(observer);
+
 
 setTimeout(() => {
-    subscription.unsubscribe();
-    // subscriptionTwo.unsubscribe();
-}, 3500);
+    console.log('unsubscribing');
+    subOne.unsubscribe();
+}, 3000)
