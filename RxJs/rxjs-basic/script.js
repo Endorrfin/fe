@@ -4,16 +4,18 @@ import { map } from 'rxjs/operators';
 
 const observer = {
     next: value => console.log('next', value),
-    error: error => console.log('error', value),
-    complete: () => console.log('complete!')
+    // error: error => console.log('error', value),
+    // complete: () => console.log('complete!')
 }
 
 const observable = new Observable(subscriber => {
     subscriber.next('Hello');
     subscriber.next('Wold');
     subscriber.complete();
-    subscriber.next('Hello');
-    subscriber.next('Wold');
 })
 
-observable.subscribe(observer)
+observable.subscribe(
+    value => console.log('next', value),
+    error => console.log('error', error),
+    () => console.log('complete')
+);
