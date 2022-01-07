@@ -8,12 +8,6 @@ const observer = {
     complete: () => console.log('complete!')
 }
 
-// const observable = new Observable(subscriber => {
-//     subscriber.next('Hello');
-//     subscriber.next('Wold');
-//     subscriber.complete();
-// })
-
 const observable = new Observable(subscriber => {
     let count = 0;
 
