@@ -1,4 +1,5 @@
 import { Observable, fromEvent, of, range, from, interval, timer } from 'rxjs';
+import { map, pluck, mapTo } from 'rxjs/operators';
 
 
 // ============ RXJS BASIC - 1 The Missing Introduction to RxJS ============
@@ -255,6 +256,40 @@ Recap - Pipeable Operators
 
 // ============ RXJS BASIC - 15 Introducing Marble Diagrams ============
 // theory
+
+
+
+// ============ RXJS BASIC - 16 map ============
+
+// of(1,2,3,4,5).subscribe(console.log);
+
+// of(1,2,3,4,5).pipe(
+//     map(value => value * 10)
+// ).subscribe(console.log);
+
+// const keyup$ = fromEvent(document, 'keyup');
+//
+// const keycode$ = keyup$.pipe(
+//     map(event => event.code)
+// );
+//
+// const keycodeWithPluck$ = keyup$.pipe(
+//     pluck('code')
+// );
+//
+// const pressed$ = keyup$.pipe(
+//     mapTo('Key Pressed!')
+// )
+
+// keyup$.subscribe(console.log);
+// keycode$.subscribe(console.log);
+// keycodeWithPluck$.subscribe(console.log);
+// pressed$.subscribe(console.log);
+
+
+
+
+
 
 
 
