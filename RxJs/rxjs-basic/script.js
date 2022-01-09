@@ -242,6 +242,16 @@ import { Observable, fromEvent, of, range, from, interval, timer } from 'rxjs';
 
 
 
+// ============ RXJS BASIC - 14 Introduction to Pipeable Operators ============
+
+/*
+Recap - Pipeable Operators
+1. Operators are the power behind RxJS, letting you more easily compose complex asynchronous code
+2. Operators can be applied by including them in the pipe method
+3. Operators return a new observable without modifying the input observable
+4. A core set of operators can solve the majority of use cases, while others can be picked up as the situation arises
+*/
+
 
 
 
