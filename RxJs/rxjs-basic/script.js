@@ -1,4 +1,4 @@
-import { Observable, fromEvent, of, range, from } from 'rxjs';
+import { Observable, fromEvent, of, range, from, interval, timer } from 'rxjs';
 
 
 // ============ RXJS BASIC - 1 The Missing Introduction to RxJS ============
@@ -175,7 +175,7 @@ import { Observable, fromEvent, of, range, from } from 'rxjs';
 
 
 
-// ============ RXJS BASIC - RxJS Basics - 10 of & range ============
+// ============ RXJS BASIC - 10 of & range ============
 
 // function hello() {
 //     return 'Hello World!';
@@ -196,7 +196,7 @@ import { Observable, fromEvent, of, range, from } from 'rxjs';
 
 
 
-// ============ RXJS BASIC - RxJS Basics - 11 from ============
+// ============ RXJS BASIC - 11 from ============
 
 // function* hello() {
 //     yield 'Hello';
@@ -224,4 +224,15 @@ import { Observable, fromEvent, of, range, from } from 'rxjs';
 //
 //
 // source$.subscribe(observer);
+
+
+
+// ============ RXJS BASIC - 12 interval ============
+
+// const timerInterval$ = interval(1000);
+// const timerTimer$ = interval(2000, 1000);
+
+// timerInterval$.subscribe(console.log);
+// timerTimer$.subscribe(console.log);
+
 
