@@ -466,6 +466,70 @@ GOOD LUCK 😀
 
 
 
+// ============ 47 Looping Arrays, Breaking and Continuing ============
+
+// const jonas = [
+//     'Jonas',
+//     'Shmedtmann',
+//     2037 - 1991,
+//     'teacher',
+//     ['Michael', 'Peter', 'Steven'],
+//     true
+// ];
+//
+// const types = [];
+//
+// // console.log(jonas[0]);
+// // console.log(jonas[1]);
+// // ...
+// // console.log(jonas[4]);
+// // jonas[5]; does NOT exist
+//
+// for (let i = 0; i < jonas.length; i++ ) {
+//     // console.log(jonas[i]);
+//     // Reading from jonas array
+//     console.log(jonas[i], typeof jonas[i]);
+//
+//     // Filing types array
+//     // types[i] = typeof jonas[i];
+//     types.push(typeof jonas[i]);
+// }
+//
+// // types[0] = 'string';
+// console.log(types);
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+//
+// for (let i = 0; i < years.length; i++) {
+//     ages.push(2037 - years[i]);
+// }
+// console.log(ages); // [46, 30, 68, 17]
+//
+//
+// // continue and break
+// console.log('--- ONLY STRINGS ---');
+// for (let i = 0; i < jonas.length; i++ ) {
+//     if(typeof jonas[i] !== 'string') continue;
+//
+//     console.log(jonas[i], typeof jonas[i]);
+// }
+//
+//
+//
+// console.log('--- BREAK WITH NUMBER ---');
+// for (let i = 0; i < jonas.length; i++ ) {
+//     if(typeof jonas[i] === 'number') break;
+//
+//     console.log(jonas[i], typeof jonas[i]);
+// }
+
+
+
+
+
+
+
+
 
 
 
