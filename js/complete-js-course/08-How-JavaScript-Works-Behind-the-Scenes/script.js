@@ -1,5 +1,7 @@
 'use strict'
 
+// ============ 93 Scoping in Practice ============
+
 function calcAge(birthYear) {
     const age = 2037 - birthYear;
 
@@ -37,3 +39,33 @@ calcAge(1991);
 
 // console.log(age);
 // printAge();
+
+
+
+// ============ 94 Variable Environment Hoisting and The TDZ ============
+
+const myName = 'Jonas'
+
+if (myName === 'Jonas') {
+    console.log(`Jonas is a ${job}`);
+    const age = 2037 - 1989;
+    console.log(age);
+    const job = 'teacher';
+    console.log(x);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
