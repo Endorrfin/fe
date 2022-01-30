@@ -1,0 +1,12 @@
+Directory content
+
+0. HTML & CSS
+1. JavaScript
+2. Angular
+3. Angular Material
+4. NgRx
+5. RxJs
+6. TypeScript
+7. Interview
+8. Algorithms
+9. Templates
