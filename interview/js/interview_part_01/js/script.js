@@ -1,12 +1,7 @@
-/**
-|--------------------------------------------------
-| ======= <<<--- TASK #1 - palindrome --->>>  =======
-|--------------------------------------------------
-*/
-
 /*
+ TASK palindrome
 Написать функцию, которая проверяет, является ли строка палиндромом, или нет. Вернуть false или
-true. Примечание: Палиндро́м - пе́ревертень — число, буквосочетание, слово или текст, 
+true. Примечание: Палиндро́м - пе́ревертень — число, буквосочетание, слово или текст,
 одинаково читающееся в обоих направлениях.
 */
 
@@ -93,12 +88,10 @@ if (count != 0) {
 
 
 
-/**
-|--------------------------------------------------
-| ======= <<<--- TASK #3 - Конем ходи --->>>  =======
-Написать с помощью javaScript код, который будет визуализировать все возможные ходы конем на шахматной доске!
-|--------------------------------------------------
-*/
+
+// ======= Написать с помощью javaScript код, который будет визуализировать все возможные ходы конем на шахматной
+// доске! =======
+
 
 // Создаем двумерный массив, который характеризует модель шахматной доски
 let chess = [
@@ -162,25 +155,25 @@ function horse() {
   // Прописываем правила для проверки возможных ходов
   // Атрибут data - это всегда строка, поэтому добавляем "+" перед всеми x & y для преобразования результата string в number
   if(+x + 2 < 8 && +y + 1 < 8) {
-    document.querySelector(`.chess-block[data-x="${+x + 2}"][data-y="${+y + 1}"]`).classList.add('active'); 
+    document.querySelector(`.chess-block[data-x="${+x + 2}"][data-y="${+y + 1}"]`).classList.add('active');
   }
   if(+x + 2 < 8 && +y - 1 >=0) {
     document.querySelector(`.chess-block[data-x="${+x + 2}"][data-y="${+y - 1}"]`).classList.add('active');
   }
   if(+x - 2 >=0 && +y + 1 < 8) {
-    document.querySelector(`.chess-block[data-x="${+x - 2}"][data-y="${+y + 1}"]`).classList.add('active'); 
+    document.querySelector(`.chess-block[data-x="${+x - 2}"][data-y="${+y + 1}"]`).classList.add('active');
   }
   if(+x - 2 >=0 && +y - 1 >=0) {
     document.querySelector(`.chess-block[data-x="${+x - 2}"][data-y="${+y - 1}"]`).classList.add('active');
   }
   if(+x + 1 < 8 && +y - 2 >=0) {
-    document.querySelector(`.chess-block[data-x="${+x + 1}"][data-y="${+y - 2}"]`).classList.add('active'); 
+    document.querySelector(`.chess-block[data-x="${+x + 1}"][data-y="${+y - 2}"]`).classList.add('active');
   }
   if(+x - 1 >=0 && +y - 2 >=0) {
     document.querySelector(`.chess-block[data-x="${+x - 1}"][data-y="${+y - 2}"]`).classList.add('active');
   }
   if(+x + 1 < 8 && +y + 2 < 8) {
-    document.querySelector(`.chess-block[data-x="${+x + 1}"][data-y="${+y + 2}"]`).classList.add('active'); 
+    document.querySelector(`.chess-block[data-x="${+x + 1}"][data-y="${+y + 2}"]`).classList.add('active');
   }
   if(+x - 1 >=0 && +y + 2 < 8) {
     document.querySelector(`.chess-block[data-x="${+x - 1}"][data-y="${+y + 2}"]`).classList.add('active');
@@ -196,42 +189,10 @@ function horse() {
 //      if (  thisCoord[0] + value[0] >= 0  && thisCoord[0] + value[0] < 8 &&
 //         thisCoord[1] + value[1] >= 0  && thisCoord[1] + value[1] < 8) {
 //         return value
-//      }   
+//      }
 //   })
 //   moves.forEach(value => {
 //      document.querySelector(`[data-x="${thisCoord[0] + value[0]}"][data-y="${thisCoord[1] + value[1]}"]`).classList.toggle('horse')
 //   })
 // }
 
-
-
-
-
-/**
-|--------------------------------------------------
-| ======= <<<--- TASK #4 -  --->>>  =======
-|--------------------------------------------------
-*/
-/*
-
-*/
-
-/**
-|--------------------------------------------------
-| ======= <<<--- TASK #5 -  --->>>  =======
-|--------------------------------------------------
-*/
-/*
-/*
-
-*/
-
-
-/**
-|--------------------------------------------------
-| ======= <<<--- TASK #6 -  --->>>  =======
-|--------------------------------------------------
-*/
-/* 
-
-*/
