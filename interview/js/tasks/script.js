@@ -324,6 +324,8 @@ The sort method changes the original array.
 // const arrayBinary = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 // let count = 0;
 //
+//
+// // Option I
 // function binarySearch(array, item) {
 //     let start = 0;
 //     let end = array.length;
@@ -349,6 +351,24 @@ The sort method changes the original array.
 //
 // console.log(binarySearch(arrayBinary, 15));
 // console.log(count);
+//
+// // Option II
+// function recursiveBinarySearch(array, item, start, end) {
+//     let middle = Math.floor((start + end) / 2);
+//     count ++;
+//     if (item === array[middle]) {
+//         return middle
+//     }
+//     if (item < array[middle]) {
+//         return recursiveBinarySearch(array, item, 0, middle - 1)
+//     } else {
+//         return recursiveBinarySearch(array, item, middle + 1, end)
+//     }
+// }
+//
+// console.log(recursiveBinarySearch(arrayBinary, 15, 0, arrayBinary.length));
+// console.log(count);
+
 
 
 // ============ 09 SELECTION SORT ============
@@ -401,12 +421,62 @@ The sort method changes the original array.
 
 
 
+// ============ 11 BUBBLE SORT ============
+// const arr = [0,3,2,5,6,8,1,9, 44, 59, 4,2,1,2,9,6,4,1,7,-1, -5, 23,6,2,35,6,3,32, 2,9,6,4,1,7,-1, -5, 23,6,2,3, 2,9,6,4,1,7,-1, -5, 23,6,2,3] // [0,1,1,2,3.......]
+// let count = 0;
+//
+// function quickSort(array) {
+//     if (array.length <= 1) {
+//         return array;
+//     }
+//     let pivotIndex = Math.floor(array.length / 2);
+//     let pivot = array[pivotIndex];
+//     let less = [];
+//     let greater = [];
+//     for (let i = 0; i < array.length; i++) {
+//         count ++;
+//         if (i === pivotIndex)
+//             continue;
+//         if (array[i] < pivot) {
+//             less.push(array[i])
+//         } else {
+//             greater.push(array[i])
+//         }
+//     }
+//     return [...quickSort(less), pivot, ...quickSort(greater)];
+// }
+//
+// console.log(quickSort(arr));
+// console.log(arr.length);
+// console.log('count', count);
 
 
 
+// ============ 12 RECURSION | FACTORIAL ============
+
+// const factorial = (n) => {
+//     if (n === 1) {
+//         return 1;
+//     }
+//     return n * factorial(n - 1)
+// }
+//
+// console.log(factorial(5));
+// console.log(factorial(8));
 
 
 
+// ============ 13 RECURSION | FIBONACCI ============
+
+// const fibonacci = (n) => {
+//     if (n === 1 || n === 2) {
+//         return 1;
+//     }
+//     return fibonacci(n - 1) + fibonacci(n - 2)
+// }
+//
+// console.log(fibonacci(5));
+// console.log(fibonacci(8));
 
 
 
