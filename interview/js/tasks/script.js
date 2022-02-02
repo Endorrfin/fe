@@ -480,11 +480,150 @@ The sort method changes the original array.
 
 
 
+// ============ 14 SEARCH the MOST SHORT WORD in the SENTENCE ============
+/*
+    Написать функцию поиска самого короткого слова в предложении.
+ */
+
+// // Base
+// function findShortBase(string) {
+//     const wordsArr = string.split(' ');
+//     console.log('wordsArr', wordsArr);
+//     const sortedWordsArr = [...wordsArr].sort((a, b) => {
+//         return a.length - b.length;
+//     });
+//     console.log('sortedWordsArr', sortedWordsArr);
+//     return sortedWordsArr[0];
+// }
+//
+// console.log(findShortBase('The number of arguments is different from the number of parameters specified in a function'));
+//
+//
+// // Advanced
+// function findShortAdvanced(string) {
+//     return string
+//         .split(' ')
+//         .sort(function(a, b) { return a.length - b.length;})[0];
+// }
+//
+// console.log(findShortAdvanced('The number of arguments is different from the number of parameters specified in the function'));
+//
+//
+// // ES6
+// const findShortES6 = string =>
+//     string
+//         .split(' ')
+//         .sort((a, b) => a.length - b.length)[0];
+//
+// console.log(findShortES6('The number of arguments is different from the number of parameters specified in the function'));
 
 
 
+// ============ 15 FUNCTION CREATE INITIALS ============
+/*
+    Написать функцию, которая из имени будет выдвать инициалы с большой буквы.
+ */
+
+// // Base
+// function toInitialsBase (name) {
+//     const nameArr = name.split(' ');
+//     const firstLetterArr = nameArr.map(function(el) {
+//         return el.slice(0, 1).toUpperCase() + '.';
+//     });
+//     let initials = firstLetterArr.join('');
+//     return initials
+// }
+//
+// console.log(toInitialsBase('Bill Gates'));
+// console.log(toInitialsBase('elon mask'));
+//
+// // Advanced
+// function toInitialsAdvanced (name) {
+//     return name
+//         .split(' ')
+//         .map(function(el) {
+//         return el.slice(0, 1).toUpperCase() + '.';
+//     })
+//     .join('');
+// }
+//
+// console.log(toInitialsAdvanced('Julia Roberts'));
+// console.log(toInitialsAdvanced('bob dilan'));
+//
+//
+// // ES6
+// const toInitialsES6 = name =>
+//     name
+//         .split(' ')
+//         .map((el) => `${el.slice(0, 1).toUpperCase()}.`)
+//         .join('');
+//
+// console.log(toInitialsES6('Kent Khovand'));
+// console.log(toInitialsES6('leonid kravchuk'));
 
 
+
+// ============ 15 FUNCTION MIN & MAX VALUE ============
+/*
+    Написать функцию возвращающую минимальное и максимальное значение в массиве.
+ */
+// const array = [2, 9, 10, 25, 47, 4, 1];
+//
+// // Base
+// function minMaxBase(arr) {
+//     const result = [];
+//     const minValue = Math.min.apply(null, arr);
+//     console.log('minValue', minValue);
+//     const maxValue = Math.max.apply(null, arr);
+//     console.log('maxValue', maxValue);
+//     return result.push(minValue, maxValue);
+// }
+// console.log(minMaxBase(array));
+//
+//
+// // Advanced
+// function minMaxAdvanced(arr) {
+//     return [Math.min.apply(null, arr), Math.max.apply(null, arr)];
+// }
+// console.log(minMaxAdvanced(array));
+//
+//
+// // ES6
+// const minMaxES6 = (arr) => [Math.min(...arr), Math.max(...arr)];
+// console.log(minMaxES6(array));
+//
+//
+// // Add
+// function  minMax(arr){
+//     return [arr.sort().shift()].concat([arr.sort().pop()]);
+// }
+// console.log(minMax(array));
+// console.log(minMax([2, 6, 23, 34, 6, 6, 78, 99, 123, 666, 4444, 1]));
+
+
+
+// ============ 16 FUNCTION RETURN UNIQUE VALUE ============
+/*
+    Написать функцию возвращающую уникальные значения из массива или нескольких массивов.
+ */
+// Base
+function uniteUniqueBase() {
+    const arr = [...arguments];
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(...arr[i]);
+    }
+    newArr = new Set(newArr);
+    return [...newArr];
+}
+console.log(uniteUniqueBase());
+
+
+// Advanced
+function uniteUniqueAdvanced() {
+    return [...new Set([...arguments].flat())];
+}
+console.log(uniteUniqueAdvanced());
 
 
 
