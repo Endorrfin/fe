@@ -259,25 +259,32 @@ The sort method changes the original array.
     [1,1,2,2,3,4,5,5] -> [3,4]
  */
 
-// // Option I
-// function uniqueValue(arr) {
+// function uniqueValue(array) {
 //     const result = [];
-//     for (let i = 0; i < arr.length; i++) {
+//     for (let i = 0; i < array.length; i++) {
+//         console.log('===== i =====', i);
 //         let count = 0;
-//         for (let j = 0; j < arr.length; j++) {
-//             if (arr[i] === arr[j]) {
+//         for (let k = 0; k < array.length; k++) {
+//             console.log('+ k +', k);
+//             if (array[i] === array[k]) {
 //                 count++;
+//                 console.log('--- count', count);
 //             }
 //         }
 //
 //         if (count === 1) {
-//             result.push(arr[i])
+//             result.push(array[i]);
 //         }
 //     }
+//
 //     return result;
+//
 // }
 //
-// console.log(uniqueValue([1, 3, 4, 2, 3, 4, 6, 6, 8, 3, 9]));
+// console.log(uniqueValue([0, 1, 2, 2, 0]));
+// console.log(uniqueValue([1,1,2,2,3,4,5,5]));
+// console.log(uniqueValue([4,6,4,18,6,2,5,2]));
+// console.log(uniqueValue([10,12,22,23,33,12,10,23, 111, 222]));
 //
 //
 // // Option II
@@ -606,25 +613,199 @@ The sort method changes the original array.
 /*
     Написать функцию возвращающую уникальные значения из массива или нескольких массивов.
  */
-// Base
-function uniteUniqueBase() {
-    const arr = [...arguments];
-    let newArr = [];
-    for (let i = 0; i < arr.length; i++) {
-        newArr.push(...arr[i]);
-    }
-    newArr = new Set(newArr);
-    return [...newArr];
-}
-console.log(uniteUniqueBase());
+// // Base
+// function uniteUniqueBase() {
+//     const arr = [...arguments];
+//     let newArr = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         newArr.push(...arr[i]);
+//     }
+//     newArr = new Set(newArr);
+//     return [...newArr];
+// }
+// console.log(uniteUniqueBase());
+//
+//
+// // Advanced
+// function uniteUniqueAdvanced() {
+//     return [...new Set([...arguments].flat())];
+// }
+// console.log(uniteUniqueAdvanced());
 
 
-// Advanced
-function uniteUniqueAdvanced() {
-    return [...new Set([...arguments].flat())];
-}
-console.log(uniteUniqueAdvanced());
 
+// ============ 17 FUNCTION FooBar ============
+/*
+    Написать функцию вывода чисел от 1 до n (n - передаваемый аргумент).
+    Выводить FooBar - вместо чисел кратных 3 и 5,
+    Выводить Foo - вместо чисел кратных 3,
+    Выводить Bar - вместо чисел кратных 5,
+ */
+
+// const array1 = [-6, -92, 1011, 100, 84, -22, 0, 1, 473];
+// const array2 = [-19, -40, -36, 200, 567, -345, 0, 447, 698, 1024, 345, 33, 123, 56, 87, -36, -76];
+// const array3 = [ 4, -10, -20, -30, 40, 50, -60, 70, 80, 90, 100, 444];
+//
+// function ArrayFilterVar(arr) {
+//     const filteredArray = [];
+//     let sortedArray;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] % 4 === 0 && arr[i] > 0) {
+//             filteredArray.push(arr[i]);
+//         }
+//     }
+//     sortedArray = filteredArray.sort((a, b) => {return b - a});
+//     console.log(filteredArray);
+//     return sortedArray[0];
+// }
+//
+// console.log(ArrayFilterVar(array1));
+// console.log(ArrayFilterVar(array2));
+// console.log(ArrayFilterVar(array3));
+
+
+
+
+// ============ 18 FUNCTION FooBar ============
+/*
+    Написать функцию вывода чисел от 1 до n (n - передаваемый аргумент).
+    Выводить FooBar - вместо чисел кратных 3 и 5,
+    Выводить Foo - вместо чисел кратных 3,
+    Выводить Bar - вместо чисел кратных 5,
+ */
+
+// // Base
+// function fooBar(n) {
+//     let result = [];
+//     for (let i = 1; i <= n; i++) {
+//         if (i % 3 === 0 && i % 5 === 0) {
+//             result.push('FooBar');
+//         } else if (i % 3 === 0) {
+//             result.push('Foo');
+//         } else if (i % 5 === 0) {
+//             result.push('Bar');
+//         } else {
+//             result.push(i);
+//         }
+//     }
+//     return result;
+// }
+// console.log(fooBar(469));
+
+
+// ============ 19 FIND VOWELS ============
+/*
+    Написать функцию поиска гласных букв в строке
+    Функция должна возвращать количество гласнных букв.
+ */
+
+// // Base
+// const findVowelsBase = (str) => {
+//     const onlyVowels = [];
+//     let count = 0;
+//     const arrayVowels = ['a', 'e', 'i', 'o', 'u'];
+//     for (let char of str.toLowerCase()) {
+//         if (arrayVowels.includes(char)) {
+//             onlyVowels.push(char);
+//             count++;
+//         }
+//     }
+//     console.log('onlyVowels', onlyVowels);
+//     return count;
+// }
+// console.log(findVowelsBase('Brrrrr!'));
+// console.log(findVowelsBase('VOLVO'));
+// console.log(findVowelsBase('mAdAgAscAr'));
+//
+//
+// // Advanced
+// const findVowelsAdvanced = (str) => {
+//     const matches = str.match(/[aeiou]/gi);
+//     // g - global search
+//     // i - ignore case
+//     return matches ? matches.length : 0;
+// }
+//
+// console.log(findVowelsAdvanced('Brrrrr!'));
+// console.log(findVowelsAdvanced('VOLVO'));
+// console.log(findVowelsAdvanced('mAdAgAscAr'));
+
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// =====================================================================
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// function uniqueValue(array) {
+//     const result = [];
+//     for (let i = 0; i < array.length; i++) {
+//         console.log('===== i =====', i);
+//         let count = 0;
+//         for (let k = 0; k < array.length; k++) {
+//             console.log('+ k +', k);
+//             if (array[i] === array[k]) {
+//                 count++;
+//                 console.log('--- count', count);
+//             }
+//         }
+//
+//         if (count === 1) {
+//             result.push(array[i]);
+//         }
+//     }
+//
+//     return result;
+//
+// }
+//
+// console.log(uniqueValue([0, 1, 2, 2, 0]));
+// console.log(uniqueValue([1,1,2,2,3,4,5,5]));
+// console.log(uniqueValue([4,6,4,18,6,2,5,2]));
+// console.log(uniqueValue([10,12,22,23,33,12,10,23, 111, 222]));
+
+
+// =====================================================================
+// function uniqueValue(array) {
+//     const intermediateResult = [];
+//     let result;
+//     for (let i = 0; i < array.length; i++) {
+//         intermediateResult.push(array[i]);
+//     }
+//
+//     console.log('intermediateResult', intermediateResult);
+//     result = new Set(intermediateResult);
+//
+//     return result;
+//
+// }
+//
+// console.log(uniqueValue([0, 1, 2, 2, 0]));
+// console.log(uniqueValue([1,1,2,2,3,4,5,5]));
+// console.log(uniqueValue([4,6,4,18,6,2,5,2]));
+// console.log(uniqueValue([10,12,22,23,33,12,10,23, 111, 222]));
+
+
+
+
+
+
+// =============================================================
+
+// ARRAY
+// const arr0 = [];
+// const arr1 = [0, 1, 2];
+// const arr2 = [3, 4, 5];
+// const arr3 = [6, 7, 8];
+// const arr4 = [9, 10];
+//
+// const mergeArr = [].concat(arr1, arr2, arr3, arr4);
+// console.log('mergeArr', mergeArr);
+//
+// const combinedArr = [...arr1, ...arr2, ...arr3, ...arr4];
+// console.log('combinedArr', combinedArr);
+//
+// arr0.push(...arr1, ...arr2, ...arr3, ...arr4);
+// console.log('arr0', arr0);
 
 
 
