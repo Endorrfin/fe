@@ -1,5 +1,10 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RxJS Basics</title>
     <link href="styles.css" rel="stylesheet"/>
 </head>
@@ -10,9 +15,13 @@
         <p class="logo-name">Ultimate Courses RxJs Basics<span>&trade;</span></p>
     </div>
 </header>
-<div id="app">
+<div id="app" class="wrapper">
     <div class="progress-bar"></div>
     <h1>Ultimate RxJS</h1>
+
+    <h2 id="countdown"></h2>
+    <div id="message"></div>
+
     <h2>Categories of operators</h2>
     <p>There are operators for different purposes, and they may be categorized as: creation, transformation,
         filtering, joining, multicasting, error handling, utility, etc. In the following list you will find all the

@@ -1,5 +1,5 @@
 import {Observable, fromEvent, from, interval, of, range, timer} from 'rxjs';
-import {map, filter, reduce, scan, take, pluck, mapTo} from 'rxjs/operators';
+import {map, filter, reduce, scan, mapTo, take, pluck} from 'rxjs/operators';
 
 
 // ============ RXJS BASIC - 1 The Missing Introduction to RxJS ============
@@ -361,31 +361,57 @@ Recap - Pipeable Operators
 
 // ============ RXJS BASIC - 20 scan ============
 
-const numbers = [1, 2, 3, 4, 5];
-const user = [
-    {name: 'Brian', loggedIn: false, token: null},
-    {name: 'Klive', loggedIn: true, token: 'abc'},
-    {name: 'Dort', loggedIn: true, token: '123'},
-]
-
-// from(numbers).pipe(
+// const numbers = [1, 2, 3, 4, 5];
+// const user = [
+//     {name: 'Brian', loggedIn: false, token: null},
+//     {name: 'Klive', loggedIn: true, token: 'abc'},
+//     {name: 'Dort', loggedIn: true, token: '123'},
+// ]
+//
+// // from(numbers).pipe(
+// //     scan((accumulator, currentValue) => {
+// //         return accumulator + currentValue;
+// //     }, 0)
+// // ).subscribe(console.log);
+//
+//
+// const state$ = from(user).pipe(
 //     scan((accumulator, currentValue) => {
-//         return accumulator + currentValue;
-//     }, 0)
-// ).subscribe(console.log);
+//         return {...accumulator, ...currentValue};
+//     }, {})
+// )
+//
+// const name$ = state$.pipe(
+//     map(state => state.name)
+// );
+//
+// name$.subscribe(console.log);
 
 
-const state$ = from(user).pipe(
-    scan((accumulator, currentValue) => {
-        return {...accumulator, ...currentValue};
-    }, {})
-)
+// ============ RXJS BASIC - 21 Build a Countdown Time ============
 
-const name$ = state$.pipe(
-    map(state => state.name)
+// elem refs
+const countdown = document.getElementById(
+    'countdown'
+);
+const message = document.getElementById(
+    'message'
 );
 
-name$.subscribe(console.log);
+const counters$ = interval(1000);
+
+counters$.pipe(
+    mapTo(-1),
+    scan((accumulator, current) => {
+        return accumulator + current;
+    }, 10),
+    filter(value => value >= 0)
+).subscribe(value => {
+    countdown.innerHTML = value;
+    if (!value) {
+        message.innerHTML = 'Liftoff!';
+    }
+});
 
 
 
