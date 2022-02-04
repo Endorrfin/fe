@@ -1,5 +1,5 @@
-import {Observable, fromEvent, of, range, from, interval, timer} from 'rxjs';
-import {map, filter, pluck, mapTo} from 'rxjs/operators';
+import {Observable, fromEvent, from, interval, of, range, timer} from 'rxjs';
+import {map, filter, reduce, take, pluck, mapTo} from 'rxjs/operators';
 
 
 // ============ RXJS BASIC - 1 The Missing Introduction to RxJS ============
@@ -304,34 +304,65 @@ Recap - Pipeable Operators
 
 // ============ RxJS BASIC - 18 Build a Scroll Progress Bar ============
 
-// helpers
-function calculateScrollPercent(element) {
-    const {
-        scrollTop,
-        scrollHeight,
-        clientHeight
-    } = element;
+// // helpers
+// function calculateScrollPercent(element) {
+//     const {
+//         scrollTop,
+//         scrollHeight,
+//         clientHeight
+//     } = element;
+//
+//     return (scrollTop / (scrollHeight - clientHeight)) * 100;
+// }
+//
+// // elems
+// const progressBar = document.querySelector('.progress-bar');
+//
+// // streams
+// const scroll$ = fromEvent(document, 'scroll');
+// const progress$ = scroll$.pipe(
+//
+//     // percent progress
+//     map(({target}) => calculateScrollPercent(
+//         target.documentElement
+//     ))
+// );
+//
+//
+// progress$.subscribe(percent => {
+//     progressBar.style.width = `${percent}%`;
+// });
 
-    return (scrollTop / (scrollHeight - clientHeight)) * 100;
-}
-
-// elems
-const progressBar = document.querySelector('.progress-bar');
-
-// streams
-const scroll$ = fromEvent(document, 'scroll');
-const progress$ = scroll$.pipe(
-
-    // percent progress
-    map(({target}) => calculateScrollPercent(
-        target.documentElement
-    ))
-);
 
 
-progress$.subscribe(percent => {
-    progressBar.style.width = `${percent}%`;
+// ============ RXJS BASIC - 19 reduce ============
+
+const numbers = [1, 2, 3, 4, 5];
+
+const totalReducer = (accumulator, currentValue) => {
+    console.log(accumulator, currentValue);
+    return accumulator + currentValue;
+};
+
+// const total = numbers.reduce(totalReducer, 0);
+// console.log(total);
+
+
+// from(numbers).pipe(
+//     reduce(totalReducer, 0)
+// ).subscribe(console.log);
+
+
+interval(1000).pipe(
+    take(3),
+    reduce(totalReducer, 0)
+).subscribe({
+    next: console.log,
+    complete: () => console.log('Complete!')
 });
+
+
+
 
 
 
