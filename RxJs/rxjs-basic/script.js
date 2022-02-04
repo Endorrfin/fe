@@ -1,5 +1,5 @@
 import {Observable, fromEvent, from, interval, of, range, timer} from 'rxjs';
-import {map, filter, reduce, take, pluck, mapTo} from 'rxjs/operators';
+import {map, filter, reduce, scan, take, pluck, mapTo} from 'rxjs/operators';
 
 
 // ============ RXJS BASIC - 1 The Missing Introduction to RxJS ============
@@ -300,8 +300,6 @@ Recap - Pipeable Operators
 // keycode$.subscribe(console.log);
 
 
-
-
 // ============ RxJS BASIC - 18 Build a Scroll Progress Bar ============
 
 // // helpers
@@ -334,32 +332,63 @@ Recap - Pipeable Operators
 // });
 
 
-
 // ============ RXJS BASIC - 19 reduce ============
 
+// const numbers = [1, 2, 3, 4, 5];
+//
+// const totalReducer = (accumulator, currentValue) => {
+//     console.log(accumulator, currentValue);
+//     return accumulator + currentValue;
+// };
+//
+// // const total = numbers.reduce(totalReducer, 0);
+// // console.log(total);
+//
+//
+// // from(numbers).pipe(
+// //     reduce(totalReducer, 0)
+// // ).subscribe(console.log);
+//
+//
+// interval(1000).pipe(
+//     take(3),
+//     reduce(totalReducer, 0)
+// ).subscribe({
+//     next: console.log,
+//     complete: () => console.log('Complete!')
+// });
+
+
+// ============ RXJS BASIC - 20 scan ============
+
 const numbers = [1, 2, 3, 4, 5];
-
-const totalReducer = (accumulator, currentValue) => {
-    console.log(accumulator, currentValue);
-    return accumulator + currentValue;
-};
-
-// const total = numbers.reduce(totalReducer, 0);
-// console.log(total);
-
+const user = [
+    {name: 'Brian', loggedIn: false, token: null},
+    {name: 'Klive', loggedIn: true, token: 'abc'},
+    {name: 'Dort', loggedIn: true, token: '123'},
+]
 
 // from(numbers).pipe(
-//     reduce(totalReducer, 0)
+//     scan((accumulator, currentValue) => {
+//         return accumulator + currentValue;
+//     }, 0)
 // ).subscribe(console.log);
 
 
-interval(1000).pipe(
-    take(3),
-    reduce(totalReducer, 0)
-).subscribe({
-    next: console.log,
-    complete: () => console.log('Complete!')
-});
+const state$ = from(user).pipe(
+    scan((accumulator, currentValue) => {
+        return {...accumulator, ...currentValue};
+    }, {})
+)
+
+const name$ = state$.pipe(
+    map(state => state.name)
+);
+
+name$.subscribe(console.log);
+
+
+
 
 
 
