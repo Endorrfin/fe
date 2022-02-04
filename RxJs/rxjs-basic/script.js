@@ -1,5 +1,5 @@
-import { Observable, fromEvent, of, range, from, interval, timer } from 'rxjs';
-import { map, pluck, mapTo } from 'rxjs/operators';
+import {Observable, fromEvent, of, range, from, interval, timer} from 'rxjs';
+import {map, filter, pluck, mapTo} from 'rxjs/operators';
 
 
 // ============ RXJS BASIC - 1 The Missing Introduction to RxJS ============
@@ -151,7 +151,6 @@ import { map, pluck, mapTo } from 'rxjs/operators';
 // }, 3500);
 
 
-
 // ============ RXJS BASIC - 9 fromEvent ============
 // const observer = {
 //     next: val => console.log('next', val),
@@ -175,7 +174,6 @@ import { map, pluck, mapTo } from 'rxjs/operators';
 // }, 3000)
 
 
-
 // ============ RXJS BASIC - 10 of & range ============
 
 // function hello() {
@@ -194,7 +192,6 @@ import { map, pluck, mapTo } from 'rxjs/operators';
 //
 // source$.subscribe(observer);
 // console.log(hello());
-
 
 
 // ============ RXJS BASIC - 11 from ============
@@ -227,7 +224,6 @@ import { map, pluck, mapTo } from 'rxjs/operators';
 // source$.subscribe(observer);
 
 
-
 // ============ RXJS BASIC - 12 interval ============
 
 // const timerInterval$ = interval(1000);
@@ -237,10 +233,8 @@ import { map, pluck, mapTo } from 'rxjs/operators';
 // timerTimer$.subscribe(console.log);
 
 
-
 // ============ RXJS BASIC - 13 What's Next ============
 // Theory
-
 
 
 // ============ RXJS BASIC - 14 Introduction to Pipeable Operators ============
@@ -256,7 +250,6 @@ Recap - Pipeable Operators
 
 // ============ RXJS BASIC - 15 Introducing Marble Diagrams ============
 // theory
-
 
 
 // ============ RXJS BASIC - 16 map ============
@@ -285,6 +278,28 @@ Recap - Pipeable Operators
 // keycode$.subscribe(console.log);
 // keycodeWithPluck$.subscribe(console.log);
 // pressed$.subscribe(console.log);
+
+
+// ============ RXJS BASIC - 17 filter ============
+
+// of(1,2,3,4,5).pipe(
+//     filter(value => value > 2)
+// ).subscribe(console.log);
+
+
+const keyup$ = fromEvent(document, 'keyup');
+const keycode$ = keyup$.pipe(
+    map(event => event.code)
+);
+
+const enter$ = keycode$.pipe(
+    filter(code => code === 'Enter')
+)
+
+enter$.subscribe(console.log);
+keycode$.subscribe(console.log);
+
+
 
 
 
