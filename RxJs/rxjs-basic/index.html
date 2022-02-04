@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>RxJS Basics</title>
-    <link href="styles.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="header">
@@ -11,7 +11,169 @@
     </div>
 </header>
 <div id="app">
+    <div class="progress-bar"></div>
     <h1>Ultimate RxJS</h1>
+    <h2>Categories of operators</h2>
+    <p>There are operators for different purposes, and they may be categorized as: creation, transformation,
+        filtering, joining, multicasting, error handling, utility, etc. In the following list you will find all the
+        operators organized in categories. For a complete overview, see the references page.</p>
+
+    <h3>Creation Operators</h3>
+    <ul>
+        <li>ajax</li>
+        <li>bindCallback</li>
+        <li>bindNodeCallback</li>
+        <li>defer</li>
+        <li>empty</li>
+        <li>from</li>
+        <li>fromEvent</li>
+        <li>fromEventPattern</li>
+        <li>generate</li>
+        <li>interval</li>
+        <li>of</li>
+        <li>range</li>
+        <li>throwError</li>
+        <li>timer</li>
+        <li>iif</li>
+    </ul>
+
+    <h3>Join Creation Operators</h3>
+    <p>These are Observable creation operators that also have join functionality -- emitting values of multiple
+        source Observables.</p>
+    <ul>
+        <li>combineLatest</li>
+        <li>concat</li>
+        <li>forkJoin</li>
+        <li>merge</li>
+        <li>partition</li>
+        <li>race</li>
+        <li>zip</li>
+    </ul>
+
+    <h3>Transformation Operators</h3>
+    <ul>
+        <li>buffer</li>
+        <li>bufferCount</li>
+        <li>bufferTime</li>
+        <li>bufferToggle</li>
+        <li>bufferWhen</li>
+        <li>concatMap</li>
+        <li>concatMapTo</li>
+        <li>exhaust</li>
+        <li>exhaustMap</li>
+        <li>expand</li>
+        <li>groupBy</li>
+        <li>map</li>
+        <li>mapTo</li>
+        <li>mergeMap</li>
+        <li>mergeMapTo</li>
+        <li>mergeScan</li>
+        <li>pairwise</li>
+        <li>partition</li>
+        <li>pluck</li>
+        <li>scan</li>
+        <li>switchScan</li>
+        <li>switchMap</li>
+        <li>switchMapTo</li>
+        <li>window</li>
+        <li>windowCount</li>
+        <li>windowTime</li>
+        <li>windowToggle</li>
+        <li>windowWhen</li>
+    </ul>
+
+    <h3>Filtering Operators</h3>
+    <ul>
+        <li>audit</li>
+        <li>auditTime</li>
+        <li>debounce</li>
+        <li>debounceTime</li>
+        <li>distinct</li>
+        <li>distinctUntilChanged</li>
+        <li>distinctUntilKeyChanged</li>
+        <li>elementAt</li>
+        <li>filter</li>
+        <li>first</li>
+        <li>ignoreElements</li>
+        <li>last</li>
+        <li>sample</li>
+        <li>sampleTime</li>
+        <li>single</li>
+        <li>skip</li>
+        <li>skipLast</li>
+        <li>skipUntil</li>
+        <li>skipWhile</li>
+        <li>take</li>
+        <li>takeLast</li>
+        <li>takeUntil</li>
+        <li>takeWhile</li>
+        <li>throttle</li>
+        <li>throttleTime</li>
+    </ul>
+
+    <h3>Join Operators</h3>
+    <p>Also see the Join Creation Operators section above.</p>
+    <ul>
+        <li>combineLatestAll</li>
+        <li>concatAll</li>
+        <li>exhaustAll</li>
+        <li>mergeAll</li>
+        <li>switchAll</li>
+        <li>startWith</li>
+        <li>withLatestFrom</li>
+    </ul>
+
+    <h3>Multicasting Operators</h3>
+    <ul>
+        <li>multicast</li>
+        <li>multicast</li>
+        <li>publish</li>
+        <li>publishBehavior</li>
+        <li>publishLast</li>
+        <li>publishReplay</li>
+        <li>share</li>
+    </ul>
+
+    <h3>Error Handling Operators</h3>
+    <ul>
+        <li>catchError</li>
+        <li>retry</li>
+        <li>retryWhen</li>
+    </ul>
+
+    <h3>Utility Operators</h3>
+    <ul>
+        <li>tap</li>
+        <li>delay</li>
+        <li>delayWhen</li>
+        <li>dematerialize</li>
+        <li>materialize</li>
+        <li>observeOn</li>
+        <li>subscribeOn</li>
+        <li>timeInterval</li>
+        <li>timestamp</li>
+        <li>timeout</li>
+        <li>timeoutWith</li>
+        <li>toArray</li>
+    </ul>
+
+    <h3>Conditional and Boolean Operators</h3>
+    <ul>
+        <li>defaultIfEmpty</li>
+        <li>every</li>
+        <li>find</li>
+        <li>findIndex</li>
+        <li>isEmpty</li>
+    </ul>
+
+    <h3>Mathematical and Aggregate Operators</h3>
+    <ul>
+        <li>count</li>
+        <li>max</li>
+        <li>min</li>
+        <li>reduce</li>
+    </ul>
+
 </div>
 <script src="script.js"></script>
 </body>

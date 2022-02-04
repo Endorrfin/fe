@@ -287,17 +287,51 @@ Recap - Pipeable Operators
 // ).subscribe(console.log);
 
 
-const keyup$ = fromEvent(document, 'keyup');
-const keycode$ = keyup$.pipe(
-    map(event => event.code)
+// const keyup$ = fromEvent(document, 'keyup');
+// const keycode$ = keyup$.pipe(
+//     map(event => event.code)
+// );
+//
+// const enter$ = keycode$.pipe(
+//     filter(code => code === 'Enter')
+// )
+//
+// enter$.subscribe(console.log);
+// keycode$.subscribe(console.log);
+
+
+
+
+// ============ RxJS BASIC - 18 Build a Scroll Progress Bar ============
+
+// helpers
+function calculateScrollPercent(element) {
+    const {
+        scrollTop,
+        scrollHeight,
+        clientHeight
+    } = element;
+
+    return (scrollTop / (scrollHeight - clientHeight)) * 100;
+}
+
+// elems
+const progressBar = document.querySelector('.progress-bar');
+
+// streams
+const scroll$ = fromEvent(document, 'scroll');
+const progress$ = scroll$.pipe(
+
+    // percent progress
+    map(({target}) => calculateScrollPercent(
+        target.documentElement
+    ))
 );
 
-const enter$ = keycode$.pipe(
-    filter(code => code === 'Enter')
-)
 
-enter$.subscribe(console.log);
-keycode$.subscribe(console.log);
+progress$.subscribe(percent => {
+    progressBar.style.width = `${percent}%`;
+});
 
 
 

@@ -71,3 +71,19 @@ body {
     position: relative;
     top: 6px;
 }
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    height: 4px;
+    width: 0%;
+    background: #ff16b7;
+}
+
+h2, h3, p {
+    display: flex;
+}
+
+ul li {
+    text-align: left;
+}
