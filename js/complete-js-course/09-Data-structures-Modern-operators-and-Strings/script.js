@@ -22,7 +22,7 @@ const restaurant = {
     },
   },
 
-  order: function(starterIndex, mainIndex) {
+  order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
@@ -38,11 +38,11 @@ const restaurant = {
       at ${time}`);
   },
 
-  orderPasta: function(ing1, ing2, ing3) {
+  orderPasta(ing1, ing2, ing3) {
     console.log(`Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`);
   },
 
-  orderPizza: function(mainIngredient, ...otherIngredient) {
+  orderPizza(mainIngredient, ...otherIngredient) {
     console.log(mainIngredient);
     console.log(otherIngredient);
   }
@@ -446,21 +446,42 @@ GOOD LUCK 😀
 //            111 Looping Arrays The for-of loop
 // ==========================================================
 
-const  menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// const  menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+//
+// // for (const item of menu) console.log(item);
+// for (const item of menu.entries()) {
+//   // console.log(item);
+//   console.log('--- option I old school ---', `${item[0] + 1}: ${item[1]}`);
+// }
+//
+// for (const [i, el] of menu.entries()) {
+//   console.log('--- option II Destructuring ---',`${i + 1}: ${el}`);
+// }
+//
+// // console.log(menu.entries());
+// // console.log([...menu.entries()]);
 
-// for (const item of menu) console.log(item);
-for (const item of menu.entries()) {
-  // console.log(item);
-  console.log('--- option I old school ---', `${item[0] + 1}: ${item[1]}`);
-}
 
-for (const [i, el] of menu.entries()) {
-  console.log('--- option II Destructuring ---',`${i + 1}: ${el}`);
-}
 
-// console.log(menu.entries());
-// console.log([...menu.entries()]);
+// ==========================================================
+//            112 Enhanced Object Literals
+// ==========================================================
 
+
+const openingHours = {
+  [weekdays[3]]: {
+    open: 12,
+      close: 22,
+  },
+  [weekdays[4]]: {
+    open: 11,
+      close: 23,
+  },
+  [`day-${2 + 4}`]: {
+    open: 0, // Open 24 hours
+      close: 24,
+  },
+};
 
 
 
