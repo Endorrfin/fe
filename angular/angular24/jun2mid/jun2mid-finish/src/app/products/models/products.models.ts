@@ -1,15 +1,15 @@
-export interface Product {
+export interface IProduct {
     name: string;
     id: number;
     description: string;
-    inventory_no: string;
+    inventoryNumber: string;
     price: number;
-    category_id: number;
+    categoryId: number;
 }
 
-export type ProductWithCategory = Product & {category: string};
-
-export interface InventoryTypeItem {
+export interface IInventoryTypeItem {
     id: number;
-    displayed_name: string;
+    displayedName: string;
 }
+
+export type ProductWithCategoryName = IProduct & { categoryName: string };

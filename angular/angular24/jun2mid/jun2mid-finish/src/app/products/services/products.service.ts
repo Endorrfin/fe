@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { defer, Observable, of, throwError } from 'rxjs';
 import { delay } from 'rxjs/operators';
-import { InventoryTypeItem as Category, Product } from '../models/products.models';
+import { IInventoryTypeItem as Category, IProduct } from '../models/products.models';
 
 @Injectable({ providedIn: 'root' })
 export class ProductsService {
   private productsRequestCount = 0;
   private categoriesRequestCount = 0;
 
-  getProducts(): Observable<Product[]> {
+  getProducts(): Observable<IProduct[]> {
     return defer(() => {
       console.log('getProducts http');
       // if (++this.productsRequestCount <= 2) {
@@ -33,35 +33,55 @@ export class ProductsService {
 
 const CATEGORIES: Category[] = [
   {
-    displayed_name: 'Автотовары',
-    id: 1
+    id: 1,
+    displayedName: 'Ноутбуки та комп’ютери'
   },
   {
-    displayed_name: 'Товары для дома',
-    id: 2
+    id: 2,
+    displayedName: 'Смартфони'
   },
   {
-    displayed_name: 'Бытовая химия',
-    id: 3
+    id: 3,
+    displayedName: 'Побутова техніка'
   },
   {
-    displayed_name: 'Сувениры',
-    id: 4
+    id: 4,
+    displayedName: 'Товари для дому'
   },
   {
-    displayed_name: 'Игрушки',
-    id: 5
-  }
+    id: 5,
+    displayedName: 'Електроінструменти'
+  },
+  {
+    id: 6,
+    displayedName: 'Сантехніка та ремонт'
+  },
+  {
+    id: 7,
+    displayedName: 'Спорт і захоплення'
+  },
+  {
+    id: 8,
+    displayedName: 'Одяг та взуття'
+  },
+  {
+    id: 9,
+    displayedName: 'Краса та здоров’я'
+  },
+  {
+    id: 10,
+    displayedName: 'Дитячі товари'
+  },
 ];
 
-const PRODUCTS_DATA: Product[] = new Array(5).fill(null).map((e, index) => {
+const PRODUCTS_DATA: IProduct[] = new Array(5).fill(null).map((e, index) => {
   const name = 'Product ' + index + 1;
   return {
     name,
     id: index + 1,
-    inventory_no: ((index + 1) * 30000).toString(16),
+    inventoryNumber: ((index + 1) * 30000).toString(16),
     description: 'Детальное описание товара ' + index + 1,
     price: index % 3 * 10 + index % 2 * 6 - index % 2 * 4,
-    category_id: CATEGORIES[index].id
+    categoryId: CATEGORIES[index].id
   };
 });
