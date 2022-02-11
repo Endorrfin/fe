@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { MatButtonToggleChange } from '@angular/material/button-toggle';
-import { BehaviorSubject, combineLatest, Observable } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
+import { BehaviorSubject, combineLatest, Observable, of } from 'rxjs';
+import { catchError, filter, map, retry, retryWhen, shareReplay } from 'rxjs/operators';
 import { handleHttpError } from 'src/app/utils/handle-http-error';
 import { ProductsService } from '../../services/products.service';
 import {
@@ -9,12 +9,13 @@ import {
   IProduct,
   ProductWithCategoryName
 } from '../../models/products.models';
+import { genericRetryStrategy } from '../../../utils/generic-retry-strategy';
 
-// interface ViewModel {
-//   products: Product[];
-//   subtitle: string | null;
-//   selectedProduct: ProductWithCategory | null;
-// }
+interface ViewModel {
+  products: IProduct[];
+  selectedProductWithCategory: ProductWithCategoryName | null;
+  subtitle: string | null;
+}
 
 
 @Component({
@@ -26,12 +27,19 @@ import {
 export class ProductsTableComponent {
   title = 'Список товарів';
 
-  private readonly selectedProductId$ = new BehaviorSubject<number | null>(null);
-  readonly products$: Observable<IProduct[]> = this.productsService.getProducts();
-  readonly categories$: Observable<IInventoryTypeItem[]> = this.productsService.getCategories();
-  readonly selectedProduct$: Observable<ProductWithCategoryName | null> = this.getSelectedProduct();
-  readonly subtitle$: Observable<string> = this.getSubtitle();
+  /*
+  shareReplay - это промежуточное звено между подпиской и получателем.
+  Под копотом используется ReplaySubject - отдает последнее свое выбранное значение всем слушателям.
+  */
+  // readonly products$: Observable<IProduct[]> = this.productsService.getProducts().pipe(
+  //   shareReplay({refCount: true, bufferSize: 1})
+  // );
+  // readonly categories$: Observable<IInventoryTypeItem[]> = this.productsService.getCategories().pipe(
+  //   shareReplay({refCount: true, bufferSize: 1})
+  // );
 
+  private readonly selectedProductId$ = new BehaviorSubject<number | null>(null);
+  readonly viewModels$ = this.getViewModel();
 
   constructor(private productsService: ProductsService) {}
 
@@ -41,58 +49,34 @@ export class ProductsTableComponent {
     this.selectedProductId$.next(productId);
   }
 
-  private getSelectedProduct(): Observable<ProductWithCategoryName | null> {
+  private getViewModel(): Observable<ViewModel> {
     return combineLatest([
       this.selectedProductId$,
-      this.products$,
-      this.categories$
+      this.productsService.getProducts().pipe(
+        handleHttpError([] as IProduct[])
+      ),
+      this.productsService.getCategories().pipe(
+        handleHttpError([] as IInventoryTypeItem[])
+      )
     ]).pipe(
       map(([selectedProductId, products, categories]) => {
-        if (!selectedProductId) {
-          return null;
+        let selectedProductWithCategory: ProductWithCategoryName | null = null;
+        let subtitle: string | null = null;
+        if  (selectedProductId) {
+          const selectedProduct = products.find(p => p.id === selectedProductId)!;
+          const category = categories.find(c => c.id === selectedProduct.categoryId)!;
+          selectedProductWithCategory = {...selectedProduct, categoryName: category.displayedName };
+          subtitle = `${selectedProductWithCategory.name} (${selectedProductWithCategory.categoryName})`;
         }
 
-        // Remove the undefined as a possible value with <!>
-        const selectedProduct = products.find(p => p.id === selectedProductId)!;
-        const category = categories.find(c => c.id === selectedProduct.categoryId)!;
-        return { ...selectedProduct, categoryName: category.displayedName };
+        return {
+          products,
+          selectedProductWithCategory,
+          subtitle
+        }
       })
-    );
-  }
-
-  private getSubtitle() {
-    return this.selectedProduct$.pipe(
-      filter((value): value is ProductWithCategoryName => !!value),
-        map(selectedProduct => `${selectedProduct.name} (${selectedProduct.categoryName})`)
     )
-  }
-
-  // private getViewModel(): Observable<ViewModel> {
-  //   return combineLatest([
-  //     this.productsService.getProducts().pipe( handleHttpError<Product[]>([]) ),
-  //     this.productsService.getCategories().pipe( handleHttpError<InventoryTypeItem[]>([]) ),
-  //     this.selectedProductId$,
-  //   ]).pipe(
-  //     map(([products, categories, selectedProductId]) => {
-  //       let selectedProduct: ProductWithCategory | null = null;
-  //       let subtitle: string | null = null;
-  //       if (selectedProductId) {
-  //         const foundSelectedProduct = products.find((p) => p.id === selectedProductId)!;
-  //         const foundCategory = categories.find((c) => c.id === foundSelectedProduct.category_id)!;
-  //         selectedProduct = {
-  //           ...foundSelectedProduct,
-  //           category: foundCategory.displayed_name,
-  //         } as ProductWithCategory;
-  //         subtitle = `${selectedProduct.name} (${selectedProduct.category})`;
-  //       }
-  //       return {
-  //         products,
-  //         selectedProduct: selectedProduct,
-  //         subtitle,
-  //       };
-  //     })
-  //   );
-  // };
+  };
 
 }
 

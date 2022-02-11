@@ -11,10 +11,10 @@ export class ProductsService {
   getProducts(): Observable<IProduct[]> {
     return defer(() => {
       console.log('getProducts http');
-      // if (++this.productsRequestCount <= 2) {
-      //   console.error('Products request failed');
-      //   return throwError(new Error('Products request failed'));
-      // }
+      if (++this.productsRequestCount <= 2) {
+        console.error('Products request failed');
+        return throwError(new Error('Products request failed'));
+      }
       return of(PRODUCTS_DATA).pipe(delay(2000));
     });
   }
@@ -74,7 +74,7 @@ const CATEGORIES: Category[] = [
   },
 ];
 
-const PRODUCTS_DATA: IProduct[] = new Array(5).fill(null).map((e, index) => {
+const PRODUCTS_DATA: IProduct[] = new Array(10).fill(null).map((e, index) => {
   const name = 'Product ' + index + 1;
   return {
     name,
