@@ -1,19 +1,19 @@
-'use strict'
+'use strict';
 
 const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 const openingHours = {
   [weekdays[3]]: {
     open: 12,
-      close: 22,
+    close: 22
   },
   [weekdays[4]]: {
     open: 11,
-      close: 23,
+    close: 23
   },
   [weekdays[5]]: {
     open: 0, // Open 24 hours
-      close: 24,
-  },
+    close: 24
+  }
 };
 const restaurant = {
   name: 'Classico Italiano',
@@ -29,11 +29,12 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
-  orderDelivery: function ({
-                             starterIndex = 1,
-                             mainIndex = 0,
-                             time = '20:00',
-                             address}) {
+  orderDelivery: function({
+                            starterIndex = 1,
+                            mainIndex = 0,
+                            time = '20:00',
+                            address
+                          }) {
     console.log(
       `Order received! ${this.starterMenu[starterIndex]}
       and ${this.mainMenu[mainIndex]}
@@ -110,7 +111,6 @@ const restaurant = {
 // console.log(p, q, r); // 8 9 1
 
 
-
 // ==========================================================
 //            104 Destructuring Object
 // ==========================================================
@@ -159,7 +159,6 @@ const restaurant = {
 // console.log(fri); // {open: 11, close: 23}
 // console.log(open, close); // 11 23
 // console.log(o, c); // 11 23
-
 
 
 // ==========================================================
@@ -294,7 +293,6 @@ const restaurant = {
 // restaurant.orderPizza && restaurant.orderPizza ('mushroom', 'spinach');
 
 
-
 // ==========================================================
 //            108 The Nulish Coalescing Operator
 // ==========================================================
@@ -306,7 +304,6 @@ const restaurant = {
 // // Nullish: null and undefined (NOT 0 or '')
 // const guestCorrect = restaurant.numGuests ?? 10;
 // console.log(guestCorrect);
-
 
 
 // ==========================================================
@@ -344,7 +341,6 @@ const restaurant = {
 //
 // console.log(rest1);
 // console.log(rest2);
-
 
 
 // ==========================================================
@@ -398,7 +394,7 @@ const game = {
       'Brandt',
       'Sancho',
       'Gotze'
-    ],
+    ]
   ],
   score: '4:0',
   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
@@ -406,8 +402,8 @@ const game = {
   odds: {
     team1: 1.33,
     x: 3.25,
-    team2: 6.5,
-  },
+    team2: 6.5
+  }
 };
 //
 // // 1 Destructuring players - two separate arrays
@@ -444,7 +440,6 @@ const game = {
 // team1 < team2 && console.log('Team 2 is more likely to win');
 
 
-
 // ==========================================================
 //            111 Looping Arrays The for-of loop
 // ==========================================================
@@ -465,13 +460,11 @@ const game = {
 // // console.log([...menu.entries()]);
 
 
-
 // ==========================================================
 //            112 Enhanced Object Literals
 // ==========================================================
 
 // Transform main object Restaurant
-
 
 
 // ==========================================================
@@ -511,7 +504,6 @@ const game = {
 // if (users.length > 0) console.log(users[0].name); else console.log('user array empty');
 
 
-
 // ==========================================================
 //   114 Looping Objects: Objects Keys, Values, and Entries
 // ==========================================================
@@ -543,7 +535,6 @@ const game = {
 // for(const [key, { open, close }] of entries) {
 //   console.log(`On ${key} we open at ${open} and close at ${close}`);
 // }
-
 
 
 // ==========================================================
@@ -597,40 +588,85 @@ GOOD LUCK 😀
 //            116 Sets
 // ==========================================================
 
-const ordersSet = new Set([
-  'Pasta',
-  'Pizza',
-  'Risotto',
-  'Pizza',
-  'Pasta',
-  'Pizza'
-])
-console.log(ordersSet); // Set(3) {'Pasta', 'Pizza', 'Risotto'}
+// const ordersSet = new Set([
+//   'Pasta',
+//   'Pizza',
+//   'Risotto',
+//   'Pizza',
+//   'Pasta',
+//   'Pizza'
+// ])
+// console.log(ordersSet); // Set(3) {'Pasta', 'Pizza', 'Risotto'}
+//
+// console.log(new Set('Jonas')); // Set(5) {'J', 'o', 'n', 'a', 's'}
+//
+// console.log(ordersSet.size);
+// console.log(ordersSet.has('Pizza'));
+// console.log(ordersSet.has('Bread'));
+//
+// ordersSet.add('Garlic Bread');
+// ordersSet.add('Garlic Bread');
+// console.log(ordersSet);
+// ordersSet.delete('Risotto');
+// console.log(ordersSet);
+// // console.log(ordersSet[0]); // undefined
+// // ordersSet.clear(); // {}.
+//
+// for (const order of ordersSet) console.log(order);
+//
+// // Example
+// const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+// const staffUnique = [...new Set(staff)];
+// console.log(staffUnique);
+// console.log(staff);
+//
+// console.log(new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size); // 3 unique
+// console.log(new Set('jonasschmedtmann').size);
 
-console.log(new Set('Jonas')); // Set(5) {'J', 'o', 'n', 'a', 's'}
 
-console.log(ordersSet.size);
-console.log(ordersSet.has('Pizza'));
-console.log(ordersSet.has('Bread'));
 
-ordersSet.add('Garlic Bread');
-ordersSet.add('Garlic Bread');
-console.log(ordersSet);
-ordersSet.delete('Risotto');
-console.log(ordersSet);
-// console.log(ordersSet[0]); // undefined
-// ordersSet.clear(); // {}.
+// ==========================================================
+//            117 Maps Fundamentals
+// ==========================================================
 
-for (const order of ordersSet) console.log(order);
+const rest = new Map();
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze, Italy');
+console.log(rest.set(2, 'Lisbon, Portugal'));
 
-// Example
-const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
-const staffUnique = [...new Set(staff)];
-console.log(staffUnique);
-console.log(staff);
+rest
+  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open :D')
+  .set(false, 'We are closed :');
 
-console.log(new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size); // 3 unique
-console.log(new Set('jonasschmedtmann').size);
+console.log(rest.get('name'));
+console.log(rest.get(true));
+console.log(rest.get(1));
+
+// const time = 21;
+const time = 8;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.has('categories'));
+rest.delete(2);
+console.log(rest);
+console.log(rest.size);
+// rest.clear();
+console.log(rest.size);
+
+rest.set([1, 2], 'Test');
+console.log(rest);
+
+console.log(rest.get([1, 2])); // undefined
+
+const arr = [1, 2];
+rest.set(arr, 'Test');
+console.log(rest.get(arr));
+
+rest.set(document.querySelector('h1'), 'Heading');
+console.log(rest);
 
 
 
