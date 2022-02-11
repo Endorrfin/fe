@@ -702,7 +702,7 @@ for (const [key, value] of question) {
 const answer = 3
 console.log(answer);
 
-console.log(question.get(question.get('correct') === answer))
+console.log(question.get(question.get('correct') === answer));
 
 // Convert map to array
 console.log([...question]);
