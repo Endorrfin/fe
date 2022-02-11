@@ -571,27 +571,66 @@ BONUS: Create an object called 'scorers' which contains the names of the players
 GOOD LUCK 😀
 */
 
-// 1.
-for (const [i, player] of game.scored.entries()) {
-  console.log(`Goal ${i + 1}: ${player}`);
-}
+// // 1.
+// for (const [i, player] of game.scored.entries()) {
+//   console.log(`Goal ${i + 1}: ${player}`);
+// }
+//
+// // 2.
+// const odds = Object.values(game.odds);
+// let average = 0;
+// for (const odd of Object.values(game.odds))
+//   average += odd;
+// average /= odds.length;
+// console.log(average);
+//
+//
+// // 3.
+// for(const [team, odd] of Object.entries(game.odds)) {
+//   // console.log(team, odd);
+//   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`
+//   console.log(`Odd of ${teamStr} ${odd}`);
+// }
 
-// 2.
-const odds = Object.values(game.odds);
-let average = 0;
-for (const odd of Object.values(game.odds))
-  average += odd;
-average /= odds.length;
-console.log(average);
 
+// ==========================================================
+//            116 Sets
+// ==========================================================
 
-// 3.
-for(const [team, odd] of Object.entries(game.odds)) {
-  // console.log(team, odd);
-  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`
-  console.log(`Odd of ${teamStr} ${odd}`);
-}
+const ordersSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Risotto',
+  'Pizza',
+  'Pasta',
+  'Pizza'
+])
+console.log(ordersSet); // Set(3) {'Pasta', 'Pizza', 'Risotto'}
 
+console.log(new Set('Jonas')); // Set(5) {'J', 'o', 'n', 'a', 's'}
+
+console.log(ordersSet.size);
+console.log(ordersSet.has('Pizza'));
+console.log(ordersSet.has('Bread'));
+
+ordersSet.add('Garlic Bread');
+ordersSet.add('Garlic Bread');
+console.log(ordersSet);
+ordersSet.delete('Risotto');
+console.log(ordersSet);
+// console.log(ordersSet[0]); // undefined
+// ordersSet.clear(); // {}.
+
+for (const order of ordersSet) console.log(order);
+
+// Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+console.log(staff);
+
+console.log(new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size); // 3 unique
+console.log(new Set('jonasschmedtmann').size);
 
 
 
