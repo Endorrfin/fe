@@ -674,41 +674,71 @@ GOOD LUCK 😀
 //            118 Maps Iteration
 // ==========================================================
 
-const question = new Map([
-  ['question', 'What is the best programming language in the world?'],
-  [1, 'C'],
-  [2, 'Java'],
-  [3, 'Javascript'],
-  ['correct', 3],
-  [true, 'Correct'],
-  [false, 'Try again'],
-]);
+// const question = new Map([
+//   ['question', 'What is the best programming language in the world?'],
+//   [1, 'C'],
+//   [2, 'Java'],
+//   [3, 'Javascript'],
+//   ['correct', 3],
+//   [true, 'Correct'],
+//   [false, 'Try again'],
+// ]);
+//
+// console.log(question);
+//
+// // Convert object to map
+// console.log(Object.entries(openingHours));
+//
+// const hoursMap = new Map(Object.entries(openingHours));
+// console.log( hoursMap);
+//
+// // Quiz app
+// console.log( question.get('question'));
+// for (const [key, value] of question) {
+//   if (typeof  key === 'number') console.log(` Answer ${key}: ${value}`);
+// }
+//
+// // const answer = Number(prompt('Your answer'));
+// const answer = 3
+// console.log(answer);
+//
+// console.log(question.get(question.get('correct') === answer));
+//
+// // Convert map to array
+// console.log([...question]);
+// // console.log(question.entries());
+// console.log(...question.keys());
+// console.log(...question.values());
 
-console.log(question);
 
-// Convert object to map
-console.log(Object.entries(openingHours));
 
-const hoursMap = new Map(Object.entries(openingHours));
-console.log( hoursMap);
+// ==========================================================
+//          119 Summary Which Data Structure to Use
+// ==========================================================
 
-// Quiz app
-console.log( question.get('question'));
-for (const [key, value] of question) {
-  if (typeof  key === 'number') console.log(` Answer ${key}: ${value}`);
-}
-
-// const answer = Number(prompt('Your answer'));
-const answer = 3
-console.log(answer);
-
-console.log(question.get(question.get('correct') === answer));
-
-// Convert map to array
-console.log([...question]);
-// console.log(question.entries());
-console.log(...question.keys());
-console.log(...question.values());
+/*
+* SOURCE OF DATA
+* 1. From the program itself: Data written directly in source code (e. g. status messages)
+* 2. From the UI: Data input from the user or data written in DOM (e.g. tasks in todo app)
+* 3. From external sources: Data fetched for example from web API (e.g. recipe objects)
+*
+*
+* Collection of data -> Data structure
+* SIMPLE LIST? - Arrays or Sets
+* KEY / VALUE PAIRS? - Objects or Maps
+*
+*
+* OTHER BUILT-IN:
+* - WeakMap
+* - WeakSet
+*
+* NON-BUILT IN:
+* - Stacks
+* - Queues
+* - Linked lists
+* - Trees
+* - Hash tables
+* */
 
 
 
