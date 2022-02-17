@@ -1,6 +1,5 @@
 'use strict';
-
-// ============ 03 Mapping Users to Get Usernames ============
+// ============ Mapping Users to Get Usernames ============
 
 /*
 * 1. Write code to get array of names from given array of users,
@@ -69,7 +68,7 @@ const users = [
 // console.log(names);
 
 
-// ============ 04 Difference between null and undefined ============
+// ============ Difference between null and undefined ============
 
 // let var1;
 // console.log(var1);
@@ -80,7 +79,7 @@ const users = [
 // console.log(typeof var2);
 
 
-// ============ 05 Hoisting ============
+// ============ Hoisting ============
 
 /*
 * What will be console.logged here
@@ -108,9 +107,7 @@ const users = [
 // var foo;
 
 
-
-
-// ============ 06 Closures ============
+// ============ Closures ============
 
 /*
 * Create a counter function which has increment and genValue functionality
@@ -148,9 +145,7 @@ const users = [
 // console.log(getSecret()); // foo
 
 
-
-
-// ============ 07 Currying ============
+// ============ Currying ============
 
 /*
 * Write a function which helps to achieve multiply(a)(b) and returns product of a and b
@@ -168,7 +163,6 @@ const users = [
 
 // const multiply = (num1) => (num2) => num1 * num2;
 // console.log(multiply(2)(3));
-
 
 
 // const multiply = (num1) => {
@@ -213,8 +207,7 @@ const users = [
 // const getIds = map(getId);
 
 
-
-// ============ 08 Adding Elements of the Array ============
+// ============ Adding Elements of the Array ============
 
 /*
 * Write a function which get's an array and an element and returns a array with this element at the end
@@ -243,8 +236,7 @@ const users = [
 // console.log(numbers);
 
 
-
-// ============ 09 Concatenating Arrays ============
+// ============ Concatenating Arrays ============
 
 /*
 * Write a function which can concatenate 2 arrays
@@ -269,8 +261,7 @@ const users = [
 // // console.log('result', mergeArrays( arr1, arr2));
 
 
-
-// ============ 10. Check if User With Such Name Exists ============
+// ============ Check if User With Such Name Exists ============
 
 /*
 * Check that user with such name exists in array of objects
@@ -332,7 +323,7 @@ const users = [
 // console.log(isNameExists4('Akim', users));
 
 
-// ============ 11. Remove all Duplicates in the Array ============
+// ============ Remove all Duplicates in the Array ============
 
 /*
 * Remove all duplicates in the array
@@ -374,8 +365,7 @@ const users = [
 // console.log(uniqueArr3(arr));
 
 
-
-// ============ 12. Sorting the array ============
+// ============ Sorting the array ============
 
 /*
 * Sort the array of numbers
@@ -400,7 +390,7 @@ const users = [
 // console.log(books);
 
 
-// ============ 14. Writing Range Function ============
+// ============ Writing Range Function ============
 
 /*
 * Write a function which implement range
@@ -427,8 +417,7 @@ const users = [
 // console.log(range2(1, 11));
 
 
-
-// ============ 15. Writing Shuffle Function ============
+// ============ Writing Shuffle Function ============
 
 /*
 * Write a function which implements shuffle
@@ -454,6 +443,310 @@ const users = [
 // const minValue = Math.min(...arr);
 // const minArr = arr.filter((el) => el === minValue);
 // console.log(minArr.length);
+
+
+// ============ This ============
+
+/*
+* What will be logged here?
+* */
+
+// // Task 1
+// function getItem() {
+//   console.log(this); // window, if no 'use strict'
+// }
+//
+// getItem();
+
+
+// // Task 2
+// const item = {
+//   title: 'Ball',
+//   getItem() {
+//     console.log('this', this); // item object
+//   },
+// };
+//
+// item.getItem();
+
+
+// // Task 3
+// class Item {
+//   title = 'Ball';
+//   getItem() {
+//     console.log('this', this); // item object
+//   }
+// }
+//
+// const item = new Item();
+// item.getItem();
+
+
+// // Task 4
+// class Item {
+//   title = 'Ball';
+//
+//   getItem() {
+//     function someFn() {
+//       console.log('this', this); // undefined
+//     }
+//
+//     someFn();
+//   }
+// }
+//
+// const item = new Item();
+// item.getItem();
+
+
+// // Task 5
+// class Item {
+//   title = 'Ball';
+//
+//   getItem() {
+//     const this_ = this;
+//     [1, 2, 3].map(function(item) {
+//       console.log(this_); // item object
+//     })
+//   }
+// }
+//
+// const item = new Item();
+// item.getItem();
+
+
+// // Task 6
+// class Item {
+//   title = 'Ball';
+//
+//   getItem() {
+//     [1, 2, 3].map((item) => {
+//       console.log(this); // item object
+//     })
+//   }
+// }
+//
+// const item = new Item();
+// item.getItem();
+
+
+// ============ Classes ============
+
+/*
+* 1. Design a class for employee which takes id and name during construction of object and has a salary property
+* 2. Design a class for manager which is employee and can have department property
+* */
+
+// class Employee {
+//
+//   constructor(id, name) {
+//     if (!id || !name) {
+//       throw new Error('Employee id and name are mandatory');
+//     }
+//     this.id = id;
+//     this.name = name;
+//   }
+//
+//   setSalary(salary) {
+//     this.salary = salary;
+//   }
+//
+//   getId() {
+//     return this.id;
+//   }
+//
+//   getName() {
+//     return this.name;
+//   }
+//
+//   getSalary() {
+//     return this.salary;
+//   }
+// }
+//
+// const employee = new Employee(1, 'Jack');
+// employee.setSalary(1000);
+//
+// console.log(employee); // Employee {id: 1, name: 'Jack', salary: 1000}
+// console.log(employee.getId()); // 1
+// console.log(employee.getName()); // Jack
+// console.log(employee.getSalary()); // 1000
+//
+//
+// class Manager extends Employee {
+//   setDepartment(name) {
+//     this.department = name;
+//   }
+//
+//   getDepartment() {
+//     return this.department;
+//   }
+// }
+//
+//
+// const manager = new Manager(2, 'John');
+// manager.setDepartment('Development')
+// console.log(manager);
+
+
+// ============ Prototypes ============
+
+/*
+* 1. Design the same classes by using only Javascript prototypes
+* */
+
+// var Staff = function(id, name) {
+//   if (!id || !name) {
+//     throw new Error('Staff if and name are mandatory')
+//   }
+//
+//   this.id = id;
+//   this.name = name;
+// };
+//
+// Staff.prototype.setSalary = function (salary) {
+//   this.salary = salary;
+// }
+//
+// Staff.prototype.getId = function() {
+//   return this.id;
+// }
+//
+// Staff.prototype.getName = function() {
+//   return this.name;
+// }
+//
+// Staff.prototype.getSalary = function() {
+//   return this.salary;
+// }
+//
+// var staff = new Staff(2, 'Mark');
+// staff.setSalary(700);
+// console.log(staff.getId());
+// console.log(staff.getName());
+// console.log(staff.getSalary());
+//
+//
+// var Manager = function(params) {
+//   Staff.apply(this, arguments);
+// };
+//
+// Manager.prototype = Object.create(Staff.prototype);
+// console.log(Manager.prototype);
+// Manager.prototype.constructor = Manager;
+//
+// Manager.prototype.setDepartment = function(name) {
+//   this.department = name;
+// };
+//
+// Manager.prototype.getDepartment = function() {
+//   return this.department;
+// };
+//
+//
+// const manager = new Manager(3, 'Bill');
+// manager.setDepartment('Risk');
+// console.log(manager);
+// console.log(manager.getId());
+// console.log(manager.getDepartment());
+
+
+// ============ Modules ============
+
+/*
+* 1. Create a es6 module with function getName, getSurname and default export getFullname
+* 2. Create the same with commonJs module
+* */
+
+
+// import getFullName, { getName, getSurname } from './es6.js';
+// const {getName, getSurname, getFullname} = require('./common');
+//
+// console.log(
+//   getName('Jack'),
+//   getSurname('Sparrow'),
+//   getFullName('Jack', 'Sparrow')
+// );
+
+
+// ============ Implement Debounce Function ============
+
+/*
+* 1. Create debounce function
+* */
+
+// const debounce = (func, timeout = 300) => {
+//   let timer
+//   return (...args) => {
+//     console.log('inner fn', args);
+//     clearTimeout(timer);
+//    timer = setTimeout(() => {
+//       func.apply(this, args);
+//     }, timeout);
+//   }
+// }
+//
+// const saveInput = (name) => {
+//   console.log('saveInput', name);
+// }
+//
+// const processChange = debounce(saveInput, 2000);
+// processChange('foo');
+// processChange('foo');
+// processChange('foo');
+// processChange('foo');
+
+
+// ============ Implement Throttle Function ============
+
+/*
+* 1. Create throttle function
+* */
+
+// const throttle = (func, timeout = 300) => {
+//   let isWaiting = false;
+//   return (...args) => {
+//     if (!isWaiting) {
+//       func.apply(this, args);
+//       isWaiting = true
+//       setTimeout(() => {
+//         isWaiting = false;
+//       }, timeout);
+//     }
+//   };
+// };
+//
+// const saveInput = (name) => {
+//   console.log('saveInput', name);
+// };
+//
+// const processChange = throttle(saveInput, 2000);
+// processChange('foo');
+//
+// setTimeout(() => {
+//   processChange('foo');
+// }, 1000);
+//
+// setTimeout(() => {
+//   processChange('foo');
+// }, 1200);
+//
+// setTimeout(() => {
+//   processChange('foo');
+// }, 2400);
+//
+// setTimeout(() => {
+//   processChange('foo');
+// }, 1000);
+
+
+
+
+
+
+
+
+
 
 
 
