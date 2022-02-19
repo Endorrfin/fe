@@ -740,6 +740,20 @@ const users = [
 // }, 1000);
 
 
+// ============ Highlight all words over 8 chars with red ============
+
+const paragraph = document.querySelector('.text');
+paragraph.innerHTML = paragraph.innerHTML
+  .split(' ')
+  .map((word) => {
+    return word.length > 8
+      ? `<span style='background-color: red'>${word}</span>`
+      : word;
+  })
+.join(' ');
+
+
+
 
 
 
