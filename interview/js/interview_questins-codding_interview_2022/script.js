@@ -742,16 +742,27 @@ const users = [
 
 // ============ Highlight all words over 8 chars with red ============
 
-const paragraph = document.querySelector('.text');
-paragraph.innerHTML = paragraph.innerHTML
-  .split(' ')
-  .map((word) => {
-    return word.length > 8
-      ? `<span style='background-color: red'>${word}</span>`
-      : word;
-  })
-.join(' ');
+// const paragraph = document.querySelector('.text');
+// paragraph.innerHTML = paragraph.innerHTML
+//   .split(' ')
+//   .map((word) => {
+//     return word.length > 8
+//       ? `<span style='background-color: red'>${word}</span>`
+//       : word;
+//   })
+// .join(' ');
 
+
+// ============ Add a link ============
+
+/*
+* 1. Ad a link back to the source of the text after the paragraph tag(https://forcemipsum.com/)
+* */
+
+const link = document.createElement('a');
+link.href = 'https://forcemipsum.com/';
+link.innerHTML = 'Text generated from Lorem Ipsum';
+document.body.appendChild(link);
 
 
 
