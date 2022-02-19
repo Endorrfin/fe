@@ -772,11 +772,35 @@ const users = [
 * A sentence can be assumed to be a string of text terminated with a period (.)
 * */
 
-const paragraph = document.querySelector('p');
-paragraph.innerHTML = paragraph.innerHTML
-  // .split('.')
-  .split(/\.[^.|<]/)
-  .join('.<p></p>') + '<p>';
+// const paragraph = document.querySelector('p');
+// paragraph.innerHTML = paragraph.innerHTML
+//   // .split('.')
+//   .split(/\.[^.|<]/)
+//   .join('.<p></p>') + '<p>';
+
+
+// ============ Event Delegation ============
+
+/*
+* 1. Implement a click on todo item as fast as possible
+* */
+
+// Option I
+// const items = document.querySelectorAll('.item');
+// items.forEach((item) => {
+//   item.addEventListener('click', () => {
+//     console.log('you clicked on item: ' + item.innerText);
+//   });
+// });
+
+
+// Option II
+const app = document.querySelector('.todo-app');
+app.addEventListener('click', (e) => {
+  if (e.target && e.target.classList.contains('item')) {
+    console.log('you clicked on item: ' + e.target.innerText);
+  }
+})
 
 
 
