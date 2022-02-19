@@ -759,10 +759,24 @@ const users = [
 * 1. Ad a link back to the source of the text after the paragraph tag(https://forcemipsum.com/)
 * */
 
-const link = document.createElement('a');
-link.href = 'https://forcemipsum.com/';
-link.innerHTML = 'Text generated from Lorem Ipsum';
-document.body.appendChild(link);
+// const link = document.createElement('a');
+// link.href = 'https://forcemipsum.com/';
+// link.innerHTML = 'Text generated from Lorem Ipsum';
+// document.body.appendChild(link);
+
+
+// ============ Split Each Sentence to a Separate Line ============
+
+/*
+* 1. Split each new sentence to a separate line in the paragraph text.
+* A sentence can be assumed to be a string of text terminated with a period (.)
+* */
+
+const paragraph = document.querySelector('p');
+paragraph.innerHTML = paragraph.innerHTML
+  // .split('.')
+  .split(/\.[^.|<]/)
+  .join('.<p></p>') + '<p>';
 
 
 
