@@ -795,12 +795,70 @@ const users = [
 
 
 // Option II
-const app = document.querySelector('.todo-app');
-app.addEventListener('click', (e) => {
-  if (e.target && e.target.classList.contains('item')) {
-    console.log('you clicked on item: ' + e.target.innerText);
-  }
-})
+// const app = document.querySelector('.todo-app');
+// app.addEventListener('click', (e) => {
+//   if (e.target && e.target.classList.contains('item')) {
+//     console.log('you clicked on item: ' + e.target.innerText);
+//   }
+// })
+
+
+// ============ Asynchronous JavaScript | Xml HTTP Request ============
+
+/*
+* 1. Write an example of fetching data with XMLHttpRequest.
+* */
+
+// const xhr = new XMLHttpRequest();
+// xhr.open('GET', 'https://api.github.com/users/gaearon/repos');
+//
+// xhr.send();
+// xhr.onload = function () {
+//   if (xhr.status !== 200) {
+//     console.log('Error' + xhr.status + xhr.status);
+//   } else {
+//     console.log('Success', xhr.response);
+//   }
+// };
+//
+// xhr.onerror = function () {
+//   console.log('xhr request failed');
+// }
+
+
+// ============ Asynchronous JavaScript | Fetch API ============
+
+/*
+* 1. Write an example of fetching data using fetch API.
+* */
+
+fetch('https://api.github.com/users/gaearon/repos')
+  .then((res) => res.json())
+  .then((data) => {
+    console.log('success', data);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+
+
+// ============ Asynchronous JavaScript | Basic Callback ============
+
+/*
+* 1. Write an asynchronous function which executes callback after finishing it's asynchronous task
+* */
+
+const asyncFn = (callback) => {
+  setTimeout(() => {
+    callback('done');
+  }, 2000)
+};
+
+asyncFn((message) => {
+  console.log('callback', message);
+});
+
+
 
 
 
