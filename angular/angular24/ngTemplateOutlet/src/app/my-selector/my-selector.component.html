@@ -1,6 +1,6 @@
 <p>my-selector works!</p>
 
-<div class='app-selector btr-group' dropdown>
+<div class='app-selector btn-group' dropdown>
   <button
     dropdownToggle
     type='button'
@@ -23,7 +23,7 @@
     <li *ngFor='let option of options; index as i'
         (click)='selectOption(option)'>
 
-      <ng-template #defaultOption let-option>
+      <ng-template #defaultOption>
         <a class='dropdown-item'>
           {{ option?.name || option }}
         </a>

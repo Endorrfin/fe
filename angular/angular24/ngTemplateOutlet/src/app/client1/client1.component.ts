@@ -42,13 +42,14 @@ export class Client1Component implements OnInit {
   safeSharks = ["Angular roughshark", "Pyjama"];
   selectedShark: Shark = {} as Shark;
 
-  displayFunc = (shark: Shark) => {
+  sharkDisplay = (shark: Shark) => {
     return `${shark.name} (${shark.latinName})`;
   };
 
   getSwimIcon = (shark: Shark) => {
-    const icon =
-      this.safeSharks.indexOf(shark.name) >= 0 ? faSwimmer : faSkullCrossbones;
+    const icon = this.safeSharks.indexOf(shark.name) >= 0
+      ? faSwimmer
+      : faSkullCrossbones;
     return icon;
   };
 
