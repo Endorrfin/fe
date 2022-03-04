@@ -11,7 +11,8 @@
     </ng-template>
 
     <ng-container
-      [ngTemplateOutlet]='selectedTemplateRef || defaultSelected'
+      *ngIf="!selectedTemplateRef"
+      [ngTemplateOutlet]="selectedTemplateRef"
       [ngTemplateOutletContext]='{ $implicit: picked }'>
     </ng-container>
 
@@ -33,7 +34,6 @@
         [ngTemplateOutlet]='optionTemplateRef || defaultOption'
         [ngTemplateOutletContext]='{ $implicit: option, index: i }'>
       </ng-container>
-
     </li>
   </ul>
 </div>

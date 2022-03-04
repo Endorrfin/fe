@@ -21,8 +21,11 @@ export class MySelectorComponent<T extends { name: string }> implements OnInit {
   @Input()
   options!: T[];
 
-  @Input("selectedTemplate")
-  selectedTemplateRef!: TemplateRef<any>
+  // @Input("selectedTemplate")
+  // selectedTemplateRef!: TemplateRef<any>
+
+  @ContentChild("selectedTemplate", { static: false })
+  selectedTemplateRef!: TemplateRef<any>;
 
   @ContentChild('optionTemplate', {static: false})
   optionTemplateRef!: TemplateRef<any>;

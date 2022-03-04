@@ -5,7 +5,7 @@
   {{ tractor?.name || "Tractor" }}
 </ng-template>
 
-<app-my-selector [options]="tractors" [selectedTemplate]="selectedTemplate">
+<app-my-selector [options]="tractors">
   <!-- Using @ContentChild to pass template into component -->
   <ng-template #optionTemplate let-tractor let-id="index">
     <div>
