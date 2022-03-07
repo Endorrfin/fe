@@ -8,18 +8,14 @@ true. Примечание: Палиндро́м - пе́ревертень — 
 // ---------------- OPTION I ----------------
 function palindrome(str) {
   str = str.toLowerCase(); // перевод строки в нижний регистр
-  console.log(str);
   str2 = str.split(''); // трансформация слово по буквенно в массив
-  console.log(str2);
   str2 = str2.reverse(); // переворачивание массива задом на перед
-  console.log(str2);
   str2 = str2.join(''); // объединение побуквенного массива в слово
-  console.log(str2);
 
   if (str == str2) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 
@@ -34,32 +30,32 @@ function palindrome(str) {
 const palindrome2 = data => {
   data.toLowerCase();
   return data == [...data].reverse().join('');
-}
+};
 
-console.log(palindrome2('SOS'));
-console.log(palindrome2('SOFT'));
+// console.log(palindrome2('SOS'));
+// console.log(palindrome2('SOFT'));
 
 // ---------------- OPTION III ----------------
 isPalindrom = string => string.toLowerCase() === [...string].reverse().join('').toLowerCase();
 
-console.log(palindrome2('SOS'));
-console.log(palindrome2('Ароза упала на лапу Азора'));
+// console.log(palindrome2('SOS'));
+// console.log(palindrome2('Ароза упала на лапу Азора'));
 
 // Заключение: Какие минусы данного подхода?
 // если в данных есть спецсимвол эмодзи, который складывается с 2-х симовол результат будет некорректный.
 
 /**
-|--------------------------------------------------
-  ======= <<<--- TASK #2 - кавычки  --->>>  =======
-  Написать решение, которое:
-  1. Проверит в правильном ли порядке написаны кавычки!
-  2. Проверит соответствует ли к-во открывающих кавычек к-ву закрывающих кавычек.
-|--------------------------------------------------
-*/
+ |--------------------------------------------------
+ ======= <<<--- TASK #2 - кавычки --->>> =======
+ Написать решение, которое:
+ 1. Проверит в правильном ли порядке написаны кавычки!
+ 2. Проверит соответствует ли к-во открывающих кавычек к-ву закрывающих кавычек.
+ |--------------------------------------------------
+ */
 
 let roundBrackets = '()()((())))';
 // проверка длинны строки (length)
-console.log(roundBrackets.length);
+// console.log(roundBrackets.length);
 
 // создадим глобальную переменную count
 let count = 0;
@@ -75,110 +71,106 @@ for (let i = 0; i <= roundBrackets.length; i++) {
   }
   // Делаем проверку правельности последовательности кавычек
   if (count < 0) {
-    console.log(false);
-    break // выходим из цыкла проверки
+    // console.log(false);
+    break; // выходим из цыкла проверки
   }
 }
-console.log(count);
+// console.log(count);
 
-if (count != 0) {
-  console.log(false)
-} else console.log(true);
-
-
+// if (count != 0) {
+//   console.log(false)
+// } else console.log(true);
 
 
-
-// ======= Написать с помощью javaScript код, который будет визуализировать все возможные ходы конем на шахматной
-// доске! =======
+// ======= Написать с помощью javaScript код, который будет визуализировать все возможные ходы конем на шахматной доске! =======
 
 
-// Создаем двумерный массив, который характеризует модель шахматной доски
-let chess = [
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0],
-]
-
-// Отрисуем массив
-function draw() {
-  let out = '';
-  let m = 0; // счетчик
-  // создание 1-го цикла, который рисует горизонтальные строки
-  for(let i = 0; i < chess.length; i++) {
-    // создание 2-го цикла, который будет рисовать внутри строки ячейки
-    let arr = chess[i]; // arr = каждая строка для упрощения визуального восприятия.
-    for(let j = 0; j < arr.length; j++){
-      // отрисуем кубики шахматной доски белый / серый
-      if (m % 2 == 0) {
-        // создание блока + добавление дата-атрибутов data-x="${j}" data-y="${i}" для маркировки ячеек на шахматной доске, чтоб их идентифицировать
-        out+= `<div class="chess-block" data-x="${j}" data-y="${i}"></div>`;
-      } else {
-        out+= `<div class="chess-block bg-black" data-x="${j}" data-y="${i}"></div>`;
-      }
-      m++ // необходимо делать после каждой итерации
-    }
-    m++ // после итерации 1-й строки тоже увеличиваем m на единицу
-  }
-  // вывод блока на страницу
-  document.querySelector('#chessBoard').innerHTML = out;
-  document.querySelectorAll('.chess-block').forEach(function(element) {
-    element.onclick = horse;
-  });
-}
-
-// запуск отрисовки функцией
-draw();
-
-
-function horse() {
-  // Реализация зачистки поля после клика
-  document.querySelectorAll('.chess-block').forEach(function(element) {
-    element.classList.remove('green');
-    element.classList.remove('active');
-  })
-
-
-  let x = this.dataset.x;
-  let y = this.dataset.y;
-  // проверяем позволяет ли функция получать координаты ячеек x & y
-  console.log(x + ' ' + y);
-
-  // подсветка ячейки по которой кликнет пользователь
-  this.classList.add('green');
-
-  // Прописываем правила для проверки возможных ходов
-  // Атрибут data - это всегда строка, поэтому добавляем "+" перед всеми x & y для преобразования результата string в number
-  if(+x + 2 < 8 && +y + 1 < 8) {
-    document.querySelector(`.chess-block[data-x="${+x + 2}"][data-y="${+y + 1}"]`).classList.add('active');
-  }
-  if(+x + 2 < 8 && +y - 1 >=0) {
-    document.querySelector(`.chess-block[data-x="${+x + 2}"][data-y="${+y - 1}"]`).classList.add('active');
-  }
-  if(+x - 2 >=0 && +y + 1 < 8) {
-    document.querySelector(`.chess-block[data-x="${+x - 2}"][data-y="${+y + 1}"]`).classList.add('active');
-  }
-  if(+x - 2 >=0 && +y - 1 >=0) {
-    document.querySelector(`.chess-block[data-x="${+x - 2}"][data-y="${+y - 1}"]`).classList.add('active');
-  }
-  if(+x + 1 < 8 && +y - 2 >=0) {
-    document.querySelector(`.chess-block[data-x="${+x + 1}"][data-y="${+y - 2}"]`).classList.add('active');
-  }
-  if(+x - 1 >=0 && +y - 2 >=0) {
-    document.querySelector(`.chess-block[data-x="${+x - 1}"][data-y="${+y - 2}"]`).classList.add('active');
-  }
-  if(+x + 1 < 8 && +y + 2 < 8) {
-    document.querySelector(`.chess-block[data-x="${+x + 1}"][data-y="${+y + 2}"]`).classList.add('active');
-  }
-  if(+x - 1 >=0 && +y + 2 < 8) {
-    document.querySelector(`.chess-block[data-x="${+x - 1}"][data-y="${+y + 2}"]`).classList.add('active');
-  }
-}
+// // Создаем двумерный массив, который характеризует модель шахматной доски
+// let chess = [
+//   [0, 0, 0, 0, 0, 0, 0, 0],
+//   [0, 0, 0, 0, 0, 0, 0, 0],
+//   [0, 0, 0, 0, 0, 0, 0, 0],
+//   [0, 0, 0, 0, 0, 0, 0, 0],
+//   [0, 0, 0, 0, 0, 0, 0, 0],
+//   [0, 0, 0, 0, 0, 0, 0, 0],
+//   [0, 0, 0, 0, 0, 0, 0, 0],
+//   [0, 0, 0, 0, 0, 0, 0, 0],
+// ]
+//
+// // Отрисуем массив
+// function draw() {
+//   let out = '';
+//   let m = 0; // счетчик
+//   // создание 1-го цикла, который рисует горизонтальные строки
+//   for(let i = 0; i < chess.length; i++) {
+//     // создание 2-го цикла, который будет рисовать внутри строки ячейки
+//     let arr = chess[i]; // arr = каждая строка для упрощения визуального восприятия.
+//     for(let j = 0; j < arr.length; j++){
+//       // отрисуем кубики шахматной доски белый / серый
+//       if (m % 2 == 0) {
+//         // создание блока + добавление дата-атрибутов data-x="${j}" data-y="${i}" для маркировки ячеек на шахматной доске, чтоб их идентифицировать
+//         out+= `<div class="chess-block" data-x="${j}" data-y="${i}"></div>`;
+//       } else {
+//         out+= `<div class="chess-block bg-black" data-x="${j}" data-y="${i}"></div>`;
+//       }
+//       m++ // необходимо делать после каждой итерации
+//     }
+//     m++ // после итерации 1-й строки тоже увеличиваем m на единицу
+//   }
+//   // вывод блока на страницу
+//   document.querySelector('.chessBoard').innerHTML = out;
+//   document.querySelectorAll('.chess-block').forEach(function(element) {
+//     element.onclick = horse;
+//   });
+// }
+//
+// // запуск отрисовки функцией
+// draw();
+//
+//
+// function horse() {
+//   // Реализация зачистки поля после клика
+//   document.querySelectorAll('.chess-block').forEach(function(element) {
+//     element.classList.remove('green');
+//     element.classList.remove('active');
+//   })
+//
+//
+//   let x = this.dataset.x;
+//   let y = this.dataset.y;
+//   // проверяем позволяет ли функция получать координаты ячеек x & y
+//   console.log(x + ' ' + y);
+//
+//   // подсветка ячейки по которой кликнет пользователь
+//   this.classList.add('green');
+//
+//   // Прописываем правила для проверки возможных ходов
+//   // Атрибут data - это всегда строка, поэтому добавляем "+" перед всеми x & y для преобразования результата string в number
+//   if(+x + 2 < 8 && +y + 1 < 8) {
+//     document.querySelector(`.chess-block[data-x="${+x + 2}"][data-y="${+y + 1}"]`).classList.add('active');
+//   }
+//   if(+x + 2 < 8 && +y - 1 >=0) {
+//     document.querySelector(`.chess-block[data-x="${+x + 2}"][data-y="${+y - 1}"]`).classList.add('active');
+//   }
+//   if(+x - 2 >=0 && +y + 1 < 8) {
+//     document.querySelector(`.chess-block[data-x="${+x - 2}"][data-y="${+y + 1}"]`).classList.add('active');
+//   }
+//   if(+x - 2 >=0 && +y - 1 >=0) {
+//     document.querySelector(`.chess-block[data-x="${+x - 2}"][data-y="${+y - 1}"]`).classList.add('active');
+//   }
+//   if(+x + 1 < 8 && +y - 2 >=0) {
+//     document.querySelector(`.chess-block[data-x="${+x + 1}"][data-y="${+y - 2}"]`).classList.add('active');
+//   }
+//   if(+x - 1 >=0 && +y - 2 >=0) {
+//     document.querySelector(`.chess-block[data-x="${+x - 1}"][data-y="${+y - 2}"]`).classList.add('active');
+//   }
+//   if(+x + 1 < 8 && +y + 2 < 8) {
+//     document.querySelector(`.chess-block[data-x="${+x + 1}"][data-y="${+y + 2}"]`).classList.add('active');
+//   }
+//   if(+x - 1 >=0 && +y + 2 < 8) {
+//     document.querySelector(`.chess-block[data-x="${+x - 1}"][data-y="${+y + 2}"]`).classList.add('active');
+//   }
+// }
 
 
 // ---------------- OPTION II ----------------
@@ -195,4 +187,44 @@ function horse() {
 //      document.querySelector(`[data-x="${thisCoord[0] + value[0]}"][data-y="${thisCoord[1] + value[1]}"]`).classList.toggle('horse')
 //   })
 // }
+
+
+// const Summarize = (num) => {
+//   let arr = [];
+//   for (let i = 0; i < num.length; i = i + 1) {
+//     console.log(i);
+//     console.log('num[i]', num[i]);
+//     console.log('num[i]');
+//     arr.push(num[i]);
+//     // console.log('arr', arr);
+//   }
+//
+//   return arr.reduce((acc, number) => acc + number);
+// };
+//
+// Summarize(5);
+// console.log('--- WoRk ---');
+//
+//
+// let item = 7;
+// let arr = [];
+// for (let i = 0; i < item.length; i++) {
+//   console.log(i);
+//   console.log('item[i]', item[i]);
+//   console.log('item[i]');
+//   arr.push(item[i]);
+// }
+// console.log('FINAL ARR', arr);
+//
+// // const total = arr.reduce((acc, number) => acc + number);
+// // console.log(total);
+//
+// arr1 = [1, 2, 3];
+// arr2 = [4, 5, 6];
+// arr1.push(...arr2);
+// console.log('arr1', arr1);
+
+
+
+
 
