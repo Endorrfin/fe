@@ -64,7 +64,7 @@ Enable Sort Wrap -> search everywhere -> double Shift, click soft wrap
 ANGULAR CLI
 ng new - <name of project>
 ng serve - start of project
-ng lint - start lint
+ng lint - start es-lint
 ng add @angular-eslint/schematics
 
 
