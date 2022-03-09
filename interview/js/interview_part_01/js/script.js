@@ -189,40 +189,35 @@ for (let i = 0; i <= roundBrackets.length; i++) {
 // }
 
 
-// const Summarize = (num) => {
-//   let arr = [];
-//   for (let i = 0; i < num.length; i = i + 1) {
-//     console.log(i);
-//     console.log('num[i]', num[i]);
-//     console.log('num[i]');
-//     arr.push(num[i]);
-//     // console.log('arr', arr);
-//   }
-//
-//   return arr.reduce((acc, number) => acc + number);
-// };
-//
-// Summarize(5);
-// console.log('--- WoRk ---');
-//
-//
-// let item = 7;
-// let arr = [];
-// for (let i = 0; i < item.length; i++) {
-//   console.log(i);
-//   console.log('item[i]', item[i]);
-//   console.log('item[i]');
-//   arr.push(item[i]);
-// }
-// console.log('FINAL ARR', arr);
-//
-// // const total = arr.reduce((acc, number) => acc + number);
-// // console.log(total);
-//
-// arr1 = [1, 2, 3];
-// arr2 = [4, 5, 6];
-// arr1.push(...arr2);
-// console.log('arr1', arr1);
+const Summarize = function (num) {
+  let arr = [];
+  for (let i = 1; i <= num; i++) {
+
+    //для наочності виводимо на кожній ітерації число
+    console.log( 'ITERATION', i);
+    arr.push(i);
+    // 'для наочності виводимо на кожній ітерації массив, в який додаються числа'
+    console.log('[ARR]', arr);
+  }
+
+  // Пробігаємо по масиву та плюсуємо кожний єлемент, щоб отримати суму всіх елементів
+  return arr.reduce((acc, number) => acc + number);
+};
+
+console.log('- WORK №1 -', Summarize(4));
+console.log('-- WORK №2 --', Summarize(7));
+console.log('--- WORK №3 ---', Summarize(10));
+console.log('---- WORK №4 ----', Summarize(15));
+// console.log('---- WORK №5 ----', Summarize(100));
+// console.log('---- WORK №6 ----', Summarize(1000));
+
+/*
+* Conclusions
+* 1. Можемо передати будь-яке число, як аргумент в функцію.
+* 2. Функцію можна викликати скільки завгодно раз, передаючи різні числа в якості аргументів.
+* 3. Функція має універсальний характер при застосуванні
+* */
+
 
 
 
