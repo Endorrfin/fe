@@ -204,10 +204,10 @@ const Summarize = function (num) {
   return arr.reduce((acc, number) => acc + number);
 };
 
-console.log('- WORK №1 -', Summarize(4));
-console.log('-- WORK №2 --', Summarize(7));
-console.log('--- WORK №3 ---', Summarize(10));
-console.log('---- WORK №4 ----', Summarize(15));
+// console.log('- WORK №1 -', Summarize(4));
+// console.log('-- WORK №2 --', Summarize(7));
+// console.log('--- WORK №3 ---', Summarize(10));
+// console.log('---- WORK №4 ----', Summarize(15));
 // console.log('---- WORK №5 ----', Summarize(100));
 // console.log('---- WORK №6 ----', Summarize(1000));
 
