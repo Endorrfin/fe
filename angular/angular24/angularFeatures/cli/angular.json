@@ -1,7 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "c40d8d15-b8c2-4d7b-84ca-92d2997ca1fd"
+    "analytics": "c40d8d15-b8c2-4d7b-84ca-92d2997ca1fd",
+    "defaultCollection": "@angular-eslint/schematics"
   },
   "version": 1,
   "newProjectRoot": "projects",
@@ -106,9 +107,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "cli"
+  "defaultProject": "cli",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

@@ -59,3 +59,12 @@ Alt + J/Shift + Alt + J для создания нескольких карет�
 
 
 Enable Sort Wrap -> search everywhere -> double Shift, click soft wrap
+
+
+ANGULAR CLI
+ng new - <name of project>
+ng serve - start of project
+ng lint - start lint
+ng add @angular-eslint/schematics
+
+
