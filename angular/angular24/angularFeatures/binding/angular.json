@@ -121,7 +121,7 @@
     }
   },
   "defaultProject": "binding",
-  "cli": {
+  "binding": {
     "defaultCollection": "@angular-eslint/schematics"
   }
 }

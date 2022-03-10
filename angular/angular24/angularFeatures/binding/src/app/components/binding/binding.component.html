@@ -1,29 +1,73 @@
-
-<p (click)="updatePhone()" title="{{phone}}">Phone is: {{phone}}</p>
+<h3>Block #1</h3>
+<p (click)='updatePhone()' title='{{phone}}'>Phone is: {{phone}}</p>
 
 <p>FullName is: {{user.name + " " + user.surname}}</p>
-<p [class]="user.name" [title]="user.name">FullName is: {{user.name}} {{user.surname}}</p>
+<p [class]='user.name' [title]='user.name'>FullName is: {{user.name}} {{user.surname}}</p>
 <p>FullName is: {{fullName}}</p>
+<p [innerHTML]='boldText'></p>
 
-<p [innerHTML]="boldText"></p>
+<hr>
+<h3>Block #2</h3>
 
-<input [value]="phone" type="text">
-<hr>
-<input (input)="onInput($event, 123, user)" [value]="phone" type="text">
-<hr>
+<input [value]='phone' type='text'>
+<br>
+<input (input)='onInput($event, 123, user)' [value]='phone' type='text'>
+
+<br>
+<p>Separate</p>
 
 <!--<input (ngModalChange)="user.name=$event" [ngModal]="user.name" type="text">-->
-<input [(ngModel)]="user.name" type="text">
+<input [(ngModel)]='user.name' type='text'>
 <br>
-<input [(ngModel)]="user.surname" type="text">f
+<input [(ngModel)]='user.surname' type='text'>
 
 <hr>
-
+<h3>Block #3</h3>
 <h2>Form</h2>
-<form action="#" (ngSubmit)="onSubmit()">
-  <input [(ngModel)]="login" name="login" type="text">
-  <input [(ngModel)]="password" name="password" type="text">
-  <button type="submit">Submit</button>
+<form (ngSubmit)='onSubmit()' action='#'>
+  <input [(ngModel)]='login' name='login' type='text'>
+  <input [(ngModel)]='password' name='password' type='text'>
+  <button type='submit'>Submit</button>
 </form>
+
+
+<h3>Block #4 Attributes</h3>
+<p title='title'>Attributes</p>
+<p [title]="'title' + 12">Attributes</p>
+<p [draggable]='true' [title]="'title' + 12">Attributes</p>
+
+<p [attr.data-foo]='123'>Attributes</p>
+<p [attr.draggable]='true'>Attributes draggable</p>
+<p [attr.class]="'foo'">Attributes class</p>
+<p [attr.id]="'foo'">Attributes id</p>
+<p [attr.title]="'foo'">Attributes title</p>
+<p [attr.style]="'color: red'">Attributes style</p>
+
+<td [colSpan]='1'>1</td>
+<td colSpan='1'>2</td>
+<td [attr.colSpan]='1'>3</td>
+
+
+<h3>Block #5 Classes</h3>
+<!--<p [ngClass]='true'>Class</p>-->
+<p [class.red]='true'>Class red</p>
+<p [class.red-blue]='true'>Class red-blue</p>
+<p [class.blue]='true' [class.green]='true' [class.red]='true'>Class blue green red</p>
+<p class='red green blue'>Class classic - static</p>
+<p [class]="'red green blue'">Class dynamic binding - string or variable</p>
+<p [class]="['red', 'green', 'blue']">Class Array</p>
+<p [class]="{red: 'true', green: false, 'dark-blue': true}">Class Object</p>
+
+
+<h3>Block #6 Styles</h3>
+<!--<p [ngStyle]=''>Styles [ngStyle]</p>-->
+<p [style.background-color]="'red'">Styles</p>
+<p [style.background-color]="'red'" [style.width]="'100px'">Styles</p>
+<p [style.background-color]="'red'" [style.width]="100 + 'px'">Styles</p>
+<p [style.background-color]="'red'" [style.width.px]='100'>Styles</p>
+<p style='background-color: green; width: 150px'>Style classic</p>
+<p [style]="'background-color: orange; width: 150px'">Style generate JS</p>
+<p [style]="{'background-color': 'blue', width: '150px'}">Style object</p>
+
 
 
