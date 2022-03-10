@@ -1,0 +1,57 @@
+
+<h3>Block 1.1</h3>
+<div *ngIf="expression">I am okay</div>
+<div *ngIf="!expression">I am bad</div>
+
+<button (click)="expression = !expression">Toggle</button>
+
+<h3>Block 1.2</h3>
+<div *ngIf="switch; else: elseCase">I am fine</div>
+
+<ng-template #elseCase>
+  <div *ngIf="!switch">I am usually</div>
+</ng-template>
+
+
+<button (click)="switch = !switch">Toggle</button>
+
+<hr>
+<h3>Block 2.1</h3>
+<button (click)="generateUser()">Generate User</button>
+
+<ul *ngIf="deepObject && deepObject.user">
+  <li>Name is: {{deepObject.user.name}}</li>
+  <li>Surname is: {{deepObject.user.surname}}</li>
+  <li>Age is: {{deepObject.user.age}}</li>
+  <li>Is Admin: {{deepObject.user.isAdmin}}</li>
+</ul>
+
+<h3>Block 2.2</h3>
+<button (click)="generateUser()">Generate User</button>
+
+<ul *ngIf="deepObject?.user as user">
+  <li>Name is: {{user.name}}</li>
+  <li>Surname is: {{user.surname}}</li>
+  <li>Age is: {{user.age}}</li>
+  <li>Is Admin: {{user.isAdmin}}</li>
+</ul>
+
+
+<hr>
+<h3>Block 3.1</h3>
+<ul>
+  <li *ngFor="let user of users; index as i;">{{i + 1}} {{user.name}}</li>
+</ul>
+
+
+<h3>Block 3.2</h3>
+<ul>
+  <li
+    *ngFor="let user of users; index as i; trackBy: trackBy"
+    [ngSwitch]="user.template">
+    <p *ngSwitchCase="'bold'"><b>{{i + 1}} {{user.name}}</b></p>
+    <p *ngSwitchCase="'italic'"><i>{{i + 1}} {{user.name}}</i></p>
+    <p *ngSwitchDefault><span>{{i + 1}} {{user.name}}</span></p>
+  </li>
+</ul>
+
