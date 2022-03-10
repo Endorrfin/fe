@@ -1,13 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "51d9be10-530b-4103-8c15-946c0b19ea58",
-    "defaultCollection": "@angular-eslint/schematics"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "binding": {
+    "structuralDirectives": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/binding",
+            "outputPath": "dist/structural-directives",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -76,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "binding:build:production"
+              "browserTarget": "structuralDirectives:build:production"
             },
             "development": {
-              "browserTarget": "binding:build:development"
+              "browserTarget": "structuralDirectives:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "binding:build"
+            "browserTarget": "structuralDirectives:build"
           }
         },
         "test": {
@@ -107,21 +103,9 @@
             ],
             "scripts": []
           }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "src/**/*.ts",
-              "src/**/*.html"
-            ]
-          }
         }
       }
     }
   },
-  "defaultProject": "binding",
-  "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
-  }
+  "defaultProject": "structuralDirectives"
 }
