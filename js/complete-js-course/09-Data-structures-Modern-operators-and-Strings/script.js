@@ -757,44 +757,90 @@ Let's continue with our football betting app! This time, we have a map with a lo
 GOOD LUCK 😀
 */
 
-const gameEvents = new Map([
-  [17, '⚽ GOAL'],
-  [36, '🔁 Substitution'],
-  [47, '⚽ GOAL'],
-  [61, '🔁 Substitution'],
-  [64, '🔶 Yellow card'],
-  [69, '🔴 Red card'],
-  [70, '🔁 Substitution'],
-  [72, '🔁 Substitution'],
-  [76, '⚽ GOAL'],
-  [80, '⚽ GOAL'],
-  [92, '🔶 Yellow card']
-]);
+// const gameEvents = new Map([
+//   [17, '⚽ GOAL'],
+//   [36, '🔁 Substitution'],
+//   [47, '⚽ GOAL'],
+//   [61, '🔁 Substitution'],
+//   [64, '🔶 Yellow card'],
+//   [69, '🔴 Red card'],
+//   [70, '🔁 Substitution'],
+//   [72, '🔁 Substitution'],
+//   [76, '⚽ GOAL'],
+//   [80, '⚽ GOAL'],
+//   [92, '🔶 Yellow card']
+// ]);
+//
+// // 1.
+// console.log('gameEvents', gameEvents.values());
+// const events = new Set(gameEvents.values());
+// console.log('events', events);
+//
+// // 2.
+// console.log('delete 64', gameEvents.delete(64));
+// console.log('gameEvents', gameEvents.values());
+//
+// // 3.
+// console.log(
+//   `An event happened, on average, every ${90 / gameEvents.size}
+//   minutes`);
+//
+// const time = [...gameEvents.keys()].pop();
+// console.log('time', time);
+// console.log(`An event happened, on average, every ${time / gameEvents.size} minutes`);
+//
+// // 4.
+// for (const [min, event] of gameEvents) {
+//   const half = min <= 45 ? 'FIRST' : 'SECOND'
+//   console.log('TYPE of HALF', `[${half} HALF ] ${min}: ${event}`);
+// }
 
-// 1.
-console.log('gameEvents', gameEvents.values());
-const events = new Set(gameEvents.values());
-console.log('events', events);
 
-// 2.
-console.log('delete 64', gameEvents.delete(64));
-console.log('gameEvents', gameEvents.values());
+// ==========================================================
+//              121. Working With Strings - Part 1
+// ==========================================================
 
-// 3.
-console.log(
-  `An event happened, on average, every ${90 / gameEvents.size} 
-  minutes`);
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
 
-const time = [...gameEvents.keys()].pop();
-console.log('time', time);
-console.log(`An event happened, on average, every ${time / gameEvents.size} minutes`);
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
 
-// 4.
-for (const [min, event] of gameEvents) {
-  const half = min <= 45 ? 'FIRST' : 'SECOND'
-  console.log('TYPE of HALF', `[${half} HALF ] ${min}: ${event}`);
-}
+console.log(airline.length);
 
+console.log('B737'[0]);
+console.log('B737'.length);
+
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf('Portugal'));
+console.log(airline.indexOf('portugal'));
+
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+console.log(airline.slice(0, airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
+
+const checkMiddleSeat = function(seat) {
+  // B and C are middle seats
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'C') {
+    console.log('You got the middle seat 😬');
+  } else {
+    console.log('You got lucky 😎');
+  }
+};
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
+
+console.log(new String('jonas'));
+console.log(typeof new String('jonas'));
+console.log(typeof new String('jonas').slice(1));
 
 
 
