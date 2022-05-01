@@ -69,6 +69,52 @@ newPassport(jonas);
 checkIn(flight, jonas);
 
 
+// ==========================================================
+//      130 First-Class and Higher-Order Functions
+// ==========================================================
+
+// FIRST-CLASS FUNCTIONS
+// JavaScript treats functions as first-class citizens
+// This means that functions are simply values
+// Functions are just another "type" of object
+
+
+// Store functions in variables or properties:
+const add = (a, b) => a + b;
+const counter = {
+  value: 23,
+  inc: function() {
+    this.value++;
+  }
+};
+
+// Pass function as arguments to OTHER functions:
+const greet = () => console.log('Hev Jonas');
+btnClose.addEventListener('click', greet);
+
+// Return functions FROM functions
+// Call methods of functions:
+
+counter.inc.bind(someOtherObject);
+
+
+// HIGHER-ORDER FUNCTIONS
+// A function that receives another function as an argument, that returns ane function, of both
+// This is only possible because of first-class functions
+
+// Function that receives another function
+const greet2 = () => console.log('Hev Jonas');
+btnClose.addEventListener('click', greet2);
+
+
+// Function that returns new function
+function count() {
+  let count = 0;
+  return function() {
+    count++;
+  };
+}
+
 
 
 
