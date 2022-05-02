@@ -120,36 +120,59 @@
 //      131 Functions Accepting Callback Functions
 // ==========================================================
 
-const oneWord = function(str) {
-  return str.replace(/ /g, '').toLowerCase();
+// const oneWord = function(str) {
+//   return str.replace(/ /g, '').toLowerCase();
+// };
+// console.log(oneWord('ParadiSe'));
+//
+// const upperFirsWord = function(str) {
+//   const [first, ...other] = str.split(' ');
+//   return [first.toUpperCase(), ...other].join(' ');
+// };
+// console.log(upperFirsWord('Today is beautiful day'));
+//
+//
+// // Higher-order function
+// const transformer = function(str, fn) {
+//   console.log(`Original string: ${str}`);
+//   console.log(`Transformed string: ${fn(str)}`);
+//
+//   console.log(`Transformed by: ${fn.name}`);
+// };
+//
+// transformer('JavaScript is the best!', upperFirsWord);
+// console.log('===========================================>');
+// transformer('JavaScript is the best!', oneWord);
+//
+// // JS uses callbacks all the time
+// const high5 = function() {
+//   console.log('👋');
+// };
+// document.body.addEventListener('click', high5);
+// ['Jonas', 'Martha', 'Adam'].forEach(high5);
+
+
+// ==========================================================
+//        132 Functions Returning Functions
+// ==========================================================
+
+const greet = function(greeting) {
+  return function(name) {
+    console.log(`${greeting} ${name}`);
+  };
 };
-console.log(oneWord('ParadiSe'));
 
-const upperFirsWord = function(str) {
-  const [first, ...other] = str.split(' ');
-  return [first.toUpperCase(), ...other].join(' ');
-};
-console.log(upperFirsWord('Today is beautiful day'));
+const greeterHey = greet('Hey');
+greeterHey('Jonas');
+greeterHey('Steven');
+
+greet('Hello')('Barny');
+
+// Challenge
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+greetArr('Hey')('Boy');
 
 
-// Higher-order function
-const transformer = function(str, fn) {
-  console.log(`Original string: ${str}`);
-  console.log(`Transformed string: ${fn(str)}`);
-
-  console.log(`Transformed by: ${fn.name}`);
-};
-
-transformer('JavaScript is the best!', upperFirsWord);
-console.log('===========================================>');
-transformer('JavaScript is the best!', oneWord);
-
-// JS uses callbacks all the time
-const high5 = function() {
-  console.log('👋');
-};
-document.body.addEventListener('click', high5);
-['Jonas', 'Martha', 'Adam'].forEach(high5);
 
 
 
