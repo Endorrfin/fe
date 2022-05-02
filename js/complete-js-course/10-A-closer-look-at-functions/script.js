@@ -73,47 +73,88 @@
 //      130 First-Class and Higher-Order Functions
 // ==========================================================
 
-// FIRST-CLASS FUNCTIONS
-// JavaScript treats functions as first-class citizens
-// This means that functions are simply values
-// Functions are just another "type" of object
+// // FIRST-CLASS FUNCTIONS
+// // JavaScript treats functions as first-class citizens
+// // This means that functions are simply values
+// // Functions are just another "type" of object
+//
+//
+// // Store functions in variables or properties:
+// const add = (a, b) => a + b;
+// const counter = {
+//   value: 23,
+//   inc: function() {
+//     this.value++;
+//   }
+// };
+//
+// // Pass function as arguments to OTHER functions:
+// const greet = () => console.log('Hey Jonas');
+// btnClose.addEventListener('click', greet);
+//
+// // Return functions FROM functions
+// // Call methods of functions:
+//
+// counter.inc.bind(someOtherObject);
+//
+//
+// // HIGHER-ORDER FUNCTIONS
+// // A function that receives another function as an argument, that returns ane function, of both
+// // This is only possible because of first-class functions
+//
+// // Function that receives another function
+// const greet2 = () => console.log('Hev Jonas');
+// btnClose.addEventListener('click', greet2);
+//
+//
+// // Function that returns new function
+// function count() {
+//   let count = 0;
+//   return function() {
+//     count++;
+//   };
+// }
 
 
-// Store functions in variables or properties:
-const add = (a, b) => a + b;
-const counter = {
-  value: 23,
-  inc: function() {
-    this.value++;
-  }
+// ==========================================================
+//      131 Functions Accepting Callback Functions
+// ==========================================================
+
+const oneWord = function(str) {
+  return str.replace(/ /g, '').toLowerCase();
+};
+console.log(oneWord('ParadiSe'));
+
+const upperFirsWord = function(str) {
+  const [first, ...other] = str.split(' ');
+  return [first.toUpperCase(), ...other].join(' ');
+};
+console.log(upperFirsWord('Today is beautiful day'));
+
+
+// Higher-order function
+const transformer = function(str, fn) {
+  console.log(`Original string: ${str}`);
+  console.log(`Transformed string: ${fn(str)}`);
+
+  console.log(`Transformed by: ${fn.name}`);
 };
 
-// Pass function as arguments to OTHER functions:
-const greet = () => console.log('Hev Jonas');
-btnClose.addEventListener('click', greet);
+transformer('JavaScript is the best!', upperFirsWord);
+console.log('===========================================>');
+transformer('JavaScript is the best!', oneWord);
 
-// Return functions FROM functions
-// Call methods of functions:
-
-counter.inc.bind(someOtherObject);
-
-
-// HIGHER-ORDER FUNCTIONS
-// A function that receives another function as an argument, that returns ane function, of both
-// This is only possible because of first-class functions
-
-// Function that receives another function
-const greet2 = () => console.log('Hev Jonas');
-btnClose.addEventListener('click', greet2);
+// JS uses callbacks all the time
+const high5 = function() {
+  console.log('👋');
+};
+document.body.addEventListener('click', high5);
+['Jonas', 'Martha', 'Adam'].forEach(high5);
 
 
-// Function that returns new function
-function count() {
-  let count = 0;
-  return function() {
-    count++;
-  };
-}
+
+
+
 
 
 
