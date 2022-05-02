@@ -395,22 +395,73 @@ GOOD LUCK 😀
 //                137 Closures
 // ==========================================================
 
-const secureBooking = function() {
-  let passengerCount = 0;
+// const secureBooking = function() {
+//   let passengerCount = 0;
+//
+//   return function() {
+//     passengerCount++;
+//     console.log(`${passengerCount} passengers`);
+//   };
+// };
+//
+// const booker = secureBooking();
+//
+// booker();
+// booker();
+// booker();
+//
+// console.dir(booker);
 
-  return function() {
-    passengerCount++;
-    console.log(`${passengerCount} passengers`);
+
+// ==========================================================
+//               138 More Closure Examples
+// ==========================================================
+
+// EXAMPLE I
+let f;
+
+let g = function() {
+  const a = 23;
+  f = function() {
+    console.log(a * 2);
   };
 };
 
-const booker = secureBooking();
+const h = function() {
+  const b = 777;
+  f = function() {
+    console.log(b * 2);
+  };
+};
 
-booker();
-booker();
-booker();
+g();
+f();
+console.dir(f);
 
-console.dir(booker);
+// Re-assigning f function
+h();
+f();
+console.dir(f);
+
+
+// EXAMPLE II
+const boardPassengers = function(n, wait) {
+  const perGroup = n / 3;
+
+
+  setTimeout(function() {
+    console.log(`We are now boarding ${n} passengers`);
+    console.log(`There are 3 groups, each with ${perGroup} passengers`);
+  }, wait * 1000);
+
+
+  console.log(`Will start boarding in ${wait} seconds`);
+};
+
+const perGroup = 1000;
+boardPassengers(180, 3);
+
+
 
 
 
