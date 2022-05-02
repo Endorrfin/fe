@@ -363,32 +363,54 @@ GOOD LUCK 😀
 //     136 Immediately Invoked Function Expressions (IIFE)
 // ==========================================================
 
-const runOnce = function() {
-  console.log('This will never run again');
+// const runOnce = function() {
+//   console.log('This will never run again');
+// };
+//
+// runOnce();
+//
+//
+// // IIFE
+// (function() {
+//   console.log('This will never run again');
+//   const isPrivate = 23;
+// })();
+//
+// // console.log(isPrivate)
+//
+// (() => console.log('This will ALSO never run again'))
+// ();
+//
+//
+// {
+//   const isPrivate = 23;
+//   var notPrivate = 46;
+// }
+//
+// // console.log(isPrivate);
+// console.log(notPrivate);
+
+
+// ==========================================================
+//                137 Closures
+// ==========================================================
+
+const secureBooking = function() {
+  let passengerCount = 0;
+
+  return function() {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
 };
 
-runOnce();
+const booker = secureBooking();
 
+booker();
+booker();
+booker();
 
-// IIFE
-(function() {
-  console.log('This will never run again');
-  const isPrivate = 23;
-})();
-
-// console.log(isPrivate)
-
-(() => console.log('This will ALSO never run again'))
-();
-
-
-{
-  const isPrivate = 23;
-  var notPrivate = 46;
-}
-
-// console.log(isPrivate);
-console.log(notPrivate);
+console.dir(booker);
 
 
 
