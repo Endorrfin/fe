@@ -17,6 +17,21 @@
 * */
 
 
+// ==========================================================
+//            207 OOP in JavaScript
+// ==========================================================
+
+/*
+* CLASSICAL OOP: CLASSES
+* Objects (instances) are instantiated from a class, which functions like a blueprint
+*
+* OOP IN JS: PROTOTYPES
+* Objects are linked to a prototype object
+* Prototypal inheritance: The prototype contains methods (behavior) that are accessible to all objects linked to
+*  that prototype;
+* Behavior is delegated to the linked prototype object
+* */
+
 
 
 
