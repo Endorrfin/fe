@@ -1,6 +1,6 @@
 /*
 Анаграмма - слово, которое содержит все буквы другого слова в том же количестве, но ином порядке.
-Нужно написать функцию, которая проверяет, являются ли две строки анаграммами, причем регистр букв не имеет значения. 
+Нужно написать функцию, которая проверяет, являются ли две строки анаграммами, причем регистр букв не имеет значения.
 Учитываются лишь символы; пробелы или знаки препинания в расчет не берутся.
 
 anagram('finder', Friend') --> true
@@ -45,12 +45,23 @@ const anagram = (strA, strB) => {
 
     for (let char in aCharObject) {
         if (aCharObject[char] !== bCharObject[char]) {
-            return false
+            return false;
         }
     }
 
     // if both the above checks succeed, you have an anagram: return true
-    return true
+    return true;
+}
+
+
+function allAnagrams(array) {
+    const sorted = array.map((str) => str.split('').sort().join(''));
+    for (let i = 0; i < sorted.length; i++) {
+        if (sorted[i] !== sorted[0]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 // console.log(anagram('finder', 'Friend'))

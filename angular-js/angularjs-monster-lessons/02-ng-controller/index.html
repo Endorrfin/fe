@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" ng-app='app'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ng-controller</title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+
+<div ng-controller="myCtrl">
+    <h2>Lesson #2 - Контроллеры в AngularJS </h2>
+    {{1 + 11}}
+    <br>
+    {{hello}}
+    <br>
+    {{hey}}
+    <input type="text" ng-model="myBook">
+    {{myBook}}
+</div>
+
+</body>
+</html>
