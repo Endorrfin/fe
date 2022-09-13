@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app='app'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="main.js"></script>
+    <title>controller as syntax</title>
+</head>
+<body>
+<div ng-controller="mainCtrl as mainCtrl">
+    <div ng-controller="firstCtrl as firstCtrl">
+        <div ng-controller="secondCtrl as secondCtrl">
+<!--            {{myLesson}}-->
+            {{secondCtrl.myLesson}}
+            <button ng-click="mainCtrl.addLesson()">Add lesson</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
