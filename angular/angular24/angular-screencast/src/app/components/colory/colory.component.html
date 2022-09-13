@@ -1,0 +1,25 @@
+
+
+<!--OPTION I-->
+<div appColory>
+    <strong>Some text changing color I</strong>
+
+</div>
+
+<button class="btn btn-primary"
+        (click)="changeColor('red')">
+    Change color
+</button>
+
+<hr>
+
+<!--OPTION II-->
+<p appColory #c="colory">
+    <strong>Some text changing color II</strong>
+</p>
+
+<button class="btn btn-info"
+        (click)="c.setColor('orange')">
+    Change color
+</button>
+

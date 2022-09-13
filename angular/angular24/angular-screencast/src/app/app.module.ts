@@ -10,6 +10,7 @@ import { RockComponent } from './components/rock/rock.component';
 import { LinkDirective } from './directive/link.directive';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ColoryDirective } from './directive/colory.directive';
+import { ColoryComponent } from './components/colory/colory.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ColoryDirective } from './directive/colory.directive';
     FoxComponent,
     RockComponent,
     LinkDirective,
-    ColoryDirective
+    ColoryDirective,
+    ColoryComponent
   ],
   imports: [
     BrowserModule,
