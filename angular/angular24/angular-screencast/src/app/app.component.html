@@ -49,7 +49,22 @@
                 </mat-panel-description>
             </mat-expansion-panel-header>
 
-            <app-parentGreetings></app-parentGreetings>
+            <app-parent-greetings></app-parent-greetings>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Section #4
+                    {{ secondPanelOpenState ? 'open' : 'closed' }}
+                </mat-panel-title>
+                <mat-panel-description>
+                    #4 Передача нескольких параметров в структурную директиву
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <app-delay></app-delay>
 
         </mat-expansion-panel>
 

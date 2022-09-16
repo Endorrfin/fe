@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from "@angular/core";
 
 @Component({
-    selector: 'app-parentGreetings',
-    templateUrl: 'greetings.component.html'
+    selector: 'app-parent-greetings',
+    templateUrl: 'parent-greetings.component.html'
 })
 
 export class ParentGreetings {
