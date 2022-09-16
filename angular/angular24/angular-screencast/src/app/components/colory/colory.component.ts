@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {ColoryDirective} from "../../directive/colory.directive";
+import {ColoryDirective} from "../../directives/colory.directive";
 
 @Component({
     selector: 'app-colory',

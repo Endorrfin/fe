@@ -1,44 +1,75 @@
 
+<div class="container">
+    <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Section #1
+                    {{ secondPanelOpenState ? 'open' : 'closed' }}
+                </mat-panel-title>
+                <mat-panel-description>
+                    #1 Получение @ContentChildren/@ViewChildren с помощью сервиса
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <app-animals>
+                <app-cat appLink></app-cat>
+                <app-dog appLink></app-dog>
+                <app-rock></app-rock>
+                <app-fox appLink></app-fox>
+                <p>just an element</p>
+            </app-animals>
+
+        </mat-expansion-panel>
 
 
-<hr>
-<div class="accordion" id="accordionExample">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Section #2
+                    {{ secondPanelOpenState ? 'open' : 'closed' }}
+                </mat-panel-title>
+                <mat-panel-description>
+                    #2 Опция директивы exportAs для экспорта контроллера
+                </mat-panel-description>
+            </mat-expansion-panel-header>
 
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        #1 Получение @ContentChildren/@ViewChildren с помощью сервиса
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <app-animals>
-          <app-cat appLink></app-cat>
-          <app-dog appLink></app-dog>
-          <app-rock></app-rock>
-          <app-fox appLink></app-fox>
-          <p>just an element</p>
-        </app-animals>
-      </div>
-    </div>
-  </div>
+            <app-colory></app-colory>
 
-  <hr>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        #2 Опция директивы exportAs для экспорта контроллера
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-         data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <app-colory></app-colory>
-      </div>
-    </div>
-  </div>
+        </mat-expansion-panel>
 
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Section #3
+                    {{ secondPanelOpenState ? 'open' : 'closed' }}
+                </mat-panel-title>
+                <mat-panel-description>
+                    #3 Использование декоратора @Attribute
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <app-parentGreetings></app-parentGreetings>
+
+        </mat-expansion-panel>
+
+
+        <mat-expansion-panel (opened)="secondPanelOpenState = true"
+                             (closed)="secondPanelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Section
+                </mat-panel-title>
+                <mat-panel-description>
+                    Some heading :
+                    {{ secondPanelOpenState ? 'open' : 'closed' }}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p> <b>Some content.</b></p>
+        </mat-expansion-panel>
+    </mat-accordion>
 </div>
+
 
 
 
