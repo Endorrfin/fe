@@ -10,6 +10,6 @@ export class Greetings implements OnInit {
     @Input() name!: string;
 
     ngOnInit() {
-        console.log(this.name);
+        // console.log(this.name);
     }
 }

@@ -68,6 +68,21 @@
 
         </mat-expansion-panel>
 
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Section #5
+                    {{ secondPanelOpenState ? 'open' : 'closed' }}
+                </mat-panel-title>
+                <mat-panel-description>
+                    #5 Dynamic components
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <app-parent-banner></app-parent-banner>
+
+        </mat-expansion-panel>
+
 
         <mat-expansion-panel (opened)="secondPanelOpenState = true"
                              (closed)="secondPanelOpenState = false">
