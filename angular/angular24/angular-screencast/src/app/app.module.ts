@@ -16,10 +16,13 @@ import {ParentGreetings} from "./components/parent-greetings/parent-greetings.co
 import {MaterialModule} from './material/material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgMaterialModule} from "./ng-material/ng-material.module";
-import { DelayDirective } from './directives/delay.directive';
-import { DelayComponent } from './components/delay/delay.component';
-import { ParentBannerComponent } from './components/parent-banner/parent-banner.component';
-import { HostDirective } from './directives/host.directive';
+import {DelayDirective} from './directives/delay.directive';
+import {DelayComponent} from './components/delay/delay.component';
+import {ParentBannerComponent} from './components/parent-banner/parent-banner.component';
+import {HostDirective} from './directives/host.directive';
+import {HelloComponent} from "./components/elements/hello/hello.component";
+
+// import { ElementsComponent } from './components/elements/elements.component';
 
 @NgModule({
     declarations: [
@@ -37,7 +40,9 @@ import { HostDirective } from './directives/host.directive';
         DelayDirective,
         DelayComponent,
         ParentBannerComponent,
-        HostDirective
+        HostDirective,
+        // ElementsComponent,
+        HelloComponent,
     ],
     imports: [
         BrowserModule,
