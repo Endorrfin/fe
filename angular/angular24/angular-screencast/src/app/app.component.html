@@ -1,7 +1,7 @@
-
-<h1>All components</h1>
-
 <div class="container">
+    <h1>All components</h1>
+
+
     <mat-accordion>
         <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -120,6 +120,22 @@
         </mat-expansion-panel>
 
 
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Section #mix
+                    {{ secondPanelOpenState ? 'open' : 'closed' }}
+                </mat-panel-title>
+                <mat-panel-description>
+                    #mix Interaction
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <app-interaction></app-interaction>
+
+        </mat-expansion-panel>
+
+
         <mat-expansion-panel (opened)="secondPanelOpenState = true"
                              (closed)="secondPanelOpenState = false">
             <mat-expansion-panel-header>
@@ -131,7 +147,7 @@
                     {{ secondPanelOpenState ? 'open' : 'closed' }}
                 </mat-panel-description>
             </mat-expansion-panel-header>
-            <p> <b>Some content.</b></p>
+            <p><b>Some content.</b></p>
         </mat-expansion-panel>
     </mat-accordion>
 </div>

@@ -21,9 +21,13 @@ import {DelayComponent} from './components/delay/delay.component';
 import {ParentBannerComponent} from './components/parent-banner/parent-banner.component';
 import {HostDirective} from './directives/host.directive';
 import {HelloComponent} from "./components/elements/hello/hello.component";
-import { FirstDialogComponent } from './components/dialog/first-dialog/first-dialog.component';
-import { SecondDialogComponent } from './components/dialog/second-dialog/second-dialog.component';
+import {FirstDialogComponent} from './components/dialog/first-dialog/first-dialog.component';
+import {SecondDialogComponent} from './components/dialog/second-dialog/second-dialog.component';
 import {FormsModule} from "@angular/forms";
+import {InteractionComponent} from "./components/interaction/interaction.component";
+import {InputComponent} from './components/interaction/input/input.component';
+import {StudentComponent} from './components/interaction/student/student.component';
+import {StudentService} from "./services/student.service";
 
 // import { ElementsComponent } from './components/elements/elements.component';
 
@@ -48,6 +52,9 @@ import {FormsModule} from "@angular/forms";
         HelloComponent,
         FirstDialogComponent,
         SecondDialogComponent,
+        InteractionComponent,
+        InputComponent,
+        StudentComponent,
     ],
     imports: [
         BrowserModule,
@@ -58,7 +65,9 @@ import {FormsModule} from "@angular/forms";
         NgMaterialModule,
         FormsModule,
     ],
-    providers: [],
+    providers: [
+        StudentService,
+    ],
     entryComponents: [
         SecondDialogComponent,
     ],

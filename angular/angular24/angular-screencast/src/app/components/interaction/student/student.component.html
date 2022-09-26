@@ -1,0 +1,13 @@
+
+<ng-container *ngIf="student">
+    {{student.id}}. {{student.name}}
+</ng-container>
+
+<ng-container class="container" *ngIf="studentData">
+    <tr class="something">
+        <td>{{ studentData.id }}</td>
+        <td>{{ studentData.name }}</td>
+        <td>{{ studentData.surname }}</td>
+        <td>{{ studentData.age }}</td>
+    </tr>
+</ng-container>

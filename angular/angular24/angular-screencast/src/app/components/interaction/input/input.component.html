@@ -1,0 +1,18 @@
+<div class="input_wrapper" *ngIf="outEnterName">
+    <div class="input-group mb-3">
+        <input type="text"
+               class="input form-control mr-2 ml-20"
+               placeholder="Enter your name"
+               aria-label="Recipient's username"
+               aria-describedby="basic-addon2"
+               #nameInput>
+    </div>
+
+
+    <div class="btn btn-info"
+         (click)="enterName(nameInput)">
+        Add student
+    </div>
+</div>
+
+

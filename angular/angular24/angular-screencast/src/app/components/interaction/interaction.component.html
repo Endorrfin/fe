@@ -1,0 +1,49 @@
+
+<div class="container mt-6">
+    <h2>Interaction between components simple</h2>
+    <app-input (outEnterName)="addName($event)"></app-input>
+
+    <div class="students_list mt-6">
+        <h2 class="subtitle">List of students #1: </h2>
+        <ul class="list">
+            <li class="list-item mb-1 mt-1"
+                *ngFor="let student of students">
+                {{student.name}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="container mt-6">
+    <h2>Interaction between components using @Input @Output EventEmitter</h2>
+    <app-input (outEnterName)="addName($event)"></app-input>
+
+    <div class="students_list mt-6">
+        <h3 class="subtitle">List of students #2: </h3>
+        <ul class="list">
+            <li class="list-item mb-1 mt-1"
+                *ngFor="let student of students">
+                <app-student [student]="student"></app-student>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="container mt-6">
+    <h2>Interaction between components using service</h2>
+    <app-input
+            (outEnterName)="addName($event)">
+    </app-input>
+
+    <div class="students_list mt-6">
+        <h3 class="subtitle">List of students #3: </h3>
+        <ul class="list">
+            <li class="list-item mb-1 mt-1"
+                *ngFor="let student of studentsData$ | async">
+                <app-student [studentData]="student"></app-student>
+            </li>
+        </ul>
+    </div>
+</div>
