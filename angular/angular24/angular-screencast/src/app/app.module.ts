@@ -21,6 +21,9 @@ import {DelayComponent} from './components/delay/delay.component';
 import {ParentBannerComponent} from './components/parent-banner/parent-banner.component';
 import {HostDirective} from './directives/host.directive';
 import {HelloComponent} from "./components/elements/hello/hello.component";
+import { FirstDialogComponent } from './components/dialog/first-dialog/first-dialog.component';
+import { SecondDialogComponent } from './components/dialog/second-dialog/second-dialog.component';
+import {FormsModule} from "@angular/forms";
 
 // import { ElementsComponent } from './components/elements/elements.component';
 
@@ -43,6 +46,8 @@ import {HelloComponent} from "./components/elements/hello/hello.component";
         HostDirective,
         // ElementsComponent,
         HelloComponent,
+        FirstDialogComponent,
+        SecondDialogComponent,
     ],
     imports: [
         BrowserModule,
@@ -51,8 +56,12 @@ import {HelloComponent} from "./components/elements/hello/hello.component";
         BrowserAnimationsModule,
         MaterialModule,
         NgMaterialModule,
+        FormsModule,
     ],
     providers: [],
+    entryComponents: [
+        SecondDialogComponent,
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

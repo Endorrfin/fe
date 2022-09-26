@@ -1,4 +1,6 @@
 
+<h1>All components</h1>
+
 <div class="container">
     <mat-accordion>
         <mat-expansion-panel>
@@ -101,6 +103,20 @@
                 el.addEventListener('clicked', event => console.log(event.detail));
                 el.innerHTML = '<h2>NOTHING!</h2>';
             </script>
+        </mat-expansion-panel>
+
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Section #mix
+                    {{ secondPanelOpenState ? 'open' : 'closed' }}
+                </mat-panel-title>
+                <mat-panel-description>
+                    #mix Mat Dialog
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <app-first-dialog></app-first-dialog>
         </mat-expansion-panel>
 
 

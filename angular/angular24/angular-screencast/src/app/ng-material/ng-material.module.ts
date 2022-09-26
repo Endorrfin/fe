@@ -16,10 +16,6 @@ import { NextPanelComponent } from './next-panel/next-panel.component';
 
 
 @NgModule({
-  declarations: [
-    ListComponent,
-    NextPanelComponent
-  ],
   imports: [
     CommonModule,
     MatExpansionModule,
@@ -40,8 +36,6 @@ import { NextPanelComponent } from './next-panel/next-panel.component';
     MatNativeDateModule,
     MatGridListModule,
     CdkAccordionModule,
-    ListComponent,
-    NextPanelComponent,
   ]
 })
 export class NgMaterialModule { }

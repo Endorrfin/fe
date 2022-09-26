@@ -1,0 +1,40 @@
+
+<div class="row float-right">
+    <mat-icon matSuffix style="cursor: pointer;" (click)="closeDialog()">close</mat-icon>
+</div>
+<div mat-dialog-title class="mt-4">
+    <h1>Favorite Animal</h1>
+    <h2>{{selected}}</h2>
+</div>
+<div mat-dialog-content>
+    <div>
+        <mat-label>Select an Animal</mat-label>
+    </div>
+    <mat-form-field appearance="outline">
+        <mat-select [(ngModel)]="selected">
+            <mat-option *ngFor="let animal of allAnimals" [value]="animal">{{animal}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div>
+        <mat-label>Do you like the: {{selected}}?</mat-label>
+    </div>
+    <mat-form-field appearance="outline">
+        <mat-select [(ngModel)]="likeSelected">
+            <mat-option *ngFor="let like of allLikes" [value]="like">{{like}}</mat-option>
+        </mat-select>
+        <!-- <input matInput type="text" [(ngModel)]="inputVal"> -->
+    </mat-form-field>
+    <div class="justify-content-center mb-4">
+        <div *ngIf="likeSelected.toUpperCase() === 'YES'; else label2">{{likeSelected}} I like the {{selected}}</div>
+        <ng-template #label2>{{likeSelected}} I don't like the {{selected}}</ng-template>
+    </div>
+</div>
+<div mat-dialog-active>
+    <button [disabled]="saved || likeSelected.toUpperCase() === 'NO'" (click)="save()" class="btn btn-primary ml-2"
+            type="button">Save</button>
+    <button class="btn btn-outline-danger ml-5" type="button" (click)="closeDialog()">Cancel</button>
+    <button class="btn btn-outline-success ml-5" type="button" (click)="reset()">Reset</button>
+</div>
+<div class="justify-content-center mt-4">
+    <div *ngIf="saved && likeSelected.toUpperCase() === 'YES'" class="text-success">SAVED</div>
+</div>
