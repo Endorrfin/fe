@@ -39,7 +39,7 @@ const data = [
 const hashTable = {};
 
 data.forEach(item => (hashTable[item.id] = {...item, childNodes: []}));
-console.log('hashTable', hashTable);
+// console.log('hashTable', hashTable);
 
 const dataTree = [];
 data.forEach((item) => {
@@ -50,7 +50,7 @@ data.forEach((item) => {
     }
 });
 
-console.log('dataTree', JSON.stringify(dataTree, null, 4));
+// console.log('dataTree', JSON.stringify(dataTree, null, 4));
 
 
 // STEP II - build function
@@ -72,7 +72,7 @@ const makeDataTree = (dataset, id, parentNodeName, childNodeName) => {
 
 const result = makeDataTree(data, 'id', 'parentNode', 'childNodes');
 
-console.log('result', JSON.stringify(result, null, 4));
+// console.log('result', JSON.stringify(result, null, 4));
 
 
 
