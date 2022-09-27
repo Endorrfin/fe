@@ -33,10 +33,21 @@ const users = [{
         "name": "alexeev",
         "age": 43
     },
+    {
+        "name": "zakharov",
+        "age": 12
+    },
+    {
+        "name": "mirov",
+        "age": 31
+    },
 ]
 
 let newUsers = users.filter((item) => {
     return item.name.includes('ov')
 });
 
+const shortNewUsers = users.filter(user => user.name.includes('rov'));
+
 // console.log(newUsers);
+// console.log(shortNewUsers);

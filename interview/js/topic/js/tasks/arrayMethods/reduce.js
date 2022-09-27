@@ -6,7 +6,7 @@ let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let total = array.reduce((acc, elem, index) => {
     // console.log(index, 'acc', acc, 'elem', elem);
     return (acc + elem)
-})
+}, 0)
 
 // console.log(total);
 
@@ -14,9 +14,14 @@ let total = array.reduce((acc, elem, index) => {
 // ! Options II
 let totalValue = array.reduce((acc, elem) => {
     return (acc + elem)
-}, 10)
+}, 11)
+
+
+// ! Options II
+let totalValueShort = array.reduce((acc, elem) => acc + elem, 0)
 
 // console.log(totalValue);
+// console.log(totalValueShort);
 
 
 // ! Options III
