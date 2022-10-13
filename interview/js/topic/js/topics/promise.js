@@ -1,34 +1,131 @@
+// ============ PROMISE (ES6) ============
 
-// ============ PROMISE ============
-// function job() {
-//   return new Promise(function(resolve, reject) {
-//       reject();
-//   });
-// }
+// ------- Example I -------
+const promise1 = new Promise((resolve, reject) => {
+    if (true) {
+        resolve('promise completed!');
+    } else {
+        reject();
+    }
+});
 
-// let promise = job();
+// promise1
+//     .then(data => console.log(data))
+//     .catch(() => console.log('error'));
 
-// promise
 
-// .then(function() {
-//   console.log('Success 1');
-// })
+// ------- Example II -------
+const promise2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if (true) {
+            resolve('promise completed!');
+        } else {
+            reject();
+        }
+    }, 1000);
+});
 
-// .then(function() {
-//   console.log('Success 2');
-// })
+// promise2
+//     .then(data => console.log(data))
+//     .catch(() => console.log('error'));
 
-// .then(function() {
-//   console.log('Success 3');
-// })
 
-// .catch(function() {
-//   console.log('Error 1'); // Error 1
-// })
+// ------- Example III -------
+/*
+* Если внутри promise будет добавлен throw, то promise сразу вернет ошибку, которую можно будет отлавить catch.
+* Тоесть код написан после throw выполнен не будет.
+* */
 
-// .then(function() {
-//   console.log('Success 4'); // Success 4
-// });
+const promise3 = new Promise((resolve, reject) => {
+    // throw new Error('some error...');
+    setTimeout(() => {
+        if (true) {
+            resolve('promise completed!');
+        } else {
+            reject();
+        }
+    }, 1000);
+});
+
+// promise3
+//     .then(data => console.log(data))
+//     .catch(error => console.log(error));
+
+
+// ------- Example IV -------
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    // .then(data => console.log('OUTPUT USERS', data))
+    .catch(() => console.log('some error...'));
+
+
+// ------- Example V -------
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(res => res.json())
+    // .then(data => console.log('OUTPUT POSTS', data))
+    .catch(() => console.log('some error...'));
+
+
+// ------- Example VI -------
+const posts = [
+    { title: 'Post One', body: 'This is post one' },
+    { title: 'Post Two', body: 'This is post two' },
+    { title: 'Post Three', body: 'This is post three' },
+    { title: 'Post Four', body: 'This is post four' },
+    { title: 'Post Five', body: 'This is post five' }
+];
+
+function getPosts() {
+    setTimeout(() => {
+        let output = '';
+        posts.forEach((post, index) => {
+            output += `<li>${post.title}</li>`;
+        });
+
+        document.body.innerHTML = output;
+    }, 1000);
+}
+
+// getPosts();
+
+
+function createPost(post) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            posts.push(post);
+
+            const error = false;
+
+            if (!error) {
+                resolve();
+            } else {
+                reject('Error: Something went wrong');
+            }
+        }, 2000);
+    });
+}
+
+
+
+// createPost({ title: 'Post Six', body: 'This is post six' })
+//     .then(getPosts)
+//     .catch(err => console.log(err));
+
+
+// PROMISE ALL
+
+const promise01 = Promise.resolve('Hello World');
+const promise02 = 10;
+const promise03 = new Promise((resolve, reject) => setTimeout(resolve, 2000, 'Goodbye'));
+
+const promise04 =
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json());
+
+// Promise.all([promise01, promise02, promise03, promise04]).then(values => console.log(values));
+
+
+
 
 
 
@@ -72,9 +169,6 @@
 // .catch(function(error) {
 //   console.log(error);
 // });
-
-
-
 
 
 // ============ PROMISE ============
@@ -143,10 +237,7 @@
 // });
 
 
-
-
-
-    // ============ PROMISE TASK in Andersen ============
+// ============ PROMISE TASK in Andersen ============
 // Promise.reject('a')
 //   .catch(p => p + 'b')
 //   .catch(p => p + 'с')
@@ -155,9 +246,7 @@
 //   .then(p => console.log(p))
 
 
-
-
-    // ============ PROMISE TASK in Andersen ============
+// ============ PROMISE TASK in Andersen ============
 // Promise.resolve('Error')
 // .then('12312321')
 // .then((e) => {
@@ -175,13 +264,9 @@
 // }
 
 
-
-
-
 // ================================================
 //          PROMISE - InSimpleWords
 // ================================================
-
 
 
 /*
@@ -217,18 +302,17 @@
 // resolved - успешно выполненное обещание.
 
 
-
 // 3. Promise example
 // var promise2 = new Promise(function (resolve, reject) {
 
 // OPTION I
-    // Я обещею посчитать сумму 2-х чисел
-    // var sum = 5 + 7;
-    // resolve(sum); // обещание выполнено resolved
+// Я обещею посчитать сумму 2-х чисел
+// var sum = 5 + 7;
+// resolve(sum); // обещание выполнено resolved
 
 
-    // Я обещаю разделить одно число на другое, но если попадается ноль, в качестве делителя, то обстоятельства сильнее меня.
-    // Деление на ноль запрещено
+// Я обещаю разделить одно число на другое, но если попадается ноль, в качестве делителя, то обстоятельства сильнее меня.
+// Деление на ноль запрещено
 
 // OPTION II
 //     var resultDiv = div(12, 0);
@@ -251,12 +335,10 @@
 // }
 
 
-
 // 4. Promise example
 // const promise3 = new Promise(function (res, rej) {
 //     console.dir(res);
 // })
-
 
 
 // 5. Promise example
