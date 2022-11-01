@@ -1,0 +1,30 @@
+
+
+<h5>Hi I am Component Dialog following Foo list:</h5>
+<ul *ngIf="mydata">
+    <li *ngFor="let item of mydata">{{item}}</li>
+</ul>
+<button mat-button (click)="closeDialog()">Close</button>
+
+
+<hr>
+
+<h3>Are You Sure?</h3>
+<p>This could happen...{{fromPage}}</p>
+<button mat-button color="warn" (click)="yesDialog()">YES</button>
+<button mat-button color="primary" (click)="noDialog()">NO</button>
+<button mat-button (click)="maybeDialog()">MAYBE</button>
+
+
+<hr>
+
+<h2 mat-dialog-title>Install Angular</h2>
+<mat-dialog-content class="mat-typography">
+    <h3>Develop across all platforms</h3>
+    <p>Learn one way to build applications with Angular and reuse your code and abilities to build
+        apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+</mat-dialog-actions>

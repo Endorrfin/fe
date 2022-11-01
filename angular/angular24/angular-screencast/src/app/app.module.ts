@@ -28,6 +28,9 @@ import {InteractionComponent} from "./components/interaction/interaction.compone
 import {InputComponent} from './components/interaction/input/input.component';
 import {StudentComponent} from './components/interaction/student/student.component';
 import {StudentService} from "./services/student.service";
+import {ParentDialogComponent} from './components/parent-dialog/parent-dialog.component';
+import {MyDialogComponent} from './components/dialog/my-dialog/my-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 // import { ElementsComponent } from './components/elements/elements.component';
 
@@ -55,6 +58,8 @@ import {StudentService} from "./services/student.service";
         InteractionComponent,
         InputComponent,
         StudentComponent,
+        ParentDialogComponent,
+        MyDialogComponent,
     ],
     imports: [
         BrowserModule,
@@ -64,6 +69,7 @@ import {StudentService} from "./services/student.service";
         MaterialModule,
         NgMaterialModule,
         FormsModule,
+        MatDialogModule,
     ],
     providers: [
         StudentService,

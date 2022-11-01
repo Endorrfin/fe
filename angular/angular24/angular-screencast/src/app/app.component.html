@@ -105,6 +105,21 @@
             </script>
         </mat-expansion-panel>
 
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Section #7 closed
+                    {{ secondPanelOpenState ? 'open' : 'closed' }}
+                </mat-panel-title>
+                <mat-panel-description>
+                    #7 Material Dialog
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <app-parent-dialog></app-parent-dialog>
+
+        </mat-expansion-panel>
+
 
         <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -149,6 +164,11 @@
             </mat-expansion-panel-header>
             <p><b>Some content.</b></p>
         </mat-expansion-panel>
+
+
+
+
+
     </mat-accordion>
 </div>
 
