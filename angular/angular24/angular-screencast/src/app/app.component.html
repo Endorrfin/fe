@@ -3,6 +3,23 @@
 
 
     <mat-accordion>
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Section #001
+                    {{ secondPanelOpenState ? 'open' : 'closed' }}
+                </mat-panel-title>
+                <mat-panel-description>
+                    #1 Interpolation, binding, two way binding and NgModel
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <app-binding></app-binding>
+
+        </mat-expansion-panel>
+
+
         <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>

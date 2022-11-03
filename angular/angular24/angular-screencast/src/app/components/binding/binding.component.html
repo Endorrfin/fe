@@ -1,0 +1,59 @@
+<hr>
+<!-- INTERPOLATION-->
+<h2>INTERPOLATION</h2>
+<p>Phone is: {{phone}}</p>
+<p title="{{phone}}">Phone is: {{phone}}</p>
+
+<p>Full name is: {{user.name}} {{user.surname}}</p>
+<p>Full name is: {{user.name + ' ' + user.surname}}</p>
+<p>Full name is: {{fullName}}</p>
+
+<hr>
+
+
+<!--ADDING ATTRIBUTES AND CLASSES-->
+<h2>ADDING ATTRIBUTES AND CLASSES</h2>
+<p [title]="user.name" [class]="user.surname">Full name is: {{fullName}}</p>
+<p [innerHTML]="boldText"></p>
+
+<hr>
+
+
+<!--ADDING INPUTS-->
+<h2>ADDING INPUTS</h2>
+<input type="text" [value]="phone">
+<p (click)="updatePhone()" [title]="phone">Phone is: {{phone}}</p>
+<p (click)="updatePhone()" [title]="phone">Phone is: {{phone}}</p>
+<div class="container">
+    <input type="text" (input)="onInputOne($event)" [value]="phone">
+</div>
+
+<div class="container">
+    <input type="text" (input)="onInputTwo($event)" [value]="phone">
+</div>
+
+<hr>
+
+<!--TWO WAY ADDING-->
+<h2>TWO WAY ADDING</h2>
+<div class="container">
+    <input type="text" [(ngModel)]="user.name">
+</div>
+<div class="container">
+    <input type="text" [(ngModel)]="user.surname">
+</div>
+
+<hr>
+
+<!--FORM-->
+<h2>FORM</h2>
+<form action="#" (ngSubmit)="onSubmit()">
+    <input [(ngModel)]="login" type="text" name="login">
+    <input [(ngModel)]="password" type="password" name="password">
+    <button type="submit">Submit</button>
+</form>
+
+
+
+
+

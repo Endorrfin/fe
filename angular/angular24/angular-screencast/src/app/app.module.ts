@@ -31,6 +31,7 @@ import {StudentService} from "./services/student.service";
 import {ParentDialogComponent} from './components/parent-dialog/parent-dialog.component';
 import {MyDialogComponent} from './components/dialog/my-dialog/my-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import { BindingComponent } from './components/binding/binding.component';
 
 // import { ElementsComponent } from './components/elements/elements.component';
 
@@ -60,6 +61,7 @@ import {MatDialogModule} from "@angular/material/dialog";
         StudentComponent,
         ParentDialogComponent,
         MyDialogComponent,
+        BindingComponent,
     ],
     imports: [
         BrowserModule,
