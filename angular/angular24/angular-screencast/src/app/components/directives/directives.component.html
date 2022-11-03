@@ -1,0 +1,48 @@
+
+<h2>*ngIf</h2>
+<div *ngIf="expression" class="container">I am okay</div>
+<div *ngIf="!expression" class="container">I am bad</div>
+
+<button class="btn btn-info" (click)="expression = !expression">Toggle</button>
+
+<div *ngIf="showWeather; else: elseCase" class="container">Sunny weather</div>,
+<ng-template #elseCase>
+    <div class="container">It's raining</div>
+</ng-template>
+
+<button class="btn btn-primary" (click)="showWeather = !showWeather">Toggle</button>
+
+<hr>
+
+<h3>Option I</h3>
+<button class="btn btn-info" (click)="generateUser()">Generate User</button>
+<ul *ngIf="deepObject && deepObject.user">
+    <li>Name is: {{deepObject.user.name}}</li>
+    <li>Surname is: {{deepObject.user.surname}}</li>
+</ul>
+
+<h3>Option II</h3>
+<button class="btn btn-info" (click)="generateUser()">Generate User</button>
+<ul *ngIf="deepObject?.user as user">
+    <li>Name is: {{user.name}}</li>
+    <li>Surname is: {{user.surname}}</li>
+</ul>
+
+<hr>
+
+
+<h2>*ngFor</h2>
+<ul>
+    <li *ngFor="let user of users; index as i; trackBy: trackBy">{{i}}: {{user.name}}</li>
+</ul>
+
+<hr>
+
+<h2>*ngSwitchCase</h2>
+<ul>
+    <li *ngFor="let user of users; index as i; trackBy: trackBy" [ngSwitch]="user.template">
+        <p *ngSwitchCase="'bold'"><b>{{user.name}}</b></p>
+        <p *ngSwitchCase="'italic'"><i>{{user.name}}</i></p>
+        <p *ngSwitchDefault><span>{{user.name}}</span></p>
+    </li>
+</ul>

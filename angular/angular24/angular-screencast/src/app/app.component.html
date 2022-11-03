@@ -7,16 +7,27 @@
         <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>
-                    Section #001
+                    <b>Section #001</b>
                     {{ secondPanelOpenState ? 'open' : 'closed' }}
                 </mat-panel-title>
                 <mat-panel-description>
                     #1 Interpolation, binding, two way binding and NgModel
                 </mat-panel-description>
             </mat-expansion-panel-header>
-
             <app-binding></app-binding>
+        </mat-expansion-panel>
 
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <b>Section #002</b>
+                    {{ secondPanelOpenState ? 'open' : 'closed' }}
+                </mat-panel-title>
+                <mat-panel-description>
+                    #2 Structural directives: *ngIf, *ngFor, *ngSwitchCase
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <app-directives></app-directives>
         </mat-expansion-panel>
 
 

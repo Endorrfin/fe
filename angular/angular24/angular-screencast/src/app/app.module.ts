@@ -32,6 +32,7 @@ import {ParentDialogComponent} from './components/parent-dialog/parent-dialog.co
 import {MyDialogComponent} from './components/dialog/my-dialog/my-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import { BindingComponent } from './components/binding/binding.component';
+import { DirectivesComponent } from './components/directives/directives.component';
 
 // import { ElementsComponent } from './components/elements/elements.component';
 
@@ -62,6 +63,7 @@ import { BindingComponent } from './components/binding/binding.component';
         ParentDialogComponent,
         MyDialogComponent,
         BindingComponent,
+        DirectivesComponent,
     ],
     imports: [
         BrowserModule,
