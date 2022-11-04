@@ -46,3 +46,50 @@
         <p *ngSwitchDefault><span>{{user.name}}</span></p>
     </li>
 </ul>
+
+
+<h2>ATTRIBUTES</h2>
+<p>Attributes</p>
+<p title="title">Attributes</p>
+<p [title]="'title' + 12">Attributes</p>
+<p [draggable]="true" [title]="'title' + 12">Attributes</p>
+<p [attr.data-foo]="true">Attributes</p>
+<p [attr.class]="'foo'">Attributes</p>
+<p [attr.style]="'color: red'">Attributes</p>
+<p [attr.id]="'foo'">Attributes</p>
+<p [attr.title]="'foo'">Attributes</p>
+
+<td [colSpan]="1">1</td>
+<td colSpan="1">1</td>
+<td [attr.colspan]="1">1</td>
+
+<hr>
+
+<h2>CLASS</h2>
+<p [ngClass]="">Class</p>
+<p [class.red]="true">Class</p>
+<p [class.red-blue]="true">Class</p>
+<p [class.blue]="true" [class.red]="true" [class.green]="true">Class</p>
+<p class="red green blue">Class</p>
+<p [class]="'red green blue'">Class</p>
+<p [class]="['red', 'green', 'blue']">Class</p>
+<p [class]="{red: true, green: false, 'dark-blue': true}">Class</p>
+
+<hr>
+
+<h2>STYLES</h2>
+<p style="background-color: red; width: 150px">Style old variant</p>
+<p [style.width.px]="100" [style]="'background-color: green; width: 150px'">Style old variant</p>
+<p [ngStyle]="">Style</p>
+<p [style]="">Style</p>
+<p [style.background-color]="'red'">Style</p>
+<p [style.background-color]="'blue'" [style.width]="'100px'">Style</p>
+<p [style.background-color]="'green'" [style.width]="100 + 'px'">Style</p>
+<p [style.background-color]="'orange'" [style.width.px]="100">Style</p>
+<p [style]="{'background-color': 'red', width: '150px'}">Style</p>
+
+
+
+
+
+
