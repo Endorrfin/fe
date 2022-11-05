@@ -1,0 +1,6 @@
+<app-child
+        [title]="expression ? 'one' : 'two'"
+        (sayHi)="onSayHi($event)"
+        [(counter)]="age">
+</app-child>
+<button class="btn btn-primary" (click)="expression = !expression">{{!expression ? 'two' : 'one'}}</button>

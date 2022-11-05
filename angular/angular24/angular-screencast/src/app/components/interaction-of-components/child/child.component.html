@@ -1,0 +1,28 @@
+<h2>{{title?.toUpperCase()}}</h2>
+<h2>{{head.toUpperCase()}}</h2>
+
+<p>child works!</p>
+
+<button class="btn btn-info" (click)="onSayHi()">Say Hi!!!</button>
+
+<hr>
+
+
+
+<h2>COUNTER</h2>
+
+<div class="container">
+    <button
+            class="btn btn-info"
+            (click)="counterChange.emit(counter - 1)">
+        -1
+    </button>
+    <span>{{counter}}</span>
+    <button
+            class="btn btn-info"
+            (click)="counterChange.emit(counter - 1)">
+        +1
+    </button>
+</div>
+
+

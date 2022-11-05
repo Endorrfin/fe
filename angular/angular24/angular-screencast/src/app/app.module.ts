@@ -33,6 +33,10 @@ import {MyDialogComponent} from './components/dialog/my-dialog/my-dialog.compone
 import {MatDialogModule} from "@angular/material/dialog";
 import { BindingComponent } from './components/binding/binding.component';
 import { DirectivesComponent } from './components/directives/directives.component';
+import { ParentComponent } from './components/interaction-of-components/parent/parent.component';
+import { ChildComponent } from './components/interaction-of-components/child/child.component';
+import { ParentUnitComponent } from './components/advanced-communication/parent-unit/parent-unit.component';
+import { ChildUnitComponent } from './components/advanced-communication/child-unit/child-unit.component';
 
 // import { ElementsComponent } from './components/elements/elements.component';
 
@@ -64,6 +68,10 @@ import { DirectivesComponent } from './components/directives/directives.componen
         MyDialogComponent,
         BindingComponent,
         DirectivesComponent,
+        ParentComponent,
+        ChildComponent,
+        ParentUnitComponent,
+        ChildUnitComponent,
     ],
     imports: [
         BrowserModule,

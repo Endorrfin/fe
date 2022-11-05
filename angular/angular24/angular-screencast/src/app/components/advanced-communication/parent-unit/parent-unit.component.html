@@ -1,0 +1,14 @@
+
+<app-child-unit [templateRefString]="link">
+
+    <h3 class="header">Header</h3>
+    <p class="body">Body</p>
+    <footer class="footer">Footer</footer>
+</app-child-unit>
+
+
+<h2>Передаем template from parent to child</h2>
+
+<ng-template #link let-element>
+    <p> -- {{ element }} -- I am from app-parent-unit</p>
+</ng-template>

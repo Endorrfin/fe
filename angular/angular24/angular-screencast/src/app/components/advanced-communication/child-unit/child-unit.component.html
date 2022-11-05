@@ -1,0 +1,83 @@
+
+<h3>ng-template</h3>
+<p>ng-template это наиболее сложная и гибкая часть возможностей Angular. C ng-template возможно обмениваться частью верстки с параметрами и рисовать ее более чем один раз и в разных местах при этом сохраняя привязки событий и байндингов</p>
+
+
+<h3>ng-content</h3>
+<p>ng-content это концепция slot глазами angular разрабочиков, ng-content позволяет фильтровать контент по селектору</p>
+
+<h3>ng-container</h3>
+<p>ng-container это плейсхолдер, который превратиться в html комментарий и не будет изменять DOM дерево, по этому это отличное решение для опциональной верстки, на которую можно повесить логику angular и не повлиять на HTML</p>
+<hr>
+
+<h2>ng-content</h2>
+<ng-content select=".header"></ng-content>
+
+<ng-content></ng-content>
+
+<ng-content select=".footer"></ng-content>
+<hr>
+
+
+<h2>ng-template</h2>
+
+<ng-template #ref let-data="foo" let-prefix>
+    <p> {{prefix}} I am template and here should be - {{data}}</p>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="ref; context: { foo: 'some dynamic data', $implicit: 'Hello' }"></ng-container>
+
+<!--Implicit – не значение по умолчанию, а неявное значение-->
+<hr>
+
+
+<h2>ng-container</h2>
+
+<h3>Option I</h3>
+<div *ngIf="true">
+    <span class="container" *ngFor="let item of [1, 2, 3, 4, 5]">
+        {{ item }}
+    </span>
+</div>
+
+
+<h3>Option II</h3>
+<ng-container *ngIf="true">
+    <span class="container" *ngFor="let item of [1, 2, 3, 4, 5]">
+        {{ item }}
+    </span>
+</ng-container>
+
+<hr>
+
+
+<h2>Передача template от родителя к ребенку</h2>
+
+<h3>Option I</h3>
+
+<ng-template #defaultTemplateString let-element>
+    <p> {{ element }} I am default template string</p>
+</ng-template>
+
+<div class="container" *ngFor="let item of ['A', 'B', 'C', 'D', 'E']">
+    <ng-container
+            *ngTemplateOutlet="templateRefString || defaultTemplateString; context: { $implicit: item }">
+    </ng-container>
+</div>
+
+<h3>Option II</h3>
+
+<ng-template #defaultTemplateNumber let-element>
+    <p> {{ element }} I am default template number</p>
+</ng-template>
+
+<div class="container" *ngFor="let item of [10, 20, 30, 40, 50]">
+    <ng-container
+            *ngTemplateOutlet="templateRefNumber || defaultTemplateNumber; context: { $implicit: item }">
+    </ng-container>
+</div>
+
+
+
+
+

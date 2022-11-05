@@ -1,204 +1,306 @@
 <div class="container">
-    <h1>All components</h1>
+
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 1 </b> &#9733;</span>
+                <span> Interpolation, binding, two way binding and NgModel </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+
+                <div class="container">
+                    <app-binding></app-binding>
+                </div>
+
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 2 </b> &#9733;</span>
+                <span> Structural directives: *ngIf, *ngFor, *ngSwitchCase, Class, Style, Attr </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+
+                <div class="container">
+                    <app-directives></app-directives>
+                </div>
+
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
 
 
-    <mat-accordion>
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 3 </b> &#9733;</span>
+                <span> Input Output </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
 
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    <b>Section #001</b>
-                    {{ secondPanelOpenState ? 'open' : 'closed' }}
-                </mat-panel-title>
-                <mat-panel-description>
-                    #1 Interpolation, binding, two way binding and NgModel
-                </mat-panel-description>
-            </mat-expansion-panel-header>
-            <app-binding></app-binding>
-        </mat-expansion-panel>
+                <div class="container">
+                    <app-parent></app-parent>
+                </div>
 
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    <b>Section #002</b>
-                    {{ secondPanelOpenState ? 'open' : 'closed' }}
-                </mat-panel-title>
-                <mat-panel-description>
-                    #2 Structural directives: *ngIf, *ngFor, *ngSwitchCase
-                </mat-panel-description>
-            </mat-expansion-panel-header>
-            <app-directives></app-directives>
-        </mat-expansion-panel>
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
 
 
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Section #1
-                    {{ secondPanelOpenState ? 'open' : 'closed' }}
-                </mat-panel-title>
-                <mat-panel-description>
-                    #1 Получение @ContentChildren/@ViewChildren с помощью сервиса
-                </mat-panel-description>
-            </mat-expansion-panel-header>
-            <app-animals>
-                <app-cat appLink></app-cat>
-                <app-dog appLink></app-dog>
-                <app-rock></app-rock>
-                <app-fox appLink></app-fox>
-                <p>just an element</p>
-            </app-animals>
-        </mat-expansion-panel>
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 4 </b> &#9733;</span>
+                <span> ng-template, ng-content, ng-container, *ngTemplateOutlet, context </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
 
+                <div class="container">
+                    <app-parent-unit></app-parent-unit>
+                </div>
 
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Section #2
-                    {{ secondPanelOpenState ? 'open' : 'closed' }}
-                </mat-panel-title>
-                <mat-panel-description>
-                    #2 Опция директивы exportAs для экспорта контроллера
-                </mat-panel-description>
-            </mat-expansion-panel-header>
-            <app-colory></app-colory>
-        </mat-expansion-panel>
-
-
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Section #3
-                    {{ secondPanelOpenState ? 'open' : 'closed' }}
-                </mat-panel-title>
-                <mat-panel-description>
-                    #3 Использование декоратора @Attribute
-                </mat-panel-description>
-            </mat-expansion-panel-header>
-            <app-parent-greetings></app-parent-greetings>
-        </mat-expansion-panel>
-
-
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Section #4
-                    {{ secondPanelOpenState ? 'open' : 'closed' }}
-                </mat-panel-title>
-                <mat-panel-description>
-                    #4 Передача нескольких параметров в структурную директиву
-                </mat-panel-description>
-            </mat-expansion-panel-header>
-            <app-delay></app-delay>
-        </mat-expansion-panel>
-
-
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Section #5
-                    {{ secondPanelOpenState ? 'open' : 'closed' }}
-                </mat-panel-title>
-                <mat-panel-description>
-                    #5 Dynamic components
-                </mat-panel-description>
-            </mat-expansion-panel-header>
-            <app-parent-banner></app-parent-banner>
-        </mat-expansion-panel>
-
-
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Section #6
-                    {{ secondPanelOpenState ? 'open' : 'closed' }}
-                </mat-panel-title>
-                <mat-panel-description>
-                    #6 How work Angular Elements
-                </mat-panel-description>
-            </mat-expansion-panel-header>
-            <app-hello name="John">
-                <h2>SOMETHING!</h2>
-            </app-hello>
-
-            <app-hello name="Alice"></app-hello>
-            <app-hello name="Nick"></app-hello>
-            <app-hello name="Bill"></app-hello>
-
-            <script>
-                const el = document.querySelector('app-hello');
-                el.setAttribute('name', 'Elon');
-                el.addEventListener('clicked', event => console.log(event.detail));
-                el.innerHTML = '<h2>NOTHING!</h2>';
-            </script>
-        </mat-expansion-panel>
-
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Section #7 closed
-                    {{ secondPanelOpenState ? 'open' : 'closed' }}
-                </mat-panel-title>
-                <mat-panel-description>
-                    #7 Material Dialog
-                </mat-panel-description>
-            </mat-expansion-panel-header>
-
-            <app-parent-dialog></app-parent-dialog>
-
-        </mat-expansion-panel>
-
-
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Section #mix
-                    {{ secondPanelOpenState ? 'open' : 'closed' }}
-                </mat-panel-title>
-                <mat-panel-description>
-                    #mix Mat Dialog
-                </mat-panel-description>
-            </mat-expansion-panel-header>
-            <app-first-dialog></app-first-dialog>
-        </mat-expansion-panel>
-
-
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Section #mix
-                    {{ secondPanelOpenState ? 'open' : 'closed' }}
-                </mat-panel-title>
-                <mat-panel-description>
-                    #mix Interaction
-                </mat-panel-description>
-            </mat-expansion-panel-header>
-
-            <app-interaction></app-interaction>
-
-        </mat-expansion-panel>
-
-
-        <mat-expansion-panel (opened)="secondPanelOpenState = true"
-                             (closed)="secondPanelOpenState = false">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Section
-                </mat-panel-title>
-                <mat-panel-description>
-                    Some heading :
-                    {{ secondPanelOpenState ? 'open' : 'closed' }}
-                </mat-panel-description>
-            </mat-expansion-panel-header>
-            <p><b>Some content.</b></p>
-        </mat-expansion-panel>
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
 
 
 
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 4 </b> &#9733;</span>
+                <span> Получение @ContentChildren/@ViewChildren с помощью сервиса </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+
+                <div class="container">
+                    <app-animals>
+                        <app-cat appLink></app-cat>
+                        <app-dog appLink></app-dog>
+                        <app-rock></app-rock>
+                        <app-fox appLink></app-fox>
+                        <p>just an element</p>
+                    </app-animals>
+                </div>
+
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
 
 
-    </mat-accordion>
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 5 </b> &#9733;</span>
+                <span> Опция директивы exportAs для экспорта контроллера </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+
+                <div class="container">
+                    <app-colory></app-colory>
+                </div>
+
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 6 </b> &#9733;</span>
+                <span> Использование декоратора @Attribute </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+
+                <div class="container">
+                    <app-parent-greetings></app-parent-greetings>
+                </div>
+
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+
+
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 7 </b> &#9733;</span>
+                <span> Передача нескольких параметров в структурную директиву </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+
+                <div class="container">
+                    <app-delay></app-delay>
+                </div>
+
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 8 </b> &#9733;</span>
+                <span> Передача нескольких параметров в структурную директиву </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+
+                <div class="container">
+                    <app-delay></app-delay>
+                </div>
+
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+
+
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 9 </b> &#9733;</span>
+                <span> How work Angular Elements </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+
+                <div class="container">
+                    <app-hello name="John">
+                        <h2>SOMETHING!</h2>
+                    </app-hello>
+
+                    <app-hello name="Alice"></app-hello>
+                    <app-hello name="Nick"></app-hello>
+                    <app-hello name="Bill"></app-hello>
+
+                    <script>
+                        const el = document.querySelector('app-hello');
+                        el.setAttribute('name', 'Elon');
+                        el.addEventListener('clicked', event => console.log(event.detail));
+                        el.innerHTML = '<h2>NOTHING!</h2>';
+                    </script>
+                </div>
+
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+
+
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 10 </b> &#9733;</span>
+                <span> Material Dialog </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+
+                <div class="container">
+                    <app-parent-dialog></app-parent-dialog>
+                </div>
+
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+
+
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 11 </b> &#9733;</span>
+                <span> Mat Dialog </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+
+                <div class="container">
+                    <app-first-dialog></app-first-dialog>
+                </div>
+
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+
+
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 12 </b> &#9733;</span>
+                <span> Interaction </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+
+                <div class="container">
+                    <app-interaction></app-interaction>
+                </div>
+
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+
+
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 11 </b> &#9733;</span>
+                <span> SOME TITLE </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+
+                <div class="container">
+                    SOME COMPONENT
+                </div>
+
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+
+
+
+<!--    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">-->
+<!--        <ngb-panel>-->
+<!--            <ng-template ngbPanelTitle>-->
+<!--                <span>&#9733; <b>Fancy</b> title &#9733;</span>-->
+<!--            </ng-template>-->
+<!--            <ng-template ngbPanelContent>-->
+<!--                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon-->
+<!--                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf-->
+<!--                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim-->
+<!--                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher-->
+<!--                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't-->
+<!--                heard of them accusamus labore sustainable VHS.-->
+<!--            </ng-template>-->
+<!--        </ngb-panel>-->
+
+<!--        <ngb-panel title="Simple">-->
+<!--            <ng-template ngbPanelContent>-->
+<!--                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon-->
+<!--                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf-->
+<!--                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim-->
+<!--                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher-->
+<!--                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't-->
+<!--                heard of them accusamus labore sustainable VHS.-->
+<!--            </ng-template>-->
+<!--        </ngb-panel>-->
+
+<!--        <ngb-panel title="Disabled" [disabled]="false">-->
+<!--            <ng-template ngbPanelContent>-->
+<!--                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon-->
+<!--                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf-->
+<!--                moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim-->
+<!--                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher-->
+<!--                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't-->
+<!--                heard of them accusamus labore sustainable VHS.-->
+<!--            </ng-template>-->
+<!--        </ngb-panel>-->
+<!--    </ngb-accordion>-->
+
 </div>
+
+<div class="container">
+
+</div>
+
+
 
 
 
