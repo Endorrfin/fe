@@ -4,7 +4,7 @@
         <ngb-panel>
             <ng-template ngbPanelTitle>
                 <span>&#9733; <b> Section 1 </b> &#9733;</span>
-                <span> Interpolation, binding, two way binding and NgModel </span>
+                <span> -- Interpolation, binding, two way binding and NgModel -- </span>
             </ng-template>
             <ng-template ngbPanelContent>
 
@@ -20,7 +20,7 @@
         <ngb-panel>
             <ng-template ngbPanelTitle>
                 <span>&#9733; <b> Section 2 </b> &#9733;</span>
-                <span> Structural directives: *ngIf, *ngFor, *ngSwitchCase, Class, Style, Attr </span>
+                <span> -- Structural directives: *ngIf, *ngFor, *ngSwitchCase, Class, Style, Attr -- </span>
             </ng-template>
             <ng-template ngbPanelContent>
 
@@ -37,7 +37,7 @@
         <ngb-panel>
             <ng-template ngbPanelTitle>
                 <span>&#9733; <b> Section 3 </b> &#9733;</span>
-                <span> Input Output </span>
+                <span> -- Input Output -- </span>
             </ng-template>
             <ng-template ngbPanelContent>
 
@@ -54,7 +54,7 @@
         <ngb-panel>
             <ng-template ngbPanelTitle>
                 <span>&#9733; <b> Section 4 </b> &#9733;</span>
-                <span> ng-template, ng-content, ng-container, *ngTemplateOutlet, context </span>
+                <span> -- ng-template, ng-content, ng-container, *ngTemplateOutlet, context -- </span>
             </ng-template>
             <ng-template ngbPanelContent>
 
@@ -71,12 +71,29 @@
         <ngb-panel>
             <ng-template ngbPanelTitle>
                 <span>&#9733; <b> Section 5 </b> &#9733;</span>
-                <span> HostBinding & HostListener </span>
+                <span> -- HostBinding & HostListener -- </span>
             </ng-template>
             <ng-template ngbPanelContent>
 
                 <div class="container">
                     <app-host></app-host>
+                </div>
+
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+
+
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Section 6 </b> &#9733;</span>
+                <span> -- Lifecycle hooks -- </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+
+                <div class="container">
+                    <app-lifecycle-hooks></app-lifecycle-hooks>
                 </div>
 
             </ng-template>

@@ -39,6 +39,9 @@ import { ParentUnitComponent } from './components/advanced-communication/parent-
 import { ChildUnitComponent } from './components/advanced-communication/child-unit/child-unit.component';
 import { MenuComponent } from './components/host/menu/menu.component';
 import { HostComponent } from './components/host/host/host.component';
+import { LifecycleHooksComponent } from './components/lifecycle-hooks/lifecycle-hooks/lifecycle-hooks.component';
+import { ParentHookComponent } from './components/lifecycle-hooks/parent-hook/parent-hook.component';
+import { ChildHookComponent } from './components/lifecycle-hooks/child-hook/child-hook.component';
 
 // import { ElementsComponent } from './components/elements/elements.component';
 
@@ -76,6 +79,9 @@ import { HostComponent } from './components/host/host/host.component';
         ChildUnitComponent,
         MenuComponent,
         HostComponent,
+        LifecycleHooksComponent,
+        ParentHookComponent,
+        ChildHookComponent,
     ],
     imports: [
         BrowserModule,
