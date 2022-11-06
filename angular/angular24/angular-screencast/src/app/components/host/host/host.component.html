@@ -1,0 +1,35 @@
+<h2>Description</h2>
+<ul>
+    <li>Представьте себе компонент который соответствует SOLID принципам. В этом разделесделаем именно такой
+        компонент, компонент контекстного меню.</li>
+    <li>Благоларя ng-content мы передадим содержимое в компонент.</li>
+    <li>Благодаря template переменным будем открывать меню.</li>
+    <li>Благодаря HostBinding будем показывать и скрывать меню, смотря на внутреннее состояние компонента.</li>
+    <li>Благодаря HostListener будем слушать клики с window и с host елемента.</li>
+    <li>И благодаря :host / :host-context будем стилить хост.</li>
+</ul>
+<hr>
+
+<div class="container">
+    <button (click)="menu1.show()">Open menu 1</button>
+
+    <app-menu #menu1>
+        <p>From host component #1</p>
+    </app-menu>
+</div>
+
+<div class="container">
+    <button (click)="menu2.show()">Open menu 2</button>
+
+    <app-menu #menu2>
+        <p>From host component #2</p>
+    </app-menu>
+</div>
+
+<div class="container">
+    <button (click)="menu3.show()">Open menu 3</button>
+
+    <app-menu #menu3>
+        <p>From host component #3</p>
+    </app-menu>
+</div>

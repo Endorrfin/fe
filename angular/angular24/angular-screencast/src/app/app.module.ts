@@ -37,6 +37,8 @@ import { ParentComponent } from './components/interaction-of-components/parent/p
 import { ChildComponent } from './components/interaction-of-components/child/child.component';
 import { ParentUnitComponent } from './components/advanced-communication/parent-unit/parent-unit.component';
 import { ChildUnitComponent } from './components/advanced-communication/child-unit/child-unit.component';
+import { MenuComponent } from './components/host/menu/menu.component';
+import { HostComponent } from './components/host/host/host.component';
 
 // import { ElementsComponent } from './components/elements/elements.component';
 
@@ -72,6 +74,8 @@ import { ChildUnitComponent } from './components/advanced-communication/child-un
         ChildComponent,
         ParentUnitComponent,
         ChildUnitComponent,
+        MenuComponent,
+        HostComponent,
     ],
     imports: [
         BrowserModule,
