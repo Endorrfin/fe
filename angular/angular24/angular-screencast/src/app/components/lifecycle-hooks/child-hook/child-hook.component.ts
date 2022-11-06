@@ -26,39 +26,39 @@ export class ChildHookComponent implements
   @Input() titleChildHook: string = '';
 
   constructor() {
-    console.log('CHILD.Constructor');
+    // console.log('CHILD.Constructor');
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('CHILD ------> ngOnChange <------', changes);
+    // console.log('CHILD ------> ngOnChange <------', changes);
   }
 
   ngOnInit(): void {
-    console.log('CHILD.ngOnInit');
+    // console.log('CHILD.ngOnInit');
   }
 
   ngDoCheck(): void {
-    console.log('CHILD.ngDoCheck');
+    // console.log('CHILD.ngDoCheck');
   }
 
   ngAfterContentInit(): void {
-    console.log('CHILD.ngAfterContentInit');
+    // console.log('CHILD.ngAfterContentInit');
   }
 
   ngAfterContentChecked(): void {
-    console.log('CHILD.ngAfterContentChecked');
+    // console.log('CHILD.ngAfterContentChecked');
   }
 
   ngAfterViewInit(): void {
-    console.log('CHILD.ngAfterViewInit');
+    // console.log('CHILD.ngAfterViewInit');
   }
 
   ngAfterViewChecked(): void {
-    console.log('CHILD.ngAfterViewChecked');
+    // console.log('CHILD.ngAfterViewChecked');
   }
 
   ngOnDestroy(): void {
-    console.log('CHILD.ngOnDestroy');
+    // console.log('CHILD.ngOnDestroy');
   }
 
 }
