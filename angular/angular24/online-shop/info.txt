@@ -1,0 +1,11 @@
+github - https://github.com/DeniDenx/online-shop-angular/blob/master/src/app/components/UI/footer/footer.component.html
+
+npm i json-server
+ng add @angular/material
+
+json-server --watch db.json
+
+
+
+tsconfig.json
+    "strictPropertyInitialization": false,

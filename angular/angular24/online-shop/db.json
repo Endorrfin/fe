@@ -1,0 +1,126 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "title": "MacBook Air",
+      "price": 700,
+      "year": 2019,
+      "image": "assets/images/macbook_02.jpeg",
+      "configure": {
+        "chip": "M1",
+        "ssd": "128 Gb",
+        "memory": "8 Gb",
+        "display": "Retina"
+      }
+    },
+    {
+      "id": 3,
+      "title": "MacBook Pro",
+      "price": 1000,
+      "year": 2021,
+      "image": "assets/images/macbook_03.jpeg",
+      "configure": {
+        "chip": "Intel",
+        "ssd": "512 Gb",
+        "memory": "32 Gb",
+        "display": "Retina"
+      }
+    },
+    {
+      "id": 6,
+      "title": "MacBook Pro 13 Space Gray",
+      "price": 1360,
+      "year": 2020,
+      "image": "assets/images/macbook_06.jpeg",
+      "configure": {
+        "chip": "M1",
+        "ssd": "256 Gb",
+        "memory": "8 Gb",
+        "display": "IPS"
+      }
+    },
+    {
+      "id": 7,
+      "title": "MacBook Air 13 Silver",
+      "price": 1400,
+      "year": 2020,
+      "image": "assets/images/macbook_07.jpeg",
+      "configure": {
+        "chip": "M1",
+        "ssd": "256 Gb",
+        "memory": "8 Gb",
+        "display": "IPS"
+      }
+    },
+    {
+      "id": 10,
+      "title": "MacBook Pro M2",
+      "price": 1800,
+      "year": 2022,
+      "image": "assets/images/macbook_10.jpeg",
+      "configure": {
+        "chip": "M2",
+        "ssd": "1024 Gb",
+        "memory": "32 Gb",
+        "display": "IPS"
+      }
+    },
+    {
+      "id": 11,
+      "title": "MacBook 13 Silver hot",
+      "price": null,
+      "year": null,
+      "image": "assets/images/macbook.jpeg",
+      "configure": {
+        "chip": null,
+        "ssd": null,
+        "memory": null,
+        "display": null
+      }
+    }
+  ],
+  "basket": [
+    {
+      "id": 2,
+      "title": "MacBook Air",
+      "price": 700,
+      "year": 2019,
+      "image": "assets/images/macbook_02.jpeg",
+      "configure": {
+        "chip": "M1",
+        "ssd": "128 Gb",
+        "memory": "8 Gb",
+        "display": "Retina"
+      },
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "title": "MacBook Pro 13 Space Gray",
+      "price": 1360,
+      "year": 2020,
+      "image": "assets/images/macbook_06.jpeg",
+      "configure": {
+        "chip": "M1",
+        "ssd": "256 Gb",
+        "memory": "8 Gb",
+        "display": "IPS"
+      },
+      "quantity": 5
+    },
+    {
+      "id": 10,
+      "title": "MacBook Pro M2",
+      "price": 1800,
+      "year": 2022,
+      "image": "assets/images/macbook_10.jpeg",
+      "configure": {
+        "chip": "M2",
+        "ssd": "1024 Gb",
+        "memory": "32 Gb",
+        "display": "IPS"
+      },
+      "quantity": 15
+    }
+  ]
+}

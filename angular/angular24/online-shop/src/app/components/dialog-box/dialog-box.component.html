@@ -1,0 +1,68 @@
+<!--<p>dialog-box works!</p>-->
+
+<!--<span>SOME TEXT</span>-->
+<!--{{data}}-->
+<!--<button (click)="onSubmit()">SOME GET DATA</button>-->
+
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Title</mat-label>
+        <input
+                matInput
+                formControlName="title">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Price</mat-label>
+        <input
+                matInput
+                formControlName="price">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>year</mat-label>
+        <input
+                matInput
+                formControlName="year">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>chip</mat-label>
+        <input
+                matInput
+                formControlName="chip">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>ssd</mat-label>
+        <input
+                matInput
+                formControlName="ssd">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>memory</mat-label>
+        <input
+                matInput
+                formControlName="memory">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>display</mat-label>
+        <input
+                matInput
+                formControlName="display">
+    </mat-form-field>
+
+    <button
+            class="button"
+            mat-flat-button
+            color="primary"
+            type="submit"
+            style="margin-right: 5px">
+        {{isNewItem ? 'Add item' : 'Update item'}}
+    </button>
+
+    <button
+            class="button"
+            mat-flat-button color="primary"
+            type="button"
+            (click)="onNoClick()">
+        Cancel
+    </button>
+</form>
