@@ -1,0 +1,60 @@
+<div class="container">
+
+    <h3>Example 1: user</h3>
+    <div class="container">
+        <div *ngFor="let user of users$ | async">
+            {{ user.name }}
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>Example 2: username</h3>
+    <div class="container">
+        <div *ngFor="let username of usernames$ | async">
+            {{ username }}
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>Example 3: username</h3>
+    <div class="container">
+        <div *ngFor="let user of filteredUsers$ | async">
+            {{ user.name }}
+        </div>
+    </div>
+
+    <h3>Example 4.1: user$</h3>
+    <div class="container">
+        <div *ngIf="user$ | async">
+            {{ (user$ | async)?.name }}
+        </div>
+    </div>
+
+    <h3>Example 4.2: user$ optimize</h3>
+    <div class="container">
+        <div *ngIf="user$ | async as user">
+            {{ user.name }}
+        </div>
+    </div>
+
+
+    <h3>Example 5: data combineLatest</h3>
+    <div *ngIf="data$ | async as data" class="container">
+        <div *ngFor="let user of data.users">
+            {{ user.name }}
+        </div>
+
+        <div *ngFor="let username of data.usernames">
+            {{ username }}
+        </div>
+
+        <div *ngFor="let user of data.filteredUsers">
+            {{ user.name }}
+        </div>
+    </div>
+
+
+
+</div>

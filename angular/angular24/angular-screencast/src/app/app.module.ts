@@ -42,6 +42,17 @@ import { HostComponent } from './components/host/host/host.component';
 import { LifecycleHooksComponent } from './components/lifecycle-hooks/lifecycle-hooks/lifecycle-hooks.component';
 import { ParentHookComponent } from './components/lifecycle-hooks/parent-hook/parent-hook.component';
 import { ChildHookComponent } from './components/lifecycle-hooks/child-hook/child-hook.component';
+import { CreationOperatorsComponent } from './components/rxjs/operators/creation-operators/creation-operators.component';
+import { JoinCreationOperatorsComponent } from './components/rxjs/operators/join-creation-operators/join-creation-operators.component';
+import { TransformationOperatorsComponent } from './components/rxjs/operators/transformation-operators/transformation-operators.component';
+import { FilteringOperatorsComponent } from './components/rxjs/operators/filtering-operators/filtering-operators.component';
+import { JoinOperatorsComponent } from './components/rxjs/operators/join-operators/join-operators.component';
+import { MulticastingOperatorsComponent } from './components/rxjs/operators/multicasting-operators/multicasting-operators.component';
+import { ErrorHandlingOperatorsComponent } from './components/rxjs/operators/error-handling-operators/error-handling-operators.component';
+import { UtilityOperatorsComponent } from './components/rxjs/operators/utility-operators/utility-operators.component';
+import { RxjsBaseComponent } from './components/rxjs/rxjs-base/rxjs-base.component';
+import { RxjsOverviewComponent } from './components/rxjs/operators/rxjs-overview/rxjs-overview.component';
+import { SubjectComponent } from './components/rxjs/subjects/subject/subject.component';
 
 // import { ElementsComponent } from './components/elements/elements.component';
 
@@ -82,6 +93,17 @@ import { ChildHookComponent } from './components/lifecycle-hooks/child-hook/chil
         LifecycleHooksComponent,
         ParentHookComponent,
         ChildHookComponent,
+        CreationOperatorsComponent,
+        JoinCreationOperatorsComponent,
+        TransformationOperatorsComponent,
+        FilteringOperatorsComponent,
+        JoinOperatorsComponent,
+        MulticastingOperatorsComponent,
+        ErrorHandlingOperatorsComponent,
+        UtilityOperatorsComponent,
+        RxjsBaseComponent,
+        RxjsOverviewComponent,
+        SubjectComponent,
     ],
     imports: [
         BrowserModule,
