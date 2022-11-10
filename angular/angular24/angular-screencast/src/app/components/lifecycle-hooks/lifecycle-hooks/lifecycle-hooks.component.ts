@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-lifecycle-hooks',
@@ -12,6 +12,16 @@ export class LifecycleHooksComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  array = [1, 2, 3, 4, 5, 6, 7];
+
+  modifyArray() {
+    // OPTION MUTABLE APPROACH I
+    this.array.push(8);
+
+    // OPTION IMMUTABLE APPROACH II
+    // this.array = [...this.array, 8];
   }
 
 }

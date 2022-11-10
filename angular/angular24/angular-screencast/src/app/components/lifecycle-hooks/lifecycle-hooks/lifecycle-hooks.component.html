@@ -1,5 +1,44 @@
 
 <h3>Angular lifecycle hooks - методы жизненного цикла компонента</h3>
+
+
+<button
+        class="btn btn-dark"
+        (click)="show = !show">
+    Toggle
+</button>
+
+<button
+        class="btn btn-info"
+        style="margin: 0 10px"
+        (click)="title = title + '--1'">
+    Modify input
+</button>
+
+<button
+        class="btn btn-danger"
+        (click)="modifyArray()">
+    Modify array
+</button>
+
+
+<!--<button class="btn btn-info">info</button>-->
+<!--<button class="btn btn-danger">danger</button>-->
+<!--<button class="btn btn-light">light</button>-->
+<!--<button class="btn btn-link">link</button>-->
+<!--<button class="btn btn-group">group</button>-->
+<!--<button class="btn btn-lg">lg</button>-->
+<!--<button class="btn btn-sm">sm</button>-->
+
+
+<app-parent-hook
+        *ngIf="show"
+        [titleParentHook]="title"
+        [array]="array">
+</app-parent-hook>
+
+<hr>
+
 <p>Компонент это маленькая подпрограмма, которая может быть использована другим компонентом или использовать другие компоненты.</p>
 
 <dl>
@@ -130,18 +169,3 @@
     </dd>
 </dl>
 <hr>
-
-<button
-        class="btn btn-dark"
-        style="margin-right: 10px"
-        (click)="show = !show">
-    Toggle
-</button>
-
-<button
-        class="btn btn-info"
-        (click)="title = title + '--1'">
-    Modify input
-</button>
-
-<app-parent-hook *ngIf="show" [titleParentHook]="title"></app-parent-hook>

@@ -30,7 +30,7 @@ export class ChildHookComponent implements
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    // console.log('CHILD ------> ngOnChange <------', changes);
+    console.log('CHILD ------> ngOnChange <------', changes);
   }
 
   ngOnInit(): void {
@@ -38,7 +38,7 @@ export class ChildHookComponent implements
   }
 
   ngDoCheck(): void {
-    // console.log('CHILD.ngDoCheck');
+    console.log('CHILD.ngDoCheck');
   }
 
   ngAfterContentInit(): void {

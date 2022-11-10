@@ -7,6 +7,22 @@
         <ngb-panel>
             <ng-template ngbPanelTitle>
                 <span>&#9733; <b> Angular 1 </b> &#9733;</span>
+                <span> Material Dialog </span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+
+                <div class="container">
+                    <app-parent-dialog></app-parent-dialog>
+                </div>
+
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <span>&#9733; <b> Angular 1 </b> &#9733;</span>
                 <span> -- Interpolation, binding, two way binding and NgModel -- </span>
             </ng-template>
             <ng-template ngbPanelContent>
@@ -217,23 +233,6 @@
                         el.addEventListener('clicked', event => console.log(event.detail));
                         el.innerHTML = '<h2>NOTHING!</h2>';
                     </script>
-                </div>
-
-            </ng-template>
-        </ngb-panel>
-    </ngb-accordion>
-
-
-    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-        <ngb-panel>
-            <ng-template ngbPanelTitle>
-                <span>&#9733; <b> Angular 10 </b> &#9733;</span>
-                <span> Material Dialog </span>
-            </ng-template>
-            <ng-template ngbPanelContent>
-
-                <div class="container">
-                    <app-parent-dialog></app-parent-dialog>
                 </div>
 
             </ng-template>

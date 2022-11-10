@@ -1,3 +1,8 @@
 <p>parent-hook works! {{titleParentHook}}</p>
 
 <app-child-hook [titleChildHook]="titleParentHook"></app-child-hook>
+
+
+<div class="container">
+    <span *ngFor="let i of array"> | {{i}} | </span>
+</div>
