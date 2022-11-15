@@ -9,31 +9,30 @@
 /*
 * Using Promise
 * */
-// const fetchData = () => Promise.resolve({
-//     data: ['Jack', 'Max', 'Leo', 'Mark', 'Leonid', 'Artur', 'Julia']
-// })
+const fetchDataPromise = () => Promise.resolve({
+    data: ['Jack', 'Max', 'Leo', 'Mark', 'Leonid', 'Artur', 'Julia']
+})
 
-// const getNameDate = () => {
-//     fetchData()
-//         .then(data => {
-//             console.log(data);
-//             return 'done';
-//         })
-// }
+const getNameDate = () => {
+    fetchDataPromise()
+        .then(data => {
+            console.log(data);
+            return 'done';
+        })
+}
 
 /*
 * Using async / await syntax
 * */
 
-// const getNamesDate2 = async () => {
-//     console.log(await fetchData());
-//     return 'done';
-// }
+const getNamesDate2 = async () => {
+    console.log(await fetchDataPromise());
+    return 'done';
+}
 
 
 // getNameDate();
 // getNamesDate2();
-// console.log(getNamesDate2());
 
 
 // ------- Example II -------
@@ -55,7 +54,7 @@ const getNamesData = async () => {
 
 
 // ------- Example III -------
-const posts = [
+const postsAsync = [
     { title: 'Post One', body: 'This is post one' },
     { title: 'Post Two', body: 'This is post two' },
     { title: 'Post Three', body: 'This is post three' },
@@ -66,7 +65,7 @@ const posts = [
 function getPosts() {
     setTimeout(() => {
         let output = '';
-        posts.forEach((post, index) => {
+        postsAsync.forEach((post, index) => {
             output += `<li>${post.title}</li>`;
         });
 
@@ -77,7 +76,7 @@ function getPosts() {
 function createPost(post) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            posts.push(post);
+            postsAsync.push(post);
 
             const error = false;
 
