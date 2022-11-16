@@ -1,0 +1,40 @@
+COMMAND
+    tsc
+    tsc --help
+    tsc --init
+    node app.js
+
+
+
+---------------------------------------------
+    Modularity and Libraries
+    Generative patterns
+    Structural patterns
+    Behavioral patterns
+    Project - Command Execution Utility
+---------------------------------------------
+
+
+// ------- UNION -------
+
+
+// ------- UNION -------
+
+
+// ------- UNION -------
+
+
+// ------- UNION -------
+
+
+// ------- UNION -------
+
+
+// ------- UNION -------
+
+
+// ------- UNION -------
+
+
+// ------- UNION -------
+
