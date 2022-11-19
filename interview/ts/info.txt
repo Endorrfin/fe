@@ -5,6 +5,10 @@ COMMAND
     node app.js
 
 
+SETTINGS tsconfig.json
+    "strictPropertyInitialization": false, || role!: number;
+
+
 
 ---------------------------------------------
     Modularity and Libraries
