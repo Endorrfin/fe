@@ -369,5 +369,82 @@ const promise04 =
 // console.log(promise4);
 
 
+const prom1 = Promise.resolve('123');
+const prom2 = Promise.resolve('error');
+const prom3 = Promise.resolve('some');
+Promise.all([prom1, prom2, prom3])
+    // .then(data => console.log(data))
+    .catch(error => console.log(error));
+
+
+// console.log('Hi');
+
+
+// ============ Змыкание счетчик ============
+
+function makeCounter() {
+    var currentCount = 0;
+
+    return function() {
+        return currentCount++;
+    }
+}
+
+var counter = makeCounter();
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+
+var counter2 = makeCounter();
+// console.log(counter2());
+// console.log(counter2());
+// console.log(counter2());
+
+
+
+// ------- Example I -------
+
+const promise = new Promise ((resolve, reject) => {
+    setTimeout (() => {
+        resolve('Success');
+    }, 1000)
+});
+
+// promise.then(data => console.log(data));
+
+const delay = ms => new Promise (((resolve, reject) => {
+    setTimeout(() => resolve(`Done! ${ms}`), ms)
+}))
+
+delay('Err')
+    .then(data => delay(500))
+    // .then(data => console.log(data))
+    .catch(err => console.log(err))
+// .finally(() => console.log('Выполнено !'))
+
+async function asyncDelay() {
+    try {
+        const data = await delay(2000)
+        // console.log(data)
+    } catch (e) {
+        console.log('Error')
+    }
+}
+asyncDelay();
+
+// Promise.all ([
+//     delay(1000),
+//     delay(500),
+//     delay(2000)
+// ]).then(data => console.log(data))
+//
+// Promise.race ([
+//     delay(1000),
+//     delay(500),
+//     delay(2000)
+// ]).then(data => console.log(data))
+
+
 
 
