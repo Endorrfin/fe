@@ -20,7 +20,6 @@
 
 
 // === 03. Существуют ли нативные классы в JS?
-
 // My answer - No
 
 
@@ -83,7 +82,7 @@
 
 
 
-// ===|=== Object.create 
+// ===|=== Object.create
 // if(!Object.create) {
 //   Object.create = function(obj) {
 //     if (arguments.length > 1) {
@@ -98,11 +97,11 @@
 
 
 
-// ===|=== POLYFILL BIND  
+// ===|=== POLYFILL BIND
 // if(typeof Function.prototype.bind !== 'function') {
 //   Function.prototype.bind = function(context) {
 //     var leftArgs = Array.prototype.slice.call(arguments, 1),
-//     fn = this; 
+//     fn = this;
 //     return function () {
 //       fn.apply(context, leftArgs.concat(arguments));
 //     };
@@ -197,7 +196,7 @@
 // <+++|+++> FUNCTIONAL INHERITANCE II VERSION
 // function Animal(name) {
 //   this.name = name;
-  
+
 //   this.getName = function() {
 //     return this.name;
 //   }
@@ -233,7 +232,7 @@
 //   getName () {
 //     return this.name
 //   };
-  
+
 //   getRun () {
 //     return this.run
 //   };
@@ -284,18 +283,18 @@
 // <===||===> TASK FROM MENTOR II
 // Promise.resolve('BatMan')
 //   .then(function (val) {
-//     console.log('then', val); // 
+//     console.log('then', val); //
 //     throw new Error('Error happen');
 //     return 'OMG!';
 //   })
-//   .then((val) => console.log('then', val)) //  
+//   .then((val) => console.log('then', val)) //
 //   .catch((val) => {
-//     console.log('catch', val); // 
+//     console.log('catch', val); //
 //     return Promise.reject();
 //   })
-//   .then(firstHandler, secondHandler) // 
-//   .then(firstHandler, secondHandler) // 
-//   .then(firstHandler, secondHandler); // 
+//   .then(firstHandler, secondHandler) //
+//   .then(firstHandler, secondHandler) //
+//   .then(firstHandler, secondHandler); //
 
 // function firstHandler(val) {
 //   console.log('first', val);
@@ -313,7 +312,7 @@
 // const secondPromise = new Promise((res, rej) => setTimeout(res, 100, "два"));
 
 // Promise.race([firstPromise, secondPromise]).then(res => console.log(res)); //
-// Promise.all([firstPromise, secondPromise]).then(res => console.log(res)); // 
+// Promise.all([firstPromise, secondPromise]).then(res => console.log(res)); //
 
 
 
@@ -428,9 +427,9 @@
 // ===|=== TASK III - TDZ (from Mentor)
 // let x = 'outer value';
 // (function () {
-//   // start TDZ for x 
+//   // start TDZ for x
 //   console.log(x);
-//   let x = 'inner value'; // declaration ends TDZ for x 
+//   let x = 'inner value'; // declaration ends TDZ for x
 // }());
 
 
@@ -442,11 +441,11 @@
 // add(1)(2);//3
 
 // function add (a) {
-  
+
 //   return function (b) {
 //     return a + b;
 //   }
-  
+
 // }
 
 // add (2)(3);
@@ -626,7 +625,7 @@ console.log(sum(1)(2)(3));
 //   .then(p => p + 'e') //res ace
 //   .finally(p => { //
 //     p += 'f'
-//     console.log(p) // undefinedf
+//     console.log(p) // undefined
 //   })
 //   .then(console.log(p)) //res ace
 //   .catch(console.log(p)) //

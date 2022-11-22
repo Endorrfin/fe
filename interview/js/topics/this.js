@@ -1,10 +1,10 @@
-// 'use strict';
+'use strict';
 
 /**
 |--------------------------------------------------
   === <<<--- THIS --->>>  ===
   https://www.youtube.com/watch?v=qZDjK5BqLbM&list=PLwHvxJae2LazDrHm6ayqLKz6jszEn7ArQ&index=3
-  Как работает ключевое слово this?  
+  Как работает ключевое слово this?
 
   В большинстве языков программирования, по крайней мере С-подобных языков, есь ключевое слово this и оно ссылается н текущий объект. Т
  оесть на объект, которому принадлежит метод, где использовано это ключевое слово.
@@ -48,7 +48,7 @@
 
 
 // // === <<<--- Option III --->>>  ===
-/* 
+/*
 Методы в JS не обязательно принадлежать какому-то объекту.
 Поэтому, после объявления функции, мы можем указать, какому объекту, или объектам она будет принадлежать, это называется - установка контекста.
 */
@@ -136,13 +136,13 @@
 |--------------------------------------------------
   === <<<---  TASK - THIS --->>>  ===
 #1
-Создать объект с розничной ценой и количеством продуктов. 
+Создать объект с розничной ценой и количеством продуктов.
 Этот объект должен содержать метод для получения общей стоимости всех товаров (цена * количество продуктов)
 
 #2
-Создать объект из предыдущей задачи. 
+Создать объект из предыдущей задачи.
 Создать второй объект, который описывает количество деталей и цену за одну деталь.
-Для второго объекта нужно узнать общую стоимость всех деталей, но нельзя создавать новые функции и методы. 
+Для второго объекта нужно узнать общую стоимость всех деталей, но нельзя создавать новые функции и методы.
 Для этого “позаимствуйте” метод из предыдущего объекта.
 
 |--------------------------------------------------
@@ -185,7 +185,7 @@ getSquare для объекта sizes
 */
 
 // let sizes = {
-//   width: 5, 
+//   width: 5,
 //   height: 10
 // },
 
@@ -224,27 +224,81 @@ getElementHeight(); // undefined
 // console.log(getElementHeight()); // 25
 
 
-/**
-|--------------------------------------------------
-  === <<<---  TASK  --->>>  ===
+// ------- Example I - THIS in FUNCTION -------
+    /*
+    * Когда создается функция с помощью ключевого слова function,
+    * то this которая находиться внутри ключевого слова function
+    * будет ссылаться именно на контекст этой функции
+    * */
+const Muhtar = {
+    name: 'Keks',
+    friends: ['Shakik', 'Barsik', 'Sirko', 'Bim'],
+    showFriends: function () {
+        this.friends.forEach((name) => {
+            console.info(`${this.name} friends with ${name}`);
+        });
+    }
+};
 
-|--------------------------------------------------
-*/
+// Muhtar.showFriends();
+
+
+// ------- Example II - THIS in ARROW FUNCTION -------
+/*
+* У стрелочной функции нет своего собственного контекста
+* this - ссылается на контекст родителя
+* в arrow function контекст берется из замыкания
+*
+* Conclusion - this - window
+* In window not property friends and mean undefined
+* And in undefined not forEach method
+* */
+const Roy = {
+    name: 'Keks',
+    friends: ['Shakik', 'Barsik', 'Sirko', 'Bim'],
+    showFriends: () => {
+        this.friends.forEach((name) => {
+            console.info(`${this.name} friends with ${name}`);
+        });
+    }
+};
+
+// Roy.showFriends(); // Cannot read properties of undefined (reading 'friends')
 
 
 
-/**
-|--------------------------------------------------
-  === <<<---  TASK  --->>>  ===
-
-|--------------------------------------------------
-*/
+// ------- Example II - THIS in ARROW FUNCTION -------
+const checkThisOut = () => console.log(this);
+// checkThisOut();
 
 
 
-/**
-|--------------------------------------------------
-  === <<<---  TASK  --->>>  ===
+// ------- Example III - CHANGE CONTEXT IN FUNCTION -------
+const showThisFunction = function () { console.log(this); }
+// showThisFunction();
 
-|--------------------------------------------------
-*/
+const bindedThisInFunction = showThisFunction.bind({name: 'My function context'});
+// bindedThisInFunction();
+
+const myObject1 = {
+    callMethod: showThisFunction
+}
+
+// myObject1.callMethod();
+
+
+
+// ------- Example IV - CHANGE CONTEXT IN ARROW FUNCTION -------
+const showThisArrowFunction = () => console.log(this);
+// showThisArrowFunction();
+
+const bindedThisInArrowFunction = showThisFunction.bind({name: 'My arrow function context'});
+// bindedThisInArrowFunction();
+
+const myObject2 = {
+    callMethod: bindedThisInArrowFunction
+}
+
+// myObject2.callMethod();
+
+

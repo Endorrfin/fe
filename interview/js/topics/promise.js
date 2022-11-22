@@ -53,17 +53,17 @@ const promise3 = new Promise((resolve, reject) => {
 
 
 // ------- Example IV -------
-fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res => res.json())
+// fetch('https://jsonplaceholder.typicode.com/users')
+//     .then(res => res.json())
     // .then(data => console.log('OUTPUT USERS', data))
-    .catch(() => console.log('some error...'));
+    // .catch(() => console.log('some error...'));
 
 
 // ------- Example V -------
-fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(res => res.json())
+// fetch('https://jsonplaceholder.typicode.com/posts')
+//     .then(res => res.json())
     // .then(data => console.log('OUTPUT POSTS', data))
-    .catch(() => console.log('some error...'));
+    // .catch(() => console.log('some error...'));
 
 
 // ------- Example VI -------
@@ -118,9 +118,9 @@ const promise01 = Promise.resolve('Hello World');
 const promise02 = 10;
 const promise03 = new Promise((resolve, reject) => setTimeout(resolve, 2000, 'Goodbye'));
 
-const promise04 =
-    fetch('https://jsonplaceholder.typicode.com/users')
-        .then(res => res.json());
+// const promise04 =
+//     fetch('https://jsonplaceholder.typicode.com/users')
+//         .then(res => res.json());
 
 // Promise.all([promise01, promise02, promise03, promise04]).then(values => console.log(values));
 
