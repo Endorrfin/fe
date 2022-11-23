@@ -1,8 +1,22 @@
-<p>parent-hook works! {{titleParentHook}}</p>
+<p>parent-hook finally works! {{_titleParentHook}}</p>
 
-<app-child-hook [titleChildHook]="titleParentHook"></app-child-hook>
+<ng-content select="app-child-hook"></ng-content>
+
+<ng-container *ngFor="let template of templates">
+    <ng-container *ngTemplateOutlet="template; context: { $implicit: 'Template value'}"></ng-container>
+</ng-container>
+
+<app-child-hook [titleChildHook]="_titleParentHook"></app-child-hook>
 
 
 <div class="container">
     <span *ngFor="let i of array"> | {{i}} | </span>
 </div>
+
+<div #jqueryNeverDie></div>
+<ng-template #jqueryNeverDie></ng-template>
+
+
+
+
+

@@ -23,18 +23,19 @@ export class ChildHookComponent implements
     AfterViewChecked,
     OnDestroy {
 
-  @Input() titleChildHook: string = '';
+  titleChildHookOwn: string = 'title-child-hook-own';
+  @Input() titleChildHook: string = 'title-child-hook-Input';
 
   constructor() {
-    // console.log('CHILD.Constructor');
+    console.log('CHILD.Constructor');
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('CHILD ------> ngOnChange <------', changes);
+    console.log('CHILD.ngOnChange', changes);
   }
 
   ngOnInit(): void {
-    // console.log('CHILD.ngOnInit');
+    console.log('CHILD.ngOnInit');
   }
 
   ngDoCheck(): void {
@@ -42,23 +43,28 @@ export class ChildHookComponent implements
   }
 
   ngAfterContentInit(): void {
-    // console.log('CHILD.ngAfterContentInit');
+    console.log('CHILD.ngAfterContentInit');
   }
 
   ngAfterContentChecked(): void {
-    // console.log('CHILD.ngAfterContentChecked');
+    console.log('CHILD.ngAfterContentChecked');
   }
 
   ngAfterViewInit(): void {
-    // console.log('CHILD.ngAfterViewInit');
+    console.log('CHILD.ngAfterViewInit');
   }
 
   ngAfterViewChecked(): void {
-    // console.log('CHILD.ngAfterViewChecked');
+    console.log('CHILD.ngAfterViewChecked');
   }
 
   ngOnDestroy(): void {
-    // console.log('CHILD.ngOnDestroy');
+    console.log('CHILD.ngOnDestroy');
+  }
+
+
+  sayHi() {
+    console.log('Hi, I am from app-child-hook component!');
   }
 
 }

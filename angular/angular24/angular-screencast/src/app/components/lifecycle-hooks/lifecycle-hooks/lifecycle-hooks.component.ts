@@ -6,7 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./lifecycle-hooks.component.scss']
 })
 export class LifecycleHooksComponent implements OnInit {
-  title: string = 'my-life-cycle-hooks';
+  title: string = 'title-life-cycle-hooks';
   show: boolean = true;
 
   constructor() { }
