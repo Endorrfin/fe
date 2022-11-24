@@ -1,134 +1,143 @@
-'use strict';
 
-/**
-|--------------------------------------------------
-  === <<<--- THIS --->>>  ===
-  https://www.youtube.com/watch?v=qZDjK5BqLbM&list=PLwHvxJae2LazDrHm6ayqLKz6jszEn7ArQ&index=3
-  Как работает ключевое слово this?
+// ============ THIS ============
 
-  В большинстве языков программирования, по крайней мере С-подобных языков, есь ключевое слово this и оно ссылается н текущий объект. Т
- оесть на объект, которому принадлежит метод, где использовано это ключевое слово.
+/*
+* Как работает ключевое слово this?
+* В большинстве языков программирования, по крайней мере С-подобных языков, есь ключевое слово this и оно ссылается
+*  на текущий объект. тоесть на объект, которому принадлежит метод, где использовано это ключевое слово.
+*
+* Однако в JS методы, они же функции не обязательно принадлежать какому-то объекту.
+* Кроме того, они могут принадлежать нескольким объектам, или менять объекты, которым принадлежат.
+* По причине выше перечисленного в JS ключевое слово this указывает не на текущий объект, а на контекст вызова функции.
+*
+* В отличии от других языков программирования в JS ключевое слово this можно использовать глобально, тоесть вне,
+*  какого-либо класса, или функции.
+* Глобальный объект предоставляется средой выполнения.
+* Если код будет выполняться node.js - то ключевое слово this будет ссылаться на объект global
+* Если код будет выполняться в браузере - то ключевое слово this будет ссылаться на объект Window
+* https://www.youtube.com/watch?v=qZDjK5BqLbM&list=PLwHvxJae2LazDrHm6ayqLKz6jszEn7ArQ&index=3
+*
+* В целом - контекст это то, на что будет ссылаться ключевое слово this если оно использовано в теле разных функций
+*
+* В JS функция является подвидом объекта.
+* Поэтому, когда объявляется функция, она автоматически наследуется от некого базоваго объекта - FUNCTION PROTOTYPE
+* Methods call, apply & bind являются методами этого базового объекта FUNCTION PROTOTYPE - это позволяет вызывать их
+*  на любой функции просто используя точку.
+*
+* Методы call & apply позволяют непосредственно выполнить функцию с опеределенным контекстом и параметрами
+* Метод bind позволяет связать функцию с опеределенным контекстом и параметрами для того, чтоб выполнить позже
+* */
 
-  Однако в JS методы, они же функции не обязательно принадлежать какому-то объекту.
-  Кроме того, они могут принадлежать нескольким объектам, или менять объекты, которым принадлежат.
-  По причине выше перечисленного в JS ключевое слово this указывает не на текущий объект, а на контекст вызова функции.
 
-  В отличии от других языков программирования в JS ключевое слово this можно использовать глобально, тоесть вне, какого-либо класса, или функции.
- Глобальный объект предоставляется средой выполнения.
-  Если код будет выполняться node.js - то ключевое слово this будет ссылаться на объект global
-  Если код будет выполняться в браузере - то ключевое слово this будет ссылаться на объект Window
-|--------------------------------------------------
-*/
+// ------- Example I - execution this in browser -------
 
 // console.log(this); // undefined - в VS Code
+// console.log(this); // undefined - в IntellijIDEA
 // console.log(this); // Window - в консоли браузера
 
-
-// // === <<<--- Option I --->>>  ===
-// document.writeln("Content zone height is "+this.innerHeight); // Content area height is 594
-// document.writeln("Content zone width is "+this.innerWidth); // Content area width is 1366
+// console.log("Content zone height is "+this.innerHeight); // Content area height is 594
+// console.log("Content zone width is "+this.innerWidth); // Content area width is 1366
 
 
-// function getContentWidth () {
-//   return this.innerWidth;
-// }
+function getContentWidth () {
+  return this.innerWidth;
+}
 
-// document.writeln("Content zone width is "+getContentWidth()); // Content area width is 1366
-
-
-// // === <<<--- Option II --->>>  ===
-// var person = {
-//   name: "Dolly",
-//   sayHello: function () {
-//     return "Hello, "+this.name;
-//   }
-// };
-
-// console.log(person.sayHello()); // Hello, Dolly
+// console.log("Content zone width is "+getContentWidth()); // Content area width is 1366
 
 
-// // === <<<--- Option III --->>>  ===
+// ------- Example II - how work this -------
+const person1 = {
+  name: "Dolly",
+};
+
+function sayHello () {
+    return "Hello, " + this.name;
+}
+
+// Указываем, что у объекта person будет метод sayHello, который будет соответствовать глобальной функции sayHello
+person1.sayHello = sayHello;
+// console.log(person1.sayHello()); // Hello, Dolly
+
+
 /*
-Методы в JS не обязательно принадлежать какому-то объекту.
-Поэтому, после объявления функции, мы можем указать, какому объекту, или объектам она будет принадлежать, это называется - установка контекста.
-*/
+* Методы в JS не обязательно принадлежать какому-то объекту.
+* Поэтому, после объявления функции, мы можем указать, какому объекту, или объектам она будет принадлежать, это называется - установка контекста.
+* */
 
-// var person = {
-//   name: "Dolly"
-// };
+const person2 = {
+    name: "Bob",
 
-//   function sayHello () {
-//     return "Hello, "+this.name;
-// }
+    sayHello() {
+        return "Hello, " + this.name;
+    }
+};
 
-// person.sayHello = sayHello;
+const person3 = {
+    name: "Forstmann",
 
-// // document.writeln(person.sayHello()); // Hello, Dolly
-// console.log(person.sayHello()); // Hello, Dolly
-
-
-// // === <<<--- Option IV --->>>  ===
-// var person = {
-//   name: "Dolly",
-//   sayHello: function () {
-//     return "Hello, "+this.name;
-//   }
-// };
-
-// var anotherPerson = {
-//   name: "Hanna"
-// };
-
-// anotherPerson.sayHello = person.sayHello;
-
-// console.log(person.sayHello()); // Hello, Dolly
-// console.log(anotherPerson.sayHello()); // Hello, Hanna
+    sayHello() {
+        return "Hello, " + this.name;
+    }
+};
 
 
+const anotherPerson = {
+  name: "Gabriella"
+};
 
-// // === <<<--- Option V --->>>  ===
-// var person = {
-//   name: "Dolly",
-//   sayHello: function () {
-//     return "Hello, "+this.name;
-//   }
-// };
+// anotherPerson.sayHello = person1.sayHello;
+// console.log('anotherPerson', anotherPerson.sayHello()); // Hello, Gabriella
 
-// var anotherPerson = {
-//   name: "Hanna"
-// };
-
-
-// console.log(person.sayHello()); // Hello, Dolly
-// console.log(person.sayHello.call(anotherPerson)); // Hello, Hanna
-// // console.log(person.sayHello.apply[anotherPerson]); // Hello, Hanna
+// console.log('person1', person1.sayHello()); // Hello, Dolly
+// console.log('person2.1', person2.sayHello()); // Hello, Bob
+// console.log('person2.2', person2.sayHello.call(anotherPerson)); // Hello, Gabriella
+// console.log('person3', person3.sayHello.apply(anotherPerson, [])); // Hello, Gabriella
 
 
 
 
-// var employee1 = {
-//   name: "Hanna",
-//   position: "Project manager",
-//   salary: 1000
-// };
+const employee1 = {
+  name: "Hanna",
+  position: "Project manager",
+  salary: 1000
+};
 
 
-// var employee2 = {
-//   name: "Bill",
-//   position: "Junior developer",
-//   salary: 800
-// };
+const employee2 = {
+  name: "Bill",
+  position: "Junior developer",
+  salary: 800
+};
 
+// Global function promote
+function promote (newPosition, salaryRise) {
+  this.position = newPosition;
+  this.salary += salaryRise;
 
-// function promote (newPosition, salaryRise) {
-//   this.position = newPosition;
-//   this.salary += salaryRise;
+  return this.name+" is "+this.position+" and earns "+this.salary
+}
 
-//   return this.name+" is "+this.position+" and earns "+this.salary
-// }
+/*
+* На global function promote вызываем метод call и первым параметром передаем в нее новый контекст выполнения
+* То, что будет подставлятся вместо ключевого слова this при выполнении этой функции
+* */
 
-// promote.call(employee1, "Department head", 500);
-// promote.call(employee2, "Middle developer", 300);
+const promotePMcall = promote.call(employee1, "Department head", 500);
+const promotePMapply = promote.apply(employee1, ["Department head", 500]);
+console.log('promote using call:', promotePMcall);
+console.log('promote using apply:', promotePMapply);
+
+const promoteMDcall = promote.call(employee2, "Middle developer", 300);
+const promoteMDapply = promote.apply(employee2, ["Middle developer", 300]);
+console.log('promote using apply:', promoteMDcall);
+console.log('promote using apply:', promoteMDapply);
+
+const promotePMbind = promote.bind(employee1, "Department head", 500);
+const promoteMDbind = promote.bind(employee2, "Middle developer", 300);
+console.log('promote using bind:', promotePMbind());
+console.log('promote using bind:', promoteMDbind());
+
 
 
 
