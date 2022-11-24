@@ -125,18 +125,18 @@ function promote (newPosition, salaryRise) {
 
 const promotePMcall = promote.call(employee1, "Department head", 500);
 const promotePMapply = promote.apply(employee1, ["Department head", 500]);
-console.log('promote using call:', promotePMcall);
-console.log('promote using apply:', promotePMapply);
+// console.log('promote using call:', promotePMcall);
+// console.log('promote using apply:', promotePMapply);
 
 const promoteMDcall = promote.call(employee2, "Middle developer", 300);
 const promoteMDapply = promote.apply(employee2, ["Middle developer", 300]);
-console.log('promote using apply:', promoteMDcall);
-console.log('promote using apply:', promoteMDapply);
+// console.log('promote using apply:', promoteMDcall);
+// console.log('promote using apply:', promoteMDapply);
 
 const promotePMbind = promote.bind(employee1, "Department head", 500);
 const promoteMDbind = promote.bind(employee2, "Middle developer", 300);
-console.log('promote using bind:', promotePMbind());
-console.log('promote using bind:', promoteMDbind());
+// console.log('promote using bind:', promotePMbind());
+// console.log('promote using bind:', promoteMDbind());
 
 
 
