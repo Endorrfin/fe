@@ -73,7 +73,7 @@ const isObjectEmpty = (object) => {
 
 
 
-// ------- Example IV - проверьте, является ли объект пустым -------
+// ------- Example IV - Перевернуть строку -------
 const string = 'ukraine';
 // Option I
 const reverse = str => str.split('').reverse().join('');

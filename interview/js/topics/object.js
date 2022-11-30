@@ -85,6 +85,110 @@ const car = {
 
 
 
+// ============ METHODS OF COPY OF OBJECTS ============
+const guitarPlayer = {
+  firstName: 'Rik',
+  lastName: 'Martin',
+  address: {
+    city: 'Colorado',
+    street: 'Ranger Avenue',
+  },
+  soloSpeed: 10,
+  birthDate: '11.07.1978',
+  guitarCount: 277,
+  isLeftHanded: false,
+
+  play() {
+    console.log(`Let's rock!`);
+  },
+
+  playSolo(speed = 2) {
+    console.log(`Play solo ${speed}x`);
+  },
+
+  guitar: {
+    strings: 6
+  },
+}
+
+
+
+// ------- Case I - using Object.assign({} someObj) -------
+const clonesObjectAssign = [];
+const countObjectAssign = 10;
+
+for (let i = 0; i < countObjectAssign; i++) {
+  const newClone = Object.assign({}, guitarPlayer)
+      clonesObjectAssign.push(newClone);
+}
+
+// console.log('clonesObjectAssign', clonesObjectAssign);
+// console.log(clonesObjectAssign[0] === clonesObjectAssign[1]); // false
+// console.log(clonesObjectAssign[0].address === clonesObjectAssign[1].address); // true
+// console.log(clonesObjectAssign[0].play === clonesObjectAssign[1].play); // true
+
+
+
+
+// ------- Case II - using ...spread -------
+const clonesSpread = [];
+const countSpread = 10;
+
+for (let i = 0; i < countSpread; i++) {
+  const newClone = {
+    ...guitarPlayer
+  };
+  clonesSpread.push(newClone);
+}
+
+// console.log('clonesSpread', clonesSpread);
+// console.log(clonesSpread[0] === clonesSpread[1]); // false
+// console.log(clonesSpread[0].address === clonesSpread[1].address); // true
+// console.log(clonesSpread[0].play === clonesSpread[1].play); // true
+
+
+
+// ------- Case III - using Recursion -------
+const isObject = (object) => {
+  const type = typeof object;
+  return type === 'function' || type === 'object';
+};
+
+const cloneObject = (source) => {
+  const clone = {};
+
+  for (const key in source) {
+    if (source.hasOwnProperty(key)) {
+      if (isObject(source[key])) {
+        clone[key] = cloneObject(source[key]);
+      } else {
+        clone[key] = source[key];
+      }
+    }
+  }
+  return clone;
+}
+
+const clonesRerursion = [];
+const countRecursion = 10;
+
+for (let i = 0; i < countRecursion; i++) {
+  const newClone = cloneObject(guitarPlayer);
+  clonesRerursion.push(newClone);
+}
+
+// console.log('clonesRerursion', clonesRerursion);
+// console.log(clonesRerursion[0] === clonesRerursion[1]); // false
+// console.log(clonesRerursion[0].address === clonesRerursion[1].address); // false
+// console.log(clonesRerursion[0].play === clonesRerursion[1].play); // false
+
+
+
+// ------- Case IV - using Lodash cloneDeep -------
+
+
+// ------- Case V - using JSON.stringify & JSON.parse -------
+
 
 
 

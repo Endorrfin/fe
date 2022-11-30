@@ -16,24 +16,49 @@ https://www.youtube.com/watch?v=BIHziPMbaJw&list=PLwHvxJae2LazDrHm6ayqLKz6jszEn7
 */
 
 
-// ! Example I
-
+// ------- Example I -------
 function makeGreeting() {
-  var myName = "Alex";
+  let someName = "Alvaro";
 
   function greeting(personName) {
-    return "Hello, " + personName + "! My name's " + myName + ".";
+    return `Hello ${personName}! My name's ${someName}.`;
   };
 
   return greeting;
 }
 
-var newGreeting = makeGreeting();
+const newGreeting = makeGreeting();
 // console.log(newGreeting("Irvin"))
 // console.log(newGreeting("Zig"))
 // console.log(newGreeting("Ben"))
 // console.log(newGreeting("Kir"))
 // console.log(newGreeting("Rik"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

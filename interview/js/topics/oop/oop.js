@@ -103,8 +103,45 @@ HatchLeon.prototype = leon;
 // Создаем экземпляр класса HatchLeon и он сможет обращаться к свойствам и методам класса Leon
 const riki = new HatchLeon();
 
-
 // console.log('prototype riki -> ', 'name', riki.getName(), 'weight', riki.weight, 'color', riki.color);
+
+
+
+// ------- Example IV - There is prototypal style -> rewirite ES6 syntax -------
+function Bike(model, color) {
+    this.model = model;
+    this.color = color;
+}
+
+Bike.prototype.getDetails = function() {
+    return this.model + ' bike has ' + this.color + ' color!';
+};
+
+bikeProto = new Bike ('SUZUKI', 'orange');
+// console.log(bikeProto.getDetails()); // SUZUKI bike has orange color!
+
+// ----------------------------------
+class MotoBike {
+    constructor (model, color) {
+        this.model = model;
+        this.color = color;
+    }
+
+    getDetails () {
+        return `${this.model} motobike has ${this.color} color!`;
+    }
+}
+
+const bikeClass = new MotoBike('KAWASAKI', 'yellow');
+// console.log(bikeClass.getDetails()); // KAWASAKI motobike has yellow color!
+
+
+
+
+
+
+
+
 
 
 
