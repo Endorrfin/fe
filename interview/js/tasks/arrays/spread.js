@@ -1,4 +1,4 @@
-/* 
+/*
 Оператор spread (…) используется для добавления элементов одного массива в другой. Например, объединим два массива чисел:
 */
 
@@ -51,3 +51,6 @@ const {
 const numbers = [1, 1, 2, 3, 4, 4, 4, 5, 7, 9, 11, 11, 17, 19, 19]
 const uniqueNumbers = [...new Set(numbers)]
 // console.log(uniqueNumbers);
+
+// console.log([... 'Vasyl Krupka']);
+// console.log({... 'Vasyl Krupka'});

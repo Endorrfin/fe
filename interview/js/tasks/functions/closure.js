@@ -124,25 +124,25 @@ var messenger = function (firstName, secondName) {
 
 
 
-// ======= <<<--- Closure (замыкание) --->>>  =======
-
+// ============ Closure Counter ============
 function makeCounter() {
-  var currentCount = 1;
+  let currentCount = 4;
 
   return function () {
     return currentCount++;
   };
 }
 
-var counter = makeCounter();
+const counter = makeCounter();
+  // каждый вызов увеличивает счетчик и возвращает результат
+  // console.log( counter());
+  // console.log( counter());
+  // console.log( counter());
 
-//   // каждый вызов увеличивает счетчик и возвращает результат
-//   console.log( counter()); // 1
-//   console.log( counter()); // 2
-//   console.log( counter()); // 3
-//   console.log( counter()); // 4
-//   console.log( counter()); // 5
-// }
+const counter2 = makeCounter();
+// console.log(counter2());
+// console.log(counter2());
+// console.log(counter2());
 
 
 

@@ -32,7 +32,7 @@ const promise2 = new Promise((resolve, reject) => {
 
 // ------- Example III -------
 /*
-* Если внутри promise будет добавлен throw, то promise сразу вернет ошибку, которую можно будет отлавить catch.
+* Если внутри promise будет добавлен throw, то promise сразу вернет ошибку, которую можно будет отловить catch.
 * Тоесть код написан после throw выполнен не будет.
 * */
 
@@ -53,17 +53,26 @@ const promise3 = new Promise((resolve, reject) => {
 
 
 // ------- Example IV -------
-// fetch('https://jsonplaceholder.typicode.com/users')
-//     .then(res => res.json())
-    // .then(data => console.log('OUTPUT USERS', data))
-    // .catch(() => console.log('some error...'));
+function fetchUsers ()  {
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json())
+        .then(data => console.log('OUTPUT USERS', data))
+        .catch(() => console.log('some error...'));
+}
+
+// fetchUsers();
+
 
 
 // ------- Example V -------
-// fetch('https://jsonplaceholder.typicode.com/posts')
-//     .then(res => res.json())
-    // .then(data => console.log('OUTPUT POSTS', data))
-    // .catch(() => console.log('some error...'));
+function fetchPosts () {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(res => res.json())
+        .then(data => console.log('OUTPUT POSTS', data))
+        .catch(() => console.log('some error...'));
+}
+
+// fetchPosts();
 
 
 // ------- Example VI -------
@@ -105,136 +114,22 @@ function createPost(post) {
     });
 }
 
-
-
 // createPost({ title: 'Post Six', body: 'This is post six' })
 //     .then(getPosts)
 //     .catch(err => console.log(err));
 
 
-// PROMISE ALL
-
+// ------- Example VII - PROMISE ALL -------
 const promise01 = Promise.resolve('Hello World');
 const promise02 = 10;
 const promise03 = new Promise((resolve, reject) => setTimeout(resolve, 2000, 'Goodbye'));
 
-// const promise04 =
-//     fetch('https://jsonplaceholder.typicode.com/users')
-//         .then(res => res.json());
+const promise04 =
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json());
 
-// Promise.all([promise01, promise02, promise03, promise04]).then(values => console.log(values));
-
-
-
-
-
-
-
-
-
-
-// ============ PROMISE ============
-// function job(state) {
-//   return new Promise(function(resolve, reject) {
-//       if (state) {
-//           resolve('success');
-//       } else {
-//           reject('error');
-//       }
-//   });
-// }
-
-// let promise = job(true);
-
-// promise
-
-// .then(function(data) {
-//   console.log(data);  // success
-
-//   return job(false);
-// })
-
-// .catch(function(error) {
-//   console.log(error); // error
-
-//   return 'Error caught';
-// })
-
-// .then(function(data) {
-//   console.log(data); // Error caught
-
-//   return job(true);
-// })
-
-// .catch(function(error) {
-//   console.log(error);
-// });
-
-
-// ============ PROMISE ============
-// function job(state) {
-//   return new Promise(function(resolve, reject) {
-//       if (state) {
-//           resolve('success');
-//       } else {
-//           reject('error');
-//       }
-//   });
-// }
-
-// let promise = job(true);
-
-// promise
-
-// .then(function(data) {
-//   console.log(data); // success
-
-//   return job(true);
-// })
-
-// .then(function(data) {
-//   if (data !== 'victory') {
-//       throw 'Defeat';
-//   }
-
-//   return job(true);
-// })
-
-// .then(function(data) {
-//   console.log(data);
-// })
-
-// .catch(function(error) {
-//   console.log(error); // error -> Defeat
-
-//   return job(false);
-// })
-
-// .then(function(data) {
-//   console.log(data);
-
-//   return job(true);
-// })
-
-// .catch(function(error) {
-//   console.log(error); // error
-
-//   return 'Error caught';
-// })
-
-// .then(function(data) {
-//   console.log(data); // 'Error caught'
-
-//   return new Error('test');
-// })
-
-// .then(function(data) {
-//   console.log('Success:', data.message); // Success: test
-// })
-
-// .catch(function(data) {
-//   console.log('Error:', data.message); // error -> null
-// });
+// Promise.all([promise01, promise02, promise03, promise04])
+//     .then(values => console.log(values));
 
 
 // ============ PROMISE TASK in Andersen ============
@@ -264,11 +159,8 @@ const promise03 = new Promise((resolve, reject) => setTimeout(resolve, 2000, 'Go
 // }
 
 
-// ================================================
-//          PROMISE - InSimpleWords
-// ================================================
 
-
+// ============ PROMISE - InSimpleWords ============
 /*
 * Promise - это объект, у него есть сслыка __proto__
 * Promise - может в себе хранить 3 состояния и может хранить в себе неограниченное к-во значений, привязанных к этому промису.
@@ -286,125 +178,70 @@ const promise03 = new Promise((resolve, reject) => setTimeout(resolve, 2000, 'Go
 * */
 
 // 1. Пишем фукнкцию конструктор рождающую promise и сам объект promise
-// const promise = new Promise((function (resolve, reject) {
-// }))
-//
-// console.log(promise);
+const promise11 = new Promise((function (resolve, reject) {
+}))
+
+// console.log(promise11);
 // pending - состояние неопределенности, доно обещание что-то сделать.
 
 
 // 2. Promise выполнен успешно
-// const promise = new Promise((function (resolve, reject) {
-//     resolve('success')
-// }))
-//
-// console.log(promise);
+const promise12 = new Promise((function (resolve, reject) {
+    resolve('success')
+}))
+
+// console.log(promise12);
 // resolved - успешно выполненное обещание.
 
 
-// 3. Promise example
-// var promise2 = new Promise(function (resolve, reject) {
+// ------- CASE I - Promise example-------
+const arr = [6, 7, 8];
 
-// OPTION I
-// Я обещею посчитать сумму 2-х чисел
-// var sum = 5 + 7;
-// resolve(sum); // обещание выполнено resolved
-
-
-// Я обещаю разделить одно число на другое, но если попадается ноль, в качестве делителя, то обстоятельства сильнее меня.
-// Деление на ноль запрещено
-
-// OPTION II
-//     var resultDiv = div(12, 0);
-//     if (resultDiv == false) {
-//         reject('unsuccess');
-//     } else {
-//         resolve(resultDiv);
-//     }
-// })
-
-// console.log(promise2);
-
-
-// function div(a, b) {
-//     if (b == 0) {
-//         return false;
-//     } else {
-//         return a/b;
-//     }
-// }
-
-
-// 4. Promise example
-// const promise3 = new Promise(function (res, rej) {
-//     console.dir(res);
-// })
-
-
-// 5. Promise example
-// var arr = [6, 7, 8];
-
-// function randomInteger(min, max) {
-//     var rand = min - 0.5 + Math.random() * (max - min + 1)
-//     rand = Math.round(rand);
-//     return rand;
-// }
-
-// const promise4 = new Promise(function (resolve, reject) {
-//     var num = +prompt(`загадайте число из приведенных${arr}`);
-//     console.log("I'm thinking...");
-
-//     setTimeout(function (){
-//         var randomNumber = arr[randomInteger(0, 2)];
-//         if (num == randomNumber){
-//             console.log('Cool');
-//             resolve('Cool')
-//         } else {
-//             console.log('Ops;' + randomNumber);
-//             reject ('Ops')
-//         }
-//     },2000);
-// });
-
-// console.log(promise4);
-
-
-const prom1 = Promise.resolve('123');
-const prom2 = Promise.resolve('error');
-const prom3 = Promise.resolve('some');
-Promise.all([prom1, prom2, prom3])
-    // .then(data => console.log(data))
-    .catch(error => console.log(error));
-
-
-// console.log('Hi');
-
-
-// ============ Змыкание счетчик ============
-
-function makeCounter() {
-    var currentCount = 0;
-
-    return function() {
-        return currentCount++;
-    }
+function randomInteger(min, max) {
+    let rand = min - 0.5 + Math.random() * (max - min + 1)
+    rand = Math.round(rand);
+    return rand;
 }
 
-var counter = makeCounter();
-// console.log(counter());
-// console.log(counter());
-// console.log(counter());
+function imitationPromise () {
+    const promise = new Promise(function (resolve, reject) {
+        let num = +prompt(`загадайте число из приведенных ${arr}`);
+        console.log("I'm thinking...");
+
+        setTimeout(function (){
+            let randomNumber = arr[randomInteger(0, 2)];
+            if (num == randomNumber){
+                console.log('Cool');
+                resolve('Cool')
+            } else {
+                console.log('Ops;' + randomNumber);
+                reject ('Ops')
+            }
+        }, 1000);
+    });
+
+    // console.log('imitationPromise', promise);
+}
+
+// imitationPromise();
 
 
-var counter2 = makeCounter();
-// console.log(counter2());
-// console.log(counter2());
-// console.log(counter2());
+// ------- CASE II - Promise example-------
+function promiseAllExample () {
+    const prom1 = Promise.resolve('123');
+    const prom2 = Promise.resolve('error');
+    const prom3 = Promise.resolve('some');
+    Promise.all([prom1, prom2, prom3])
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
+}
+
+// console.log('promiseAllExample', promiseAllExample());
+
 
 
 
 // ------- Example I -------
-
 const promise = new Promise ((resolve, reject) => {
     setTimeout (() => {
         resolve('Success');

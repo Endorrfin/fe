@@ -15,7 +15,7 @@ class Car {
 }
 
 
-class MercedesCar extends Car {
+class GermanyCar extends Car {
 
     constructor (carName) {
         super(carName);
@@ -25,9 +25,11 @@ class MercedesCar extends Car {
     }
 }
 
-const bmw = new MercedesCar("BMW");
+const mercedes = new GermanyCar("Mercedes");
+const bmw = new GermanyCar("BMW");
 
-// console.log('class bmw -> ', 'name', bmw.getName(), 'speed', bmw.speed, 'color', bmw.color);
+// console.log('class Mercedes -> ', 'name', mercedes.getName(), 'speed', mercedes.speed, 'color', mercedes.color);
+// console.log('class BMW -> ', 'name', bmw.getName(), 'speed', bmw.speed, 'color', bmw.color);
 
 
 // ------- Example II - functional inheritance -------
@@ -41,7 +43,7 @@ function Cat (catName) {
 
 
 function BobCat (catName) {
-    // let name = catName;
+    let name = catName;
 
     /*
     * Вызывая метод call на функции конструкторе класса Cat, мы первым параметром передаем переменную контекста
@@ -49,7 +51,6 @@ function BobCat (catName) {
     * */
 
     Cat.call(this, catName);
-
     this.getName = function () {
         return name;
     }

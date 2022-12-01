@@ -8,6 +8,28 @@
   15 - значение
 */
 
+const months = {
+  January: 31,
+  February: 28,
+  March: 31,
+  April: 30,
+  May: 31,
+  June: 30,
+  July: 31,
+  August: 31,
+  September: 30,
+  October: 31,
+  November: 30,
+  December: 31,
+};
+
+const monthsBySeason = {
+  winter: { January: 31, February: 28, December: 31 },
+  spring: { March: 31, April: 30, May: 31 },
+  summer: { June: 30, July: 31, August: 31 },
+  autumn: { September: 30, October: 31, November: 30 }
+};
+
 const someObj = {
   id: 15,
   name: 'John',

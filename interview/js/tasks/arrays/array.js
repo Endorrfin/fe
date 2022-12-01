@@ -1,6 +1,10 @@
 
 // ============ КОМБИНАЦИЯ РАБОТЫ МЕТОДОВ МАССИВА ============
 
+// ------- Miscellaneous tricks -------
+// console.log('Welcome to JS world'[0]); // W
+
+
 // ------- Example I -------
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -27,11 +31,11 @@ const greet = (name = getRandomName()) => {
     // console.log(`Hi ${name}!`);
 }
 greet();
-greet('Tom');
+greet('-Tom-');
 greet();
-greet('Megan');
+greet('-Megan-');
 greet();
-greet();
+greet('-Patrik-');
 
 
 const greet2 = (name, ...titles) => {
@@ -41,7 +45,7 @@ const greet2 = (name, ...titles) => {
     // console.log(`Привет ${firstTitle} ${name}${aka}`);
 }
 
-const nameAndTitles = ['Dear', 'Nice', 'Smart', 'Alone', 'Hanson'];
+const nameAndTitles = ['Kind', 'Nice', 'Smart', 'Alone', 'Hanson'];
 
 greet2(nameAndTitles[0], nameAndTitles[1]);
 

@@ -11,11 +11,11 @@ const array = [2, 10, 2, 4, 7, 9, 3, 1, 6, 4, 8, 3, 8, 9, 5, 5];
 * и мы сделали это так, что проверка того, видели ли мы уже элемент, занимает O(1) времени.
 * */
 
-// Option I
+// Case I
 const uniqueArr = (arr) => [...new Set(arr)];
 // console.log(uniqueArr(array));
 
-// Option II
+// Case II
 const removeDuplicates = (array) => {
     // debugger;
     const uniqueValues = [];
@@ -55,21 +55,23 @@ const getURLParameters = (url) => {
 // ------- Example III - проверьте, является ли объект пустым -------
 const obj1 = {};
 const obj2 = {ukraine: 'kyiv', pollen: 'warsaw', turkish: 'ankara'};
-// Option I
+
+// Case I
 const isEmpty = obj => Reflect.ownKeys(obj).length === 0 && obj.constructor === Object;
-// console.log(isEmpty(obj1));
-// console.log(isEmpty(obj2));
+// console.log('obj1', isEmpty(obj1));
+// console.log('obj2', isEmpty(obj2));
 
 
-// Option II
+// Case II
 const isObjectEmpty = (object) => {
+    debugger;
     // Iterates over the keys of an object, if any exist, return false.
     for (_ in object) return false;
     return true;
 };
 
-// console.log(isObjectEmpty(obj1));
-// console.log(isObjectEmpty(obj2));
+// console.log('obj1', isObjectEmpty(obj1));
+// console.log('obj2', isObjectEmpty(obj2));
 
 
 
