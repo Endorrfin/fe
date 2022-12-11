@@ -24,6 +24,6 @@ function sorted (data, type = 'asc') {
     })
 };
 
-console.log('sorted default (asc)', sorted(stock.slice()));
-console.log('sorted desc ', sorted(stock.slice(), 'desc'));
+// console.log('sorted default (asc)', sorted(stock.slice()));
+// console.log('sorted desc ', sorted(stock.slice(), 'desc'));
 

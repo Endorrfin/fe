@@ -36,9 +36,42 @@ const newGreeting = makeGreeting();
 
 
 
+// ============ CLOSURE - METATECH ============
+/*
+* Closure = function + context
+* */
+
+// ------- Solution 1.1 - create closure using function declaration -------
+function add1(x) {
+  function closure(y) {
+    const z = x + y;
+    // console.log(`${x} + ${y} = ${z}`);
+    return z;
+  }
+  return closure;
+};
+
+const result1 = add1(3)(5);
+// console.log('result1', result1);
 
 
+// ------- Solution 1.2 - create closure using arrow function -------
+const add2 = (x) => (y) => {
+  const z = x + y;
+  // console.log(`${x} + ${y} = ${z}`);
+  return z;
+};
 
+const result2 = add2(2)(4);
+// console.log('result2', result2);
+
+
+// ------- Solution 1.3 - create closure using arrow function: short version -------
+const add3 = (x) => (y) => x + y;
+// console.log('add3', add3(5)(10));
+
+const add4 = (a) => (b) => (c) => (d) => (e) => a + b + c + d + e;
+// console.log('add4', add4(10)(20)(30)(40)(50));
 
 
 

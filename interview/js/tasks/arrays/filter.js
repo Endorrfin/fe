@@ -19,7 +19,7 @@ const available = stock.filter(inStock);
 
 // ============ FILTER ============
 
-let array = [12, 15, 7, 19, 2, 9, 139];
+const array = [12, 15, 7, 19, 2, 9, 139];
 
 // Вариант I
 let newArray = array.filter(function (elem) {

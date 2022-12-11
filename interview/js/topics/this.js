@@ -139,6 +139,121 @@ const promoteMDbind = promote.bind(employee2, "Middle developer", 300);
 // console.log('promote using bind:', promoteMDbind());
 
 
+// ============ this. - htmlAcademy ============
+/*
+* this = контекст
+* Контекст - то оргужение, в котором выполняется функция.
+* this - определяется во время вызова функции, а во время написания функции, нам еще не известно чему равно this.
+* Не важно, как фукнция описана, где она расположена, но значение this определяетя в момент ее запуска.
+* Сам this запишется только в тот момент, когда функцию будут вызывать.
+* Если некая функция вызывается не в контексте какого-то объекта, а просто сама по себе то:
+*   - в строгом режиме this = undefined
+*   - не в строгом режиме = глобальному объекту window
+*   - в node (not browser) = глобальному объекту global
+*
+* Контекст в значении undefined - не интересен, это не то, для чего придумали this
+* Интересно, когда this = какому-то объекту. this ровняется какому-то объекту, если функция, внутри которой есть
+*  this является методом какого-то объекта и исполняется в его контексте.
+* This определяется динамически в момент вызова функции / метода
+*
+* this в контексте вызова очень важна, когда мы хотим получить разные значения вызвая аодну и ту же функцию
+* Можно предположить, что если функция (метод) объявлен внутри какого-то объекта, то this будет ссылаться на этот
+*  объект, но этот не так, this определяется в момент исполнения метода. У какого объекта мы this вызываем на тот
+*  объект this и будет ссылаться.
+*
+* ARRW FUNCTION
+* Если в качестве метода использовать стрелочную функцию, то значение this будет определяться по другому.
+* У стрелочной функции нет собственного контекста. Контекст стрелочной функции ссылается на контекст родительской
+*  функции.
+*
+*
+* */
+
+// ------- Example 1.1 - how it work -------
+const whoAm = function () {
+  console.log(`My name is: ${this.firstName} ${this.lastName}`);
+  console.log(this);
+}
+
+const guitarPlayer = {
+  firstName: 'Curt',
+  lastName: 'Cobain',
+  whoAm,
+}
+
+const anotherGuitarPlayer = {
+  firstName: 'Richie',
+  lastName: 'Sambora',
+  whoAm,
+}
+
+// guitarPlayer.whoAm();
+// anotherGuitarPlayer.whoAm();
+
+
+// ------- Example 1.2 - this: depend on how call function -------
+const europeCar = {
+  name: 'Mercedes',
+  color: 'white',
+  country: 'Germany',
+  whoAm: function () {
+    console.log(`I was made in ${this.country}, my name is: ${this.name} and my color is: ${this.color}!`)
+  }
+}
+
+const asianCar = {
+  name: 'Toyota',
+  color: 'red',
+  country: 'Japan',
+  whoAm: europeCar.whoAm,
+}
+
+// europeCar.whoAm();
+// asianCar.whoAm();
+
+
+// ------- Example 1.3 - this in arrow function -------
+const usaCar = {
+  name: 'Ford',
+  color: 'gray',
+  country: 'USA',
+  whoAm: () => console.log(`I was made in ${this.country}, my name is: ${this.name} and my color is: ${this.color}!`)
+
+}
+
+const italianCar = {
+  name: 'Mazeratti',
+  color: 'blue',
+  country: 'Italy',
+  whoAm: usaCar.whoAm,
+}
+
+// usaCar.whoAm();
+// italianCar.whoAm();
+
+
+// ------- Example 1.4 - this in arrow function using closure -------
+const franceCar = {
+  name: 'Pegeout',
+  color: 'yellow',
+  country: 'France',
+  whoAm: () => console.log(`I was made in ${franceCar.country}, my name is: ${franceCar.name} and my color is: ${franceCar.color}!`)
+
+}
+
+const swedishCar = {
+  name: 'Vlovo',
+  color: 'brown',
+  country: 'Swiss',
+  whoAm: franceCar.whoAm,
+}
+
+franceCar.whoAm();
+swedishCar.whoAm();
+
+
+
+
 
 
 /**
