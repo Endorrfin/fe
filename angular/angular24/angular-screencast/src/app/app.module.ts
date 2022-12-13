@@ -32,7 +32,7 @@ import {ParentDialogComponent} from './components/parent-dialog/parent-dialog.co
 import {MyDialogComponent} from './components/dialog/my-dialog/my-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import { BindingComponent } from './components/binding/binding.component';
-import { DirectivesComponent } from './components/directives/directives.component';
+import {DirectivesComponent} from "./components/directives-work/directives/directives.component";
 import { ParentComponent } from './components/interaction-of-components/parent/parent.component';
 import { ChildComponent } from './components/interaction-of-components/child/child.component';
 import { ParentUnitComponent } from './components/advanced-communication/parent-unit/parent-unit.component';
