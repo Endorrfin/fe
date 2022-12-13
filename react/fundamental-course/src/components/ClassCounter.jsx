@@ -20,11 +20,11 @@ class ClassCounter extends React.Component {
 
   render() {
     return (
-        <div>
-          <h2>{this.state.count}</h2>
-          <button style={{marginRight: '5px'}} onClick={this.increment}>Increment</button>
-          <button onClick={this.decrement}>Decrement</button>
-        </div>
+      <div>
+        <h2>{this.state.count}</h2>
+        <button style={{marginRight: '5px'}} onClick={this.increment}>Increment</button>
+        <button onClick={this.decrement}>Decrement</button>
+      </div>
     )
   }
 }

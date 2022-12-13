@@ -3,12 +3,12 @@ import PostItem from "./PostItem";
 
 const PostList = ({posts, title}) => {
   return (
-      <div>
-        <h3 style={{textAlign: 'center'}}>{title}</h3>
-        {posts.map((post) =>
-            <PostItem post={post} key={post.id}/>
-        )}
-      </div>
+    <div>
+      <h3 style={{textAlign: 'center'}}>{title}</h3>
+      {posts.map((post) =>
+        <PostItem post={post} key={post.id}/>
+      )}
+    </div>
   );
 };
 

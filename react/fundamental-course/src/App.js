@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import Counter from './components/Counter';
+import PostList from './components/PostList';
 import ClassCounter from './components/ClassCounter';
 import './styles/App.css';
-import PostItem from './components/PostItem';
-import PostList from './components/PostList';
 
 function App() {
   const [value, setValue] = useState('text in input');
+
   const [posts, setPosts] = useState([
     {id: 1, title: 'Javascript 1', body: 'Description'},
     {id: 2, title: 'Javascript 2', body: 'Description'},
@@ -24,28 +24,28 @@ function App() {
   ])
 
   return (
-      <div className="App">
+    <div className="App">
 
-        <hr/>
-        <h3>Input</h3>
-        <input
-            type="text"
-            value={value}
-            onChange={event => setValue(event.target.value)}/>
+      <hr/>
+      <h3>Input</h3>
+      <input
+        type="text"
+        value={value}
+        onChange={event => setValue(event.target.value)}/>
 
-        <hr/>
-        <h3>Function (hook) counter</h3>
-        <Counter/>
+      <hr/>
+      <h3>Function (hook) counter</h3>
+      <Counter/>
 
-        <hr/>
-        <h3>Class counter</h3>
-        <ClassCounter/>
+      <hr/>
+      <h3>Class counter</h3>
+      <ClassCounter/>
 
-        <hr/>
-        <PostList posts={posts} title="List of posts about Javascript"/>
-        <PostList posts={posts2} title="List of posts about Python"/>
+      <hr/>
+      <PostList posts={posts} title="List of posts about Javascript"/>
+      <PostList posts={posts2} title="List of posts about Python"/>
 
-      </div>
+    </div>
   );
 }
 

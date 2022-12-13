@@ -12,11 +12,11 @@ const Counter = function () {
   }
 
   return (
-      <div>
-        <h2>{count}</h2>
-        <button style={{marginRight: '5px'}} onClick={increment}>Increment</button>
-        <button onClick={decrement}>Decrement</button>
-      </div>
+    <div>
+      <h2>{count}</h2>
+      <button style={{marginRight: '5px'}} onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+    </div>
   )
 }
 
