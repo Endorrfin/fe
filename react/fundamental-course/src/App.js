@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
+
 import Counter from './components/Counter';
 import PostList from './components/PostList';
 import ClassCounter from './components/ClassCounter';
+
 import './styles/App.css';
 
 function App() {
@@ -44,7 +46,6 @@ function App() {
       <hr/>
       <PostList posts={posts} title="List of posts about Javascript"/>
       <PostList posts={posts2} title="List of posts about Python"/>
-
     </div>
   );
 }
