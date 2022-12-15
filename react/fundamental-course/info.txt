@@ -1,0 +1,6 @@
+
+START
+npm start
+
+Snippets
+rsc - разворачиваем компонент
