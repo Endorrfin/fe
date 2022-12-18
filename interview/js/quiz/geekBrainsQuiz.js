@@ -1091,4 +1091,17 @@
 // console.log(undefined == null);
 
 
+// -------------- Example 1.1 --------------
+['JavaScript', 'is', 'awesome'].forEach((item, index, array) => {
+  // console.log(item, index, array);
+})
+
+
+// -------------- Example 1.2 --------------
+const someArr =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+ someArr.forEach(function(num, idx, arr) {
+  // console.log(num * 2);
+});
+
+
 

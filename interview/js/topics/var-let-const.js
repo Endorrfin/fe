@@ -2,6 +2,8 @@
 // https://stackoverflow.com/questions/31219420/are-variables-declared-with-let-or-const-not-hoisted-in-es6/31222689#31222689
 // top question on interview:   https://youtu.be/yLtNSqEF6HU?list=PLwHvxJae2LazDrHm6ayqLKz6jszEn7ArQ
 
+// ============ BEHAVIOR var, let, const ============
+
 // -------------- Example I --------------
 var foo1 = 'foo';
 // console.log(foo1); // foo

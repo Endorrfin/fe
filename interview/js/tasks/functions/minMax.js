@@ -1,8 +1,8 @@
 /*
-Написать функцию, которая бы возвращала минимальное и максимальное значение в массиве.
+* Написать функцию, которая бы возвращала минимальное и максимальное значение в массиве.
 */
 
-// !Base
+// -------------- Solution 1.1 Base --------------
 function minMaxBase(arr) {
     var res = [];
     var minValue = Math.min.apply(null, arr);
@@ -10,17 +10,19 @@ function minMaxBase(arr) {
     return res.push(minValue, maxValue);
 }
 
-// !Advanced
+
+// -------------- Solution 1.2 Advanced --------------
 function minMaxAdvanced(arr) {
     return [Math.min.apply(null, arr), Math.max.apply(null, arr)];
 }
 
-// !ES6
+// -------------- Solution 1.3 ES6 --------------
 const minMaxEs6 = (arr) => {
     [Math.min(...arr), Math.max(...arr)];
 }
 
-// ! Option IV
+
+// -------------- Solution 1.4 --------------
 function min(a, b) {
     if (a < b) return a;
     else return b;
