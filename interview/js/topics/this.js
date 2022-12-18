@@ -248,8 +248,8 @@ const swedishCar = {
   whoAm: franceCar.whoAm,
 }
 
-franceCar.whoAm();
-swedishCar.whoAm();
+// franceCar.whoAm();
+// swedishCar.whoAm();
 
 
 

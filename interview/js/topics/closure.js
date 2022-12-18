@@ -22,7 +22,7 @@ function makeGreeting() {
 
   function greeting(personName) {
     return `Hello ${personName}! My name's ${someName}.`;
-  };
+  }
 
   return greeting;
 }
@@ -49,7 +49,7 @@ function add1(x) {
     return z;
   }
   return closure;
-};
+}
 
 const result1 = add1(3)(5);
 // console.log('result1', result1);
@@ -156,9 +156,8 @@ var messenger = function (firstName, secondName) {
 // person2.sayHello();
 
 
-
-// ============ Closure Counter ============
-function makeCounter() {
+// ------- Solution 1.1 Closure Counter -------
+function makeCounter1() {
   let currentCount = 4;
 
   return function () {
@@ -166,48 +165,60 @@ function makeCounter() {
   };
 }
 
-const counter = makeCounter();
+const counter = makeCounter1();
   // каждый вызов увеличивает счетчик и возвращает результат
   // console.log( counter());
   // console.log( counter());
   // console.log( counter());
 
-const counter2 = makeCounter();
+const counter2 = makeCounter1();
 // console.log(counter2());
 // console.log(counter2());
 // console.log(counter2());
 
 
 
-// ======= <<<--- Closure (замыкание) example II --->>>  =======
+// ------- Solution 1.2 Closure Counter -------
+  function counter3() {
+    let count = 0;
 
-//   function counter() {
-//     let count = 0;
+    return function() {
+      const nexValue = count + 1;
+      count = nexValue;
+      return nexValue;
+    }
+  }
 
-//     return function() {
-//       const nexValue = count + 1;
-//       count = nexValue;
-//       return nexValue;
-//     }
-//   }
+  var b = counter3();
+  var c = counter3();
 
-//   var b = counter();
-//   var c = counter();
-
-//   // каждый вызов увеличивает счетчик на 1, b и c живут своей жизнью и не пересекаются
+  // каждый вызов увеличивает счетчик на 1, b и c живут своей жизнью и не пересекаются
 // console.log(b()); // 1
 // console.log(b()); // 2
 // console.log(b()); // 3
 // console.log(b()); // 4
-
+//
 // console.log(c()); // 1
 // console.log(c()); // 2
 // console.log(c()); // 3
-
+//
 // console.log(b()); // 5
 // console.log(c()); // 4
 
 
+
+// ------- Solution 1.3 Closure Counter -------
+const counter4 = () => {
+  let count = 0;
+  return () => {
+    return count++
+  }
+}
+
+let someCount = counter4();
+// console.log(someCount());
+// console.log(someCount());
+// console.log(someCount());
 
 
 
