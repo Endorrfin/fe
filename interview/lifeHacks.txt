@@ -9,6 +9,7 @@
 // @param myParam The parameter for this method
 
 // ============ NAME ============
+// bradtraversy / vanillawebprojects (20+ Web Projects With Vanilla JavaScript) - https://github.com/bradtraversy/vanillawebprojects
 
 // ============ NAME ============
 // ------- Example I -------
