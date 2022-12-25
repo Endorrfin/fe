@@ -100,7 +100,6 @@ const First = (() => {
 
 
 // Exercise II Asynchronous task
-
 const callSequence4 = () => {
     console.log('Hello,');
 
@@ -119,6 +118,25 @@ const callSequence4 = () => {
 
 // callSequence4();
 // Output - Hello, I am JavaScript - cool programming language
+
+
+// ============ HOW WORK EVENT LOOP ============
+// -------------- Case 1 --------------
+const consoleOutput = () => {
+    // L1
+    console.log('🥪 Synchronous 1');
+
+    // L2
+    setTimeout(_ => console.log(`🍅 Timeout 4`), 0);
+
+    // L3
+    Promise.resolve().then(_ => console.log('🍍 Promise 3'));
+
+    // L4
+    console.log('🥪 Synchronous 2');
+}
+
+// console.log(consoleOutput());
 
 
 

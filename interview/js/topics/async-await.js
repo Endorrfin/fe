@@ -114,6 +114,155 @@ async function fetchUsers() {
 
 
 
+// ============ HOW WORK PROMISES & ASYNC AWAIT ============
+// https://www.youtube.com/watch?v=vn3tm0quoqE
+
+// -------------- Case 1.1 --------------
+const tick = Date.now();
+const log = (v) => console.log(`${v} \n Elapsed: ${Date.now() - tick}ms`);
+
+const codeBlocker = () => {
+    // Blocking
+    // let i = 0;
+    // while(i < 1000000000) { i++;}
+
+    // return '🐷 billion loops done';
+
+    // Async blocking
+    // return new Promise((resolve, reject) => {
+
+    //     let i = 0;
+    //     while(i < 1000000000) { i++;}
+
+    //     resolve('🐷 billion loops done');
+    // })
+
+    // Non-blocking
+
+    return Promise.resolve().then(v =>  {
+        let i = 0;
+        while(i < 1000000000) { i++; }
+        return '🐷 billion loops done';
+    })
+}
+
+// log('🥪 Synchronous 1');
+// codeBlocker().then(log)
+// log('🥪 Synchronous 2');
+
+
+
+// -------------- Case 1.2 --------------
+export const getFruit = async name => {
+    const fruits = {
+        pineapple: '🍍',
+        peach: '🍑',
+        strawberry: '🍓'
+    };
+
+    return fruits[name];
+};
+
+// getFruit('peach').then(console.log);
+
+// Async + Await
+export const makeSmoothie = async () => {
+    const a = await getFruit('pineapple');
+    const b = await getFruit('strawberry');
+
+    return [a, b];
+};
+
+const makeSmoothie2 = () => {
+    let a;
+    return getFruit('pineapple')
+      .then(v => {
+          a = v;
+          return getFruit('strawberry');
+      })
+      .then(v => [a, v]);
+};
+
+
+
+// -------------- Case 1.3 - concurrency --------------
+const makeSmoothieFaster = async() => {
+    const a = getFruit('pineapple');
+    const b = getFruit('strawberry');
+
+    const smoothie = await Promise.all([a, b])
+
+    return smoothie;
+}
+
+
+const fruitRace = async() => {
+    const a = getFruit('pineapple');
+    const b = getFruit('strawberry');
+
+    const winner = await Promise.race([a, b])
+
+    return winner;
+}
+
+// fruitRace().then(log)
+// fruitRace().then(log)
+// fruitRace().then(log)
+// fruitRace().then(log)
+// fruitRace().then(log)
+
+
+
+// -------------- Case 1.4 - error-handling --------------
+const badSmoothie = async() => {
+    try {
+
+        const a = getFruit('pineapple')
+        const b = getFruit('strawberry');
+        const smoothie = await Promise.all([a, b])
+
+        throw 'broken!'
+
+        return smoothie;
+
+    } catch(err) {
+        console.log(err)
+        // return `😬 We are going to be fine...`
+        throw `💩 It's broken!`
+    }
+}
+
+
+// -------------- Case 1.5 - sugar --------------
+const fruits = ['peach', 'pineapple', 'strawberry'];
+
+const fruitLoop = async () => {
+    for (const f of fruits) {
+        const emoji = await getFruit(f);
+        log(emoji);
+    }
+};
+
+// console.log(fruitLoop());
+
+
+const fruitInspection = async () => {
+    if ((await getFruit('peach')) === '🍑') {
+        console.log('looks peachy!');
+    }
+};
+
+// console.log(fruitInspection());
+
+
+const getTodo = async () => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+
+    const { title, userId, body } = await res.json();
+
+    console.log(title, userId, body);
+};
+
 
 
 
