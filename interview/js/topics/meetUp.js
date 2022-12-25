@@ -1,29 +1,26 @@
 
 
 // ======= Example I =======
-// var apples = 5;
-
-// if (true) {
-//   var apples = 10;
-
-//   console.log(apples); // 10 (внутри блока)
-// }
-
-// console.log(apples); // 10 (снаружи блока то же самое)
+var apples1 = 5;
+if (true) {
+  var apples1 = 10;
+  // console.log(apples1); // 10 (внутри блока)
+}
+// console.log(apples1); // 10 (снаружи блока то же самое)
 
 
 
 
 // ======= Example II =======
-// let apples = 5; // (*)
+let apples2 = 5; // (*)
 
-// if (true) {
-//   let apples = 10;
+if (true) {
+  let apples2 = 10;
 
-//   console.log(apples); // 10 (внутри блока)
-// }
+  // console.log(apples2); // 10 (внутри блока)
+}
 
-// console.log(apples); // 5 (снаружи блока значение не изменилось)
+// console.log(apples2); // 5 (снаружи блока значение не изменилось)
 
 
 
