@@ -182,7 +182,10 @@ function test (a2) {
 // console.log(test());
 
 
-
+// -------------- Unit 3.1 What will show console.log? --------------
+const id = document.body.id = 1;
+// console.log(id === 1);
+// console.log(document.body.id === 1);
 
 
 
