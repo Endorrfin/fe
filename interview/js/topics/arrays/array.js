@@ -1,4 +1,36 @@
 
+let arrayNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+
+// ============ CREATE ARRAY OF GIVEN LENGTH ============
+
+// -------------- Solution 1.1 --------------
+const createArray1 = number => {
+    let numberArray = [];
+    for (let index = 1; index <= number; index++) {
+        numberArray.push(index);
+    }
+    return numberArray;
+};
+// console.log('createArray1', createArray1(10));
+
+
+// -------------- Solution 1.2 --------------
+const createArray2 = (num) => {
+    return Array.from(Array(num).keys()).map(item => item + 1)
+};
+
+// console.log('createArray2', createArray2(20));
+
+
+// -------------- Solution 1.3 --------------
+const createArray3 = (num) =>
+  [...new Array(num)].map((item, index) => index + 1);
+
+// console.log('createArray3', createArray3(30));
+
+
+
 // ============ КОМБИНАЦИЯ РАБОТЫ МЕТОДОВ МАССИВА ============
 
 // ------- Miscellaneous tricks -------
