@@ -1,0 +1,33 @@
+<h3 class="text-lg">Select date range</h3>
+<div class="container">
+  <form [formGroup]="form">
+    <mat-form-field appearance=fill>
+      <mat-label>Choose a range date</mat-label>
+      <mat-date-range-input
+        [rangePicker]="picker"
+        [comparisonStart]="comparisonStart"
+        [comparisonEnd]="comparisonEnd"
+        [dateFilter]="unavailableDays"
+        format="dd-MMM-yyy"
+        separator="-"
+        formGroupName="daterange"
+      >
+        <input matInput matStartDate placeholder="" formControlName="start">
+        <input matInput matEndDate placeholder="" formControlName="end">
+        <mat-hint>MM/YYYY</mat-hint>
+      </mat-date-range-input>
+      <mat-datepicker-toggle matSuffix [for]="picker">
+        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-date-range-picker
+        [opened]="false"
+        xPosition="start"
+        yPosition="below"
+        #picker
+      >
+      </mat-date-range-picker>
+    </mat-form-field>
+
+    <button (click)="onSubmit()">select</button>
+  </form>
+</div>
