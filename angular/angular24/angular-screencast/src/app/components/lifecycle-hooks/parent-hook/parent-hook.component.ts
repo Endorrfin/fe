@@ -26,15 +26,14 @@ import {ChildHookComponent} from "../child-hook/child-hook.component";
   styleUrls: ['./parent-hook.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ParentHookComponent implements
-    OnChanges,
-    OnInit,
-    DoCheck,
-    AfterContentInit,
-    AfterContentChecked,
-    AfterViewInit,
-    AfterViewChecked,
-    OnDestroy {
+export class ParentHookComponent implements OnChanges,
+  OnInit,
+  DoCheck,
+  AfterContentInit,
+  AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked,
+  OnDestroy {
 
   public _titleParentHook: string = 'before init parent';
 
@@ -80,7 +79,7 @@ export class ParentHookComponent implements
   // @ContentChildren(ChildHookComponent)
   // childrenContent!: QueryList<ChildHookComponent>
 
-  @ContentChild('ref' , {static: true, read: ChildHookComponent})
+  @ContentChild('ref', {static: true, read: ChildHookComponent})
   appChildHook!: ChildHookComponent;
 
   @ContentChildren('ref', {read: ChildHookComponent})
@@ -100,9 +99,8 @@ export class ParentHookComponent implements
   appChildrenHookViewChild!: QueryList<ChildHookComponent>
 
 
-
   constructor(
-      private cdr: ChangeDetectorRef,
+    private cdr: ChangeDetectorRef,
   ) {
     console.log('-0- PARENT -> Constructor', this._titleParentHook, this.appChildHook, this.jqueryContainer);
   }
@@ -131,7 +129,7 @@ export class ParentHookComponent implements
     setTimeout(() => {
       this._titleParentHook = 'f00f000';
       // this.cdr.markForCheck();
-    },3000);
+    }, 3000);
 
   }
 
@@ -147,7 +145,7 @@ export class ParentHookComponent implements
 
   ngAfterContentInit(): void {
     this.appChildHook?.sayHi();
-    if  (this.appChildHook) {
+    if (this.appChildHook) {
       this.appChildHook.titleChildHook = 'Bye-bye, my title was changed from parent component!'
     }
     console.log('templates', this.templates);
