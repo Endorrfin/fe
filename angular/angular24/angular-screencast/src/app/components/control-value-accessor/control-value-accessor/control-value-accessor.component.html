@@ -1,0 +1,20 @@
+<form
+  class="form"
+  [formGroup]="formGroup">
+  <app-title-input
+    ngDefaultControl
+    [formControlName]="'title'">
+  </app-title-input>
+
+  <app-author-input
+    [formControlName]="'author'">
+  </app-author-input>
+
+  <app-content-input
+    [formControlName]="'content'">
+  </app-content-input>
+</form>
+
+{{ formGroup.value | json }}
+
+<!--ngDefaultControl - директива способна перехватывать у input значение при помощи всплытия события событие. Событие input всплывает. Работает для input & textarea-->

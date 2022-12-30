@@ -1,0 +1,7 @@
+<!--contenteditable - аттрибут позволяющий сделать некий блок редактируемым-->
+<div
+  class="editor"
+  contenteditable
+  [innerText]="value"
+  (keyup)="onEditorValueChange($event)">
+</div>
