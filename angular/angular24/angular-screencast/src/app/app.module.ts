@@ -63,6 +63,10 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import {AppDateAdapter, APP_DATE_FORMATS} from './components/angular-material/date-picker/date.adapter';
+import { ControlValueAccessorComponent } from './components/control-value-accessor/control-value-accessor/control-value-accessor.component';
+import { AuthorInputComponent } from './components/control-value-accessor/author-input/author-input.component';
+import { ContentInputComponent } from './components/control-value-accessor/content-input/content-input.component';
+import { TitleInputComponent } from './components/control-value-accessor/title-input/title-input.component';
 
 // import { ElementsComponent } from './components/elements/elements.component';
 
@@ -115,6 +119,10 @@ import {AppDateAdapter, APP_DATE_FORMATS} from './components/angular-material/da
     RxjsOverviewComponent,
     SubjectComponent,
     DatePickerComponent,
+    ControlValueAccessorComponent,
+    AuthorInputComponent,
+    ContentInputComponent,
+    TitleInputComponent,
   ],
   imports: [
     BrowserModule,
