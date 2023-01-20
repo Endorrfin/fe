@@ -86,5 +86,5 @@ myCount3.increaseCount();
 myCount4.increaseCount();
 myCount4.increaseCount();
 
-console.log(myCount4.getCount()); // 4
-console.log(myCount3.getCount()); // 4
+// console.log(myCount4.getCount()); // 4
+// console.log(myCount3.getCount()); // 4
