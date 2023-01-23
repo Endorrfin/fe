@@ -1,3 +1,26 @@
+// ============ FOREACH ============
+
+// ------------ Solution 1.1 with for ------------
+const arrayItems = ['item1', 'item2', 'item3'];
+const copyItems = [];
+for (let i = 0; i < arrayItems.length; i++) {
+    copyItems.push('New' + arrayItems[i]);
+}
+
+// console.log('copyItems', copyItems);
+
+
+// ------------ Solution 1.2 with forEach ------------
+const newItems = [];
+arrayItems.forEach(function(element, index, array) {
+    newItems.push(index + 'New' + element);
+});
+
+// console.log('newItems', newItems);
+
+
+
+
 const items = ['item1', 'item2', 'item3'];
 const copy = [];
 const arrayNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];

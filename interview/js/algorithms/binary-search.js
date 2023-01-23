@@ -52,3 +52,29 @@ function recursiveBinarySearch(array, item, start, end) {
 // console.log( 'index of element = ', recursiveBinarySearch(sortedArray, 27, 0, sortedArray.length), 'count = ', count);
 // console.log('Value is: ', sortedArray[26]);
 
+
+
+// ------------ Solution 2.1 - using cycle ------------
+let search = function (nums, target) {
+  let left = 0;
+  let right = nums.length - 1;
+  let mid;
+
+  while (left <= right) {
+    count++;
+    mid = Math.round((right-left) / 2) + left;
+
+    if (target === nums[mid]) {
+      return mid;
+    } else if (target < nums[mid]) {
+      right = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+  return -1;
+}
+
+// console.log( 'index of element = ', search(sortedArray, 9), 'count = ', count);
+// console.log( 'index of element = ', search(sortedArray, 33), 'count = ', count);
+
