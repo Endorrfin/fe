@@ -39,9 +39,9 @@ const car3 = prototypeCar.produce();
 car1.interior = 'white';
 car1.autopilot = true;
 
-console.log(car1);
-console.log(car3);
-console.log(car3);
+// console.log(car1);
+// console.log(car3);
+// console.log(car3);
 
 
 

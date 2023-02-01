@@ -45,7 +45,7 @@ const produce = bmwProducer('sport');
 // Car producing (Factory)
 const myCar = new produce();
 
-console.log(myCar.info());
+// console.log(myCar.info());
 
 
 
