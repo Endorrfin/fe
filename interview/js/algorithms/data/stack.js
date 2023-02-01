@@ -39,9 +39,9 @@ const stack = {
   }
 }
 
-console.log(stack);
+// console.log(stack);
 stack.add(student1);
 stack.add(student2);
-console.log(stack);
-console.log(stack.next());
-console.log(stack);
+// console.log(stack);
+// console.log(stack.next());
+// console.log(stack);

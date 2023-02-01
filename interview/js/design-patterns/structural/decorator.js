@@ -1,95 +1,93 @@
 
-// ============ DECORATOR ============
+// ============ COMPOSITE ============
 
 /*
-* Decorator - с помощью данного структурного паттерна можно добавлять объектам новые свойства и методы.
-* Другими словами оборачивать объект в класс декоратора и тем самым расширять его функциональность.
-* */
+* Composite - компоновщик это структурный паттерн проектирования, который позволяет сгруппировать множество объектов в древовидную структуру и работать с этой структурой так,
+* как будто это один единственный объект.
+* Паттерн работает со сложными компонентами через единый интерфейс с общим методом получения стоимости в нашем примере.
+* * */
 
-// -------------- Example 1.1 --------------
-class Car {
-  constructor() {
-    this.price = 10000;
-    this.model = 'Car';
+// -------------- Example 1.1 block I --------------
+class Equipment {
+  getName() {
+    return this.name;
+  }
+
+  setName(name) {
+    this.name = name;
   }
 
   getPrice() {
-    return this.price;
+    return this.price || 0;
   }
 
-  getDescription() {
-    return this.model;
+  setPrice(price) {
+    this.price = price;
   }
 }
 
+// -------------- Example 1.1 block II --------------
 
-// Create decorator I
-class Autopilot {
-  constructor(car) {
-    this.car = car;
-  }
-
-  getPrice() {
-    return this.car.getPrice() + 5000;
-  }
-
-  getDescription() {
-    return `${this.car.getDescription()} with autopilot`;
-  }
-};
-
-// Create decorator II
-class Parktronic {
-  constructor(car) {
-    this.car = car;
-  }
-
-  getPrice() {
-    return this.car.getPrice() + 3000;
-  }
-
-  getDescription() {
-    return `${this.car.getDescription()} with parktronic`
+class Engine extends Equipment {
+  constructor() {
+    super();
+    this.setName('Engine');
+    this.setPrice(800);
   }
 };
 
 
-class Tesla extends Car {
+class Body extends Equipment {
   constructor() {
     super();
-    this.price = 40000;
-    this.model = 'Tesla';
+    this.setName('Body');
+    this.setPrice(3000);
+  }
+};
+
+
+class Tools extends Equipment {
+  constructor() {
+    super();
+    this.setName('Tools');
+    this.setPrice(4000);
+  }
+};
+
+
+// -------------- Example 1.1 block III --------------
+
+class Composite extends Equipment {
+  constructor() {
+    super();
+    this.equipments = [];
+  }
+
+  add(equipment) {
+    this.equipments.push(equipment);
+  }
+
+  getPrice() {
+    return this.equipments
+      .map(equipment => equipment.getPrice())
+      .reduce((a, b) => a + b);
   }
 }
 
+// -------------- Example 1.1 block IV How it works --------------
 
-// Version with Autopilot & Parktronic
-let tesla1 = new Tesla();
-tesla1 = new Autopilot(tesla1);
-tesla1 = new Parktronic(tesla1);
-
-// console.log(tesla1.getPrice(), tesla1.getDescription());
-
-// Version with Autopilot only
-let tesla2 = new Tesla();
-tesla2 = new Autopilot(tesla2);
-// console.log(tesla2.getPrice(), tesla2.getDescription());
-
-
-
-// -------------- Example 1.2 --------------
-class Audi extends Car {
+class Car extends Composite {
   constructor() {
     super();
-    this.price = 20000;
-    this.model = 'Audi';
+    this.setName('Audi');
   }
-}
+};
 
-// Version with Autopilot only
-let audi = new Audi();
-audi = new Autopilot(audi);
-// console.log(audi.getPrice(), audi.getDescription());
+const myCar = new Car();
+myCar.add(new Engine());
+myCar.add(new Body());
+myCar.add(new Tools());
 
+// console.log(`${myCar.getName()} price is ${myCar.getPrice()} $`);
 
 

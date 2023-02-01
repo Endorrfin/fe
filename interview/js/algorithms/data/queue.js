@@ -39,9 +39,9 @@ const queue = {
   }
 }
 
-console.log(queue);
+// console.log(queue);
 queue.add(student1);
 queue.add(student2);
-console.log(queue);
-console.log(queue.next());
-console.log(queue);
+// console.log(queue);
+// console.log(queue.next());
+// console.log(queue);
