@@ -1,0 +1,47 @@
+.active {
+  @apply text-black bg-white;
+}
+
+.bg-gray-halo {
+  background-color: #f6f6f6;
+}
+
+.nav-item {
+  @apply p-3;
+  cursor: pointer;
+}
+
+.machine-selector {
+  @apply flex;
+}
+
+.my-class {
+  border: 2px dashed blue;
+}
+
+ul > .list-item {
+  list-style: none;
+  text-decoration: none;
+}
+
+.list-item {
+  margin-bottom: 2px;
+  display: flex;
+  border: .2px solid teal;
+}
+
+.list-icon {
+  font-size: 18px;
+  color: brown;
+  margin-right: 7px;
+  justify-content: center;
+
+  &__text {
+    //background-color: magenta;
+    //text-align: center;
+    //vertical-align: center;
+    //align-items: center;
+    //line-height: 20px;
+    //justify-content: center;
+  }
+}

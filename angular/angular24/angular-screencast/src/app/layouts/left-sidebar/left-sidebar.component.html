@@ -1,0 +1,47 @@
+<aside
+  class="w-72 h-screen bg-gray-halo transition-all duration-300 space-y-2 sm:relative top-0 left-0 flex flex-col justify-between my-class"
+>
+  <div class="px-4 space-y-2">
+    <div class="flex flex-row justify-between">
+      <h1 class="text-black font-black uppercase leading-4" routerLink="/">Angular Up</h1>
+
+      <div class="flex flex-row items-center">
+        <app-sidebar-menu></app-sidebar-menu>
+
+        <mat-icon
+          class="nav-item"
+          matBadge="12"
+          matBadgeColor="warn"
+          routerLinkActive="active"
+          [routerLink]="'notifications'"
+        >
+          notifications
+        </mat-icon>
+      </div>
+    </div>
+
+    <button class="machine-selector" mat-stroked-button [matMenuTriggerFor]="menu">
+      <span class="flex items-center"> Famous people of Ukraine <mat-icon>expand_more</mat-icon></span>
+    </button>
+    <mat-menu #menu="matMenu" yPosition="above">
+      <app-sidebar-selector (click)="$event.stopPropagation()"></app-sidebar-selector>
+    </mat-menu>
+
+    <nav>
+      <ul class="list-group">
+        <li
+          *ngFor="let item of navigation"
+          routerLinkActive="active"
+          class="nav-item justify-start flex items-center space-x-2 list-item"
+          [routerLink]="item.url"
+          [routerLinkActiveOptions]="item.routerLinkActiveOptions || {}"
+        >
+          <mat-icon class="list-icon" aria-hidden="false" aria-label="Example home icon">
+            {{ item.icon }}
+          </mat-icon>
+          <span class="list-icon__text">{{ item.name }}</span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>

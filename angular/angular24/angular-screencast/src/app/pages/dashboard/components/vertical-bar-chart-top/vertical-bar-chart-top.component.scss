@@ -1,0 +1,20 @@
+@import 'src/app/@shared/shared-styles.scss';
+
+@include shared;
+
+ngx-charts-bar-vertical {
+  height: 14rem;
+}
+
+.row-flex {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.charts-h1 {
+  margin: 0;
+}
+
+img {
+  width: 1.5rem;
+}

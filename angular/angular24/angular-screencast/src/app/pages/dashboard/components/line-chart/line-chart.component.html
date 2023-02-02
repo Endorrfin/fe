@@ -1,0 +1,22 @@
+<div class="structure">
+  <h1 class="charts-h1">Total Workout & Outputs</h1>
+
+  <ngx-charts-line-chart
+    [view]="view"
+    [scheme]="colorScheme"
+    [legend]="legend"
+    [xAxis]="xAxis"
+    [yAxis]="yAxis"
+    [yScaleMax]="yScaleMax"
+    [yScaleMin]="yScaleMin"
+    [timeline]="timeline"
+    [results]="lineChartData"
+  ></ngx-charts-line-chart>
+
+  <div class="labels">
+    <p *ngFor="let data of lineChartData">
+      <span [ngStyle]="{ 'background-color': data['color'] }"></span>
+      {{ data['name'] }}
+    </p>
+  </div>
+</div>

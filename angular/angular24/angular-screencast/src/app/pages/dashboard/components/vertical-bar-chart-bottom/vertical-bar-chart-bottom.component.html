@@ -1,0 +1,17 @@
+<div class="structure" id="small-chart">
+  <h1 class="charts-h1">Bottom 5 Machines by Utilization</h1>
+
+  <ngx-charts-bar-vertical
+    [view]="view"
+    [scheme]="colorScheme"
+    [results]="verticalBarChartBottomData"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [yScaleMax]="yScaleMax"
+    [barPadding]="barPadding"
+    [showGridLines]="showGridLines"
+    [roundEdges]="roundEdges"
+    [yAxisTicks]="yAxisTicks"
+    [yAxisTickFormatting]="yAxisTickFormatting"
+  ></ngx-charts-bar-vertical>
+</div>

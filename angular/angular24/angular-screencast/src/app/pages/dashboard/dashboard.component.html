@@ -1,0 +1,44 @@
+<app-page-title [title]="'global.dashboard.title' | translate">
+  <div class="row gap-5">
+    <span class="underline cursor-pointer ml-2 mr-2 text-gray-500">7 facilities selected</span>
+
+    <mat-form-field appearance="fill" class="ml-2 mr-2">
+      <mat-date-range-input [rangePicker]="picker">
+        <input matStartDate placeholder="Start date" />
+        <input matEndDate placeholder="End date" />
+      </mat-date-range-input>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+
+    <mat-form-field class="ml-2 mr-2">
+      <mat-select [formControl]="dateControl">
+        <mat-option value="weekly" selected>weekly</mat-option>
+        <mat-option value="bi-weekly">bi-weekly</mat-option>
+        <mat-option value="monthly">monthly</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</app-page-title>
+
+<div class="charts flex">
+  <div class="col-flex1">
+    <app-pie-chart></app-pie-chart>
+    <app-screensaver></app-screensaver>
+  </div>
+  <div class="col-flex">
+    <div class="row-flex">
+      <app-number-card-chart></app-number-card-chart>
+      <app-wait-time-chart></app-wait-time-chart>
+    </div>
+    <div class="row-flex">
+      <app-line-chart></app-line-chart>
+      <app-vertical-bar-chart></app-vertical-bar-chart>
+    </div>
+    <div class="row-flex">
+      <app-vertical-bar-chart-top></app-vertical-bar-chart-top>
+      <app-vertical-bar-chart-bottom></app-vertical-bar-chart-bottom>
+      <app-grouped-vertical-bar-chart></app-grouped-vertical-bar-chart>
+    </div>
+  </div>
+</div>

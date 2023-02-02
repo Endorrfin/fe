@@ -1,0 +1,28 @@
+<div class="select__wrap">
+  <div class="select__header">
+    <div class="facilities">Facilities {{ !!selectedLength ? '(' + selectedLength + ')' : '' }}</div>
+    <div class="action" (click)="onToggleSelectAll()">
+      {{
+      (selectedLength === allFamousAmount
+          ? 'global.navigation.select.btn.unselectAll'
+          : 'global.navigation.select.btn.selectAll'
+      ) | translate
+      }}
+    </div>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="onCreateNew()">
+    <cdk-virtual-scroll-viewport appendOnly class="example-viewport" itemSize="{{ groups.length }}">
+      <div *ngFor="let city of groups; trackBy: trackFn" class="select__list example-item">
+        <app-select-group
+          [city]="city"
+          [selectAllToggle]="selectAllToggle"
+          (selected)="selectedFamous($event)"
+        ></app-select-group>
+      </div>
+    </cdk-virtual-scroll-viewport>
+
+    <div class="select__footer">
+      <button type="submit" class="submit">{{ 'global.navigation.select.btn.submit' | translate }}</button>
+    </div>
+  </form>
+</div>

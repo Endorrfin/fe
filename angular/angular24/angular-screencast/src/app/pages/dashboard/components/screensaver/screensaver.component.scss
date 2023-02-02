@@ -1,0 +1,35 @@
+@import 'src/app/@shared/shared-styles.scss';
+
+@include shared;
+
+.structure {
+  margin-top: 1.5rem;
+  padding: 0 2rem 1.5rem;
+}
+
+.charts-h1 {
+  margin: 2rem 0.5rem 1rem 0;
+}
+
+.labels {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.labels p {
+  display: flex;
+  align-items: center;
+  margin: 0 0.6rem;
+}
+
+.labels span {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+img {
+  width: 15rem;
+}

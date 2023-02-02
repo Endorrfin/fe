@@ -1,0 +1,17 @@
+<div class="structure" id="small-chart">
+  <div class="row-flex">
+    <h1 class="charts-h1">Machine Type vs. Utilization</h1>
+    <img src="../../../../assets/images/icons8-exclamation-mark-64.png" alt="" />
+  </div>
+
+  <ngx-charts-bar-vertical-2d
+    [view]="view"
+    [scheme]="colorScheme"
+    [results]="groupedVerticalBarChartData"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [xAxisTicks]="xAxisTicks"
+    [yAxisTicks]="yAxisTicks"
+    [roundDomains]="roundDomains"
+  ></ngx-charts-bar-vertical-2d>
+</div>
