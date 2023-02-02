@@ -1,0 +1,12 @@
+@import 'src/app/@shared/shared-styles.scss';
+
+@include shared;
+
+.structure {
+  width: 98%;
+  padding-right: 0.5rem;
+}
+
+h1 {
+  margin: 1.5rem 0.5rem;
+}

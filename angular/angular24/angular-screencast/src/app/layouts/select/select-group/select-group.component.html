@@ -1,0 +1,15 @@
+<div class="famous__list">
+  <div class="famous__header">
+    <div class="city">{{ city.place }}</div>
+    <div class="action" (click)="onToggleSelectAll()">{{ (selectAllState ? 'global.navigation.select.btn.unselect' : 'global.navigation.select.btn.select') | translate }}</div>
+  </div>
+  <form class="famous__checkbox-group" [formGroup]="form">
+    <ng-container formArrayName="famous">
+      <ng-container *ngFor="let control of famousControls.controls; let i = index" [formGroupName]="i">
+        <mat-checkbox class="checkbox" [formControl]="$any(control)">
+          {{ list[i] }}
+        </mat-checkbox>
+      </ng-container>
+    </ng-container>
+  </form>
+</div>

@@ -1,0 +1,20 @@
+<mat-icon
+  #menuTrigger="matMenuTrigger"
+  class="relative"
+  style="z-index: 9999"
+  [matMenuTriggerFor]="menu"
+  (mouseenter)="iconEnter(menuTrigger)"
+  (mouseleave)="iconLeave(menuTrigger)"
+>
+  settings
+</mat-icon>
+
+<mat-menu #menu="matMenu" direction="down" yPosition="below">
+  <span (mouseenter)="menuenter()" (mouseleave)="menuLeave(menuTrigger)">
+    <ul>
+      <li class="px-4 py-2" routerLinkActive="font-bold" [routerLink]="'manage/profile'">My profile</li>
+      <li class="px-4 py-2" routerLinkActive="font-bold" [routerLink]="'manage/staff'">Manage stuff</li>
+      <li class="px-4 py-2" routerLinkActive="font-bold" [routerLink]="'manage/facilities'">Manage facilities</li>
+    </ul>
+  </span>
+</mat-menu>

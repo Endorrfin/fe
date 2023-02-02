@@ -1,0 +1,7 @@
+@import 'src/app/@shared/shared-styles.scss';
+
+@include shared;
+
+ngx-charts-bar-vertical {
+  height: 14rem;
+}

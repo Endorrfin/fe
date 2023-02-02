@@ -1,0 +1,24 @@
+<div class="structure">
+  <h1 class="charts-h1">Busy Times</h1>
+
+  <ngx-charts-bar-vertical
+    [view]="view"
+    [scheme]="colorScheme"
+    [results]="verticalBarChartData"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [yScaleMax]="yScaleMax"
+    [yScaleMin]="yScaleMin"
+    [showGridLines]="showGridLines"
+    [roundEdges]="roundEdges"
+    [xAxisTicks]="xAxisTicks"
+    [yAxisTickFormatting]="yAxisTickFormatting"
+  ></ngx-charts-bar-vertical>
+
+  <div class="labels">
+    <p>
+      <span [ngStyle]="{ 'background-color': colorScheme.domain[0] }"></span>
+      Hours of the Day
+    </p>
+  </div>
+</div>

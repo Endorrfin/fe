@@ -1,0 +1,16 @@
+<div class="flex flex-col items-center m-auto w-20 gap-5">
+  <span class="underline cursor-pointer ml-2 mr-2 text-gray-500">Login</span>
+
+  <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill" class="ml-2 mr-2">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="johndoe@gmail.com" type="email" name="email" [(ngModel)]="loginForm.email" />
+    </mat-form-field>
+
+    <mat-form-field class="ml-2 mr-2">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" name="password" [(ngModel)]="loginForm.password" />
+    </mat-form-field>
+    <button mat-raised-button color="primary">Login</button>
+  </form>
+</div>

@@ -1,0 +1,24 @@
+<div #ContainerRef class="structure">
+  <h1 class="charts-h1">Machine Status</h1>
+
+  <div class="title">
+    <span>{{ totalChartCount }}</span>
+    <p>Total Machines</p>
+  </div>
+  <!-- [ContainerRef.offsetWidth, 400]/ -->
+  <ngx-charts-pie-chart
+    [view]="view"
+    [scheme]="colorScheme"
+    [results]="pieChartData"
+    [gradient]="gradient"
+    [doughnut]="isDoughnut"
+    [arcWidth]="arcWidth"
+  ></ngx-charts-pie-chart>
+
+  <div class="labels">
+    <p *ngFor="let data of pieChartData">
+      <span [ngStyle]="{ 'background-color': data['color'] }"></span>
+      {{ data['name'] }}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="structure">
+  <h1 class="charts-h1">Screensavers</h1>
+  <img src="{{ imagePath }}" alt="Screensaver image" />
+
+  <div class="labels">
+    <p *ngFor="let element of screensaverData">
+      <span [ngStyle]="{ 'background-color': element['color'] }"></span>
+      {{ element['activityType'] }} ({{ element['value'] }})
+    </p>
+  </div>
+</div>

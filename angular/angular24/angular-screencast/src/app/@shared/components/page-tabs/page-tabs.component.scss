@@ -1,0 +1,15 @@
+ul {
+  @apply flex flex-row;
+  margin: 0 0 2rem 0;
+  border-bottom: 1px solid #ccc;
+
+  li {
+    @apply p-7;
+    cursor: pointer;
+  }
+
+  .active {
+    @apply font-bold;
+    border-bottom: 1px solid rgb(60, 59, 59);
+  }
+}

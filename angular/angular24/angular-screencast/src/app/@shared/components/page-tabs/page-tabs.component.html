@@ -1,0 +1,13 @@
+<ul *ngIf="navigationConfig?.children as nav">
+  <ng-content select="[slot=beforeRouterConfig]"></ng-content>
+
+  <li *ngFor="let item of nav" [routerLink]="item.path" [routerLinkActive]="'active'">
+    {{ item.path | titlecase }}
+
+    <ng-container *ngIf="data$ | async as routeData">
+      <span *ngIf="routeData['data'] && item.path">({{ routeData['data'][0][item.path] }})</span>
+    </ng-container>
+  </li>
+
+  <ng-content select="[slot=afterRouterConfig]"></ng-content>
+</ul>

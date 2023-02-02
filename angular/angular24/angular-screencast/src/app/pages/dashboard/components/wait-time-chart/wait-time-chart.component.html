@@ -1,0 +1,15 @@
+<div class="structure">
+  <h1 class="charts-h1">Avg. Wait Time (min)</h1>
+
+  <span>{{ selectedElement.waitTime }}</span>
+
+  <div class="icons">
+    <img
+      src="{{ element['iconPath'] }}"
+      alt="Element icon"
+      [ngStyle]="{ 'background-color': selectedElement === element ? '#e3e3e3' : 'white' }"
+      *ngFor="let element of waitTimeChartData"
+      (click)="onSelectElement(element)"
+    />
+  </div>
+</div>

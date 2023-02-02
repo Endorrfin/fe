@@ -1,20 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
 /* Add application styles & imports to this file! */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+//@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-.example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-}
-
-.example-full-width {
-    width: 100%;
-}
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+//.example-form {
+//    min-width: 150px;
+//    max-width: 500px;
+//    width: 100%;
+//}
+//
+//.example-full-width {
+//    width: 100%;
+//}
+//
+//html, body { height: 100%; }
+//body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -67,6 +67,8 @@ import { ControlValueAccessorComponent } from './components/control-value-access
 import { AuthorInputComponent } from './components/control-value-accessor/author-input/author-input.component';
 import { ContentInputComponent } from './components/control-value-accessor/content-input/content-input.component';
 import { TitleInputComponent } from './components/control-value-accessor/title-input/title-input.component';
+import {AppRoutingModule} from './app-routing.module';
+import {CoreModule} from './@core/core.module';
 
 // import { ElementsComponent } from './components/elements/elements.component';
 
@@ -123,12 +125,15 @@ import { TitleInputComponent } from './components/control-value-accessor/title-i
     AuthorInputComponent,
     ContentInputComponent,
     TitleInputComponent,
+
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    CoreModule.forRoot(),
+    AppRoutingModule,
     NgbModule,
     MaterialModule,
-    BrowserAnimationsModule,
     MaterialModule,
     NgMaterialModule,
     FormsModule,
@@ -137,7 +142,7 @@ import { TitleInputComponent } from './components/control-value-accessor/title-i
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
 
   ],
   providers: [
