@@ -268,7 +268,7 @@ async function getDataForce() {
         await fetch('');
     } catch (error) {
         const e = error as Error;
-        console.log(error.message)
+        // console.log(error.message)
     }
 }
 

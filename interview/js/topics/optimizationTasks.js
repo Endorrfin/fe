@@ -1,5 +1,7 @@
 
 const array = [2, 10, 2, 4, 7, 9, 3, 1, 6, 4, 8, 3, 8, 9, 5, 5];
+const array2 = [2, 10, 2, 4, 7, 9, 3, 1, 6, 4, 8, 3, 8, 9, 5, 5];
+const array3 = ['Ben', 'Gloria', 'Cris', 'Ben', 'Gloria'];
 // console.log(array);
 
 // ------- Example I - Array Deduplication -------
@@ -14,6 +16,9 @@ const array = [2, 10, 2, 4, 7, 9, 3, 1, 6, 4, 8, 3, 8, 9, 5, 5];
 // Case I
 const uniqueArr = (arr) => [...new Set(arr)];
 // console.log(uniqueArr(array));
+
+const uniqueData = [...new Set(array2)];
+// console.log(uniqueData);
 
 // Case II
 const removeDuplicates = (array) => {
@@ -31,6 +36,24 @@ const removeDuplicates = (array) => {
 };
 
 // console.log(removeDuplicates(array));
+
+
+// Case III
+const removeDuplicatesName = (array3) => {
+    // debugger;
+    const uniqueValues = [];
+    const seenMap = {};
+
+    for (const item of array3) {
+        if (seenMap[item]) continue;
+        seenMap[item] = true;
+        uniqueValues.push(item);
+    }
+
+    return uniqueValues;
+};
+
+// console.log(removeDuplicatesName(array3));
 
 
 // ------- Example II - Получить параметры из URL-адреса и преобразовать их в объект -------
