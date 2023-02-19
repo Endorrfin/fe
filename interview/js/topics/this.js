@@ -480,4 +480,96 @@ const fn = () => {
 
 
 //  =================================================================================================
+/*
+* WHAT WILL CONSOLE LOG?
+* */
+
+// ------- Case 1 -------
+(function () {
+  // console.log(this); // window
+})();
+
+
+// ------- Case 2 -------
+const coffee1 = {
+  strong: true,
+  info: function() {
+    // console.log(this.strong); // true
+  }
+}
+
+coffee1.info();
+
+
+// ------- Case 3 -------
+const coffee2 = {
+  strong: true,
+  info() {
+    // console.log(this.strong); // true
+  }
+}
+
+coffee2.info();
+
+
+// ------- Case 4 -------
+const coffee3 = {
+  strong: true,
+  info: () => {
+    // console.log(this.strong); // window
+  }
+};
+
+coffee3.info();
+
+
+// ------- Case 5 -------
+const coffee4 = {
+  strong: true,
+  info() {
+    setTimeout(function() {
+      // console.log(this.strong); // window - because the function creates its own scope and it does not know that it is declared inside the object
+    }, 0)
+  },
+};
+
+coffee4.info();
+
+
+// ------- Case 6 -------
+const coffee5 = {
+  strong: true,
+  info() {
+    setTimeout(() => {
+      // console.log(this.strong); // true
+    }, 0)
+  },
+};
+
+coffee5.info();
+
+// ------- Case 7 -------
+function Coffee() {
+  this.strong = true;
+
+  return this;
+}
+
+const coffee6 = new Coffee()
+// console.log(coffee6.strong); // true
+
+// ------- Case 8 -------
+function Maccoffee() {
+  this.strong = true;
+
+  return {};
+}
+
+const coffee7 = new Maccoffee()
+// console.log(coffee7); // {}
+// console.log(coffee7.strong); // undefined
+
+
+
+
 
